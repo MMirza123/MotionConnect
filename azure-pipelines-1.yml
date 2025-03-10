@@ -1,0 +1,6 @@
+pool:
+  name: Default  # Eller namnet på den agent pool du använde
+
+steps:
+  - script: echo "Agent is running!"
+    displayName: 'Test Self-Hosted Agent'
