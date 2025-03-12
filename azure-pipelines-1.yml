@@ -14,3 +14,4 @@ steps:
     displayName: 'Build and Run'
     inputs:
       command: 'build'
+      projects: 'MotionConnect/MotionConnect.csproj'
