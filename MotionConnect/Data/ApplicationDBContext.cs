@@ -24,9 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         builder.Entity<AnvandareSport>()
             .HasKey(us => new { us.AnvandarId, us.SportId});
-        
-        builder.Entity<AnvandareSport>()
-            .HasOne(us => us.Anvandare )
+
     }
     
     
