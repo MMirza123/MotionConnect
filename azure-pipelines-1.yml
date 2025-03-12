@@ -1,6 +1,16 @@
+trigger:
+  branches:
+    include:
+      - main # Se till att detta är rätt branch
+
 pool:
-  name: Default  # Eller namnet på den agent pool du använde
+  name: Default # Se till att detta matchar din self-hosted agent-pool
 
 steps:
   - script: echo "Agent is running!"
     displayName: 'Test Self-Hosted Agent'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build and Run'
+    inputs:
+      command: 'build'
