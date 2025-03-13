@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Sporter
+public class Sport
 {
     public int SportId { get; set; }
     public string Namn { get; set; }

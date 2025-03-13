@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Notis
+public class AnvandareSport
 {
-    public int NotisId { get; set; }
-    public string Meddealande { get; set; }
-    public bool ArLast { get; set; }
-    public DateTime SkapadesTid { get; set; }
-
     public string AnvandarId { get; set; }
     public ApplicationUser Anvandare { get; set; }
+
+    public int SportId { get; set; }
+    public Sport Sport { get; set; }
 }

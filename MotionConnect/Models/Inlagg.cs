@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Inlagg
 {
@@ -12,6 +14,6 @@ public class Inlagg
     public ApplicationUser Anvandare { get; set; }
 
     public ICollection<Kommentar> Kommentarer { get; set; }
-    public ICollection<Gilning> Gilningar { get; set; }
+    public ICollection<Gillning> Gillningar { get; set; }
     public ICollection<InlaggSport> InlaggSporter { get; set; }
 }
