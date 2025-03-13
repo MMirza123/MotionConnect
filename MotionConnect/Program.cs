@@ -44,3 +44,6 @@ app.MapRazorPages(); // ✅ Krävs för Identity-standardvyer (t.ex. inloggning)
 
 app.Run();
 
+// dotnet watch run
+// Control + C För att den ska stoppas
+
