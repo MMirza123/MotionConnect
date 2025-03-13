@@ -1,0 +1,30 @@
+<h1>skapa ett nytt konto hej</h1>
+
+<label>Förnman:</label><br>
+<input type="text" id="Fornamn" name="Fornamn"/><br>
+<label>Efternman:</label><br>
+<input type="text" id="Efternman" name="Efternamn" required><br>
+<label>Email:</label><br>
+<input type="email" id="Email" name="Email" placeholder="Lars@gmail.com"/><br>
+<label>Telefonummer:</label><br>
+<input type="tel" id="Telefonummer" name="Telefonummer" placeholder="0123456789"/><br>
+<label>Lösenord:</label><br>
+<input type="password" id="Losenord" name="Losenord"/><br>
+<label>Profil bild:</label><br>
+<input type="file" id="Profilbild" name="Profilbild" accept="image/*"/><br>
+<img id="Forhandsvisning" src="#" alt="Forhansvisning" style="display: none; width: 150px; object-fit: cover; margin-top: 10px;">
+
+<script>
+    document.getElementById("Profilbild").addEventListener("change", function(event)
+    {
+        var reader = new FileReader();
+        reader.onload = function()
+        {
+            var imgs = document.getElementById("Forhandsvisning");
+            imgs.src = reader.result;
+            imgs.style.display = "block";
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    });
+</script>
+
