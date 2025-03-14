@@ -29,7 +29,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 // 🔹 5. Middleware för att hantera HTTP-förfrågningar
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -40,7 +40,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages(); // ✅ Krävs för Identity-standardvyer (t.ex. inloggning)
+// ✅ Krävs för Identity-standardvyer (t.ex. inloggning)
 
 app.Run();
 
