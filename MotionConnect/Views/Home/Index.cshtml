@@ -2,19 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model ApplicationUser
+
 <head>
     <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
     <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
+    <a asp-controller="Konto" asp-action="KontoInfo">Konto information</a>
     <form method="post" action="/Konto/LoggaUtFranKonto">
         <button type="submit">Logga ut</button>
     </form>
 </head>
 
 <div class="text-center">
-    @if (User.Identity.IsAuthenticated)
+    @if (User.Identity.IsAuthenticated && Model != null)
     {
-        <p>Inloggad som: @User.Identity.Name</p>
+        <p>Inloggad som: @Model.ForNamn @Model.EfterNamn</p>
+        <img id="Profilbild" src="@Model.ProfilBildUrl" alt="Profilbild" 
+        style="width: 150px; object-fit: cover; margin-top: 10px;">
+        
     }
     <h1 class="display-4">Welcome för detta hej jag heter markus</h1> 
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+

@@ -1,0 +1,15 @@
+@model ApplicationUser
+
+<h1>Info om användaren</h1>
+
+@if (User.Identity.IsAuthenticated && Model != null)
+{
+    <img src="@Model.ProfilBildUrl" alt="Profilbild"
+    style="witdh: 150px; height: 150px; object-fit: cover; margin-top: 10px; margin-bottom: 20px;">
+    <p>Namn: @Model.ForNamn</p>
+    <p>Efternamn: @Model.EfterNamn</p>
+    <p>Email: @Model.Email</p>
+    <p>Telefonummer: @Model.PhoneNumber</p>
+    <p>Födelse år: @Model.FodelsAr</p>
+    <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+}
