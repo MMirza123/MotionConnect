@@ -1,1 +1,9 @@
+@model ApplicationUser
+
+
+@if (User.Identity.IsAuthenticated && Model != null)
+    {
+        <p>Inloggad som: @Model.ForNamn @Model.EfterNamn</p>
+    }
+
 <h4>Skapa ett inlägg</h4>
