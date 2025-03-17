@@ -4,9 +4,17 @@
 
 <head>
     <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
+    <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
+    <form method="post" action="/Konto/LoggaUtFranKonto">
+        <button type="submit">Logga ut</button>
+    </form>
 </head>
 
 <div class="text-center">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>Inloggad som: @User.Identity.Name</p>
+    }
     <h1 class="display-4">Welcome för detta hej jag heter markus</h1> 
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

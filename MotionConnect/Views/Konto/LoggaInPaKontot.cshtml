@@ -1,0 +1,25 @@
+@model ApplicationUser
+
+@if(!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<h1>Logga inlägg på ditt konto</h1>
+
+<form method="post" action="/Konto/LoggaInPaKontot">
+
+    <label>Email:</label>
+    <input type="email" asp-for="Email" id="Email" placeholder="Lars@gmail.com" required /><br>
+    <span asp-validation-for="Email"></span><br>
+
+    <label>Lösenord:</label>
+    <input type="password" name="losenord" id="Loserord" required /><br>
+    <br>
+    <button type="submit">Logga in</button>
+</form>

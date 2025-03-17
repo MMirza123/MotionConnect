@@ -23,6 +23,12 @@ public class KontoController : Controller
         return View();
     }
 
+    [HttpGet]
+    public IActionResult LoggaInPaKontot()
+    {
+        return View();
+    }
+
 
     [HttpPost]
     public async Task<IActionResult> SkapaKonto(RegisterViewModel model)
@@ -101,6 +107,39 @@ public class KontoController : Controller
         // 🛠 Kolla om användaren loggas in
         await _signInManager.SignInAsync(anvandare, isPersistent: false);
         Console.WriteLine("🔑 Användaren loggades in!");
+        Console.WriteLine("🔄 Omdirigerar till Home/Index...");
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> LoggaInPaKontot(string email, string losenord)
+    {
+        var anvandare = await _userManager.FindByEmailAsync(email);
+
+        if(anvandare == null)
+        {
+            Console.WriteLine($"Anändaren med epost{email} finns inte");
+            ModelState.AddModelError("", "Användaren finns inte");
+            return View();
+        }
+
+        var result = await _signInManager.PasswordSignInAsync(email, losenord, isPersistent: false, lockoutOnFailure: false);
+
+        if(result.Succeeded)
+        {
+            Console.WriteLine($"Användaren {email} är inloggad");
+            return RedirectToAction("Index", "Home");
+        }
+
+        Console.WriteLine($"Inloggningen misslyckades för {email}");
+        ModelState.AddModelError("", "Lösenordet är fel eller tillhör inte användaren");
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> LoggaUtFranKonto()
+    {
+        await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
 

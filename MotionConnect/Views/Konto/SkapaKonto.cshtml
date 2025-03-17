@@ -1,5 +1,15 @@
 @model RegisterViewModel
 
+@if(!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
 <h1>Skapa ett nytt konto hej</h1>
 
 <form method="post" action="/Konto/SkapaKonto" enctype="multipart/form-data">
