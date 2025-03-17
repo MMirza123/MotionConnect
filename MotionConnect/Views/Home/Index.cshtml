@@ -5,9 +5,10 @@
 @model ApplicationUser
 
 <head>
-    <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
-    <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
-    <a asp-controller="Konto" asp-action="KontoInfo">Konto information</a>
+    <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a> <br>
+    <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a><br>
+    <a asp-controller="Konto" asp-action="KontoInfo">Konto information</a><br>
+    <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a>
     <form method="post" action="/Konto/LoggaUtFranKonto">
         <button type="submit">Logga ut</button>
     </form>
