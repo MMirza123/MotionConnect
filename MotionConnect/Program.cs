@@ -32,6 +32,7 @@ if (!app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseDeveloperExceptionPage();
 
 app.UseAuthentication(); // ✅ Måste finnas för att Identity ska fungera!
 app.UseAuthorization();

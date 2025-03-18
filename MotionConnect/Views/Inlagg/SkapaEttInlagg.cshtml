@@ -7,3 +7,31 @@
     }
 
 <h4>Skapa ett inlägg</h4>
+
+<form method="post" action="/Inlagg/SkapaEttInlagg" enctype="multipart/form-data">
+    <label>Skriv ditt inlägg är:</label>
+    <textarea id="text" name="text" rows="15" cols="50" placeholder="Skriv ditt inlägg är..."></textarea><br>
+    
+
+    <label>Välj SkapaEttInlagg bil om du vill</label>
+    <input type="file" id="Bild" name="Bild" accept="image/*" /><br>
+    <img id="Forhandsvisning" src="#" alt="Forhansvisning"
+        style="display: none; width: 150px; object-fit: cover; margin-top: 10px;"><br>
+
+    <button type="submit">Publicera inlägg</button>
+</form>
+
+<script>
+        document.getElementById("Bild").addEventListener("change", function (event) {
+            var file = event.target.files[0]; // Hämta filen
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                    var imgElement = document.getElementById("Forhandsvisning");
+                    imgElement.src = reader.result;
+                    imgElement.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>

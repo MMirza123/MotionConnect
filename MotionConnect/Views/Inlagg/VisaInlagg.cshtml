@@ -1,0 +1,25 @@
+@model List<Inlagg>
+
+<h1>Alla inlägg som finns:</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Inag inlägg att visa</p>
+}
+else
+{
+    @foreach (var inlagg in Model)
+    {
+        <div class="post">
+            <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare")</h3>
+            <p>@inlagg.Text</p>
+            @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+            {
+                <img src="@inlagg.BildUrl" alt="Inläggsbild" style="max-width: 300px;">
+            }
+
+            <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+            <hr>
+        </div>
+    }
+}

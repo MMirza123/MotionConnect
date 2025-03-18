@@ -41,6 +41,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         .WithMany(s => s.AnvandareSporter)
         .HasForeignKey(us => us.SportId);
 
+    builder.Entity<Inlagg>()
+        .Property(i => i.InlaggId)
+        .ValueGeneratedOnAdd();
+
     // 🏆 Inlägg ↔ Sporter (M:M via InlaggSporter)
     builder.Entity<InlaggSport>()
         .HasKey(ps => new { ps.InlaggId, ps.SportId });
