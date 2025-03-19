@@ -1,19 +1,20 @@
-@model ApplicationUser
-
-
-@if (User.Identity.IsAuthenticated && Model != null)
-    {
-        <p>Inloggad som: @Model.ForNamn @Model.EfterNamn</p>
-    }
 
 <h4>Skapa ett inlägg</h4>
 
-<form method="post" action="/Inlagg/SkapaEttInlagg" enctype="multipart/form-data">
+<form method="post" action="/Inlagg/SkapaEttInlagg" enctype="multipart/form-data">  
     <label>Skriv ditt inlägg är:</label>
     <textarea id="text" name="text" rows="15" cols="50" placeholder="Skriv ditt inlägg är..."></textarea><br>
+
+    <label>Väls sporter:</label><br>
+    <select name="sportIds[]" multiple class="form-control" style="height: 150px; width: 250px;">
+    @foreach (var sport in ViewBag.Sporter)
+    {
+        <option value="@sport.SportId">@sport.Namn</option>
+    }
+    </select><br>
     
 
-    <label>Välj SkapaEttInlagg bil om du vill</label>
+    <label>Välj bil om du vill</label>
     <input type="file" id="Bild" name="Bild" accept="image/*" /><br>
     <img id="Forhandsvisning" src="#" alt="Forhansvisning"
         style="display: none; width: 150px; object-fit: cover; margin-top: 10px;"><br>

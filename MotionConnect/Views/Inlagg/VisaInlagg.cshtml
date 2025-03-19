@@ -11,12 +11,33 @@ else
     @foreach (var inlagg in Model)
     {
         <div class="post">
-            <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare")</h3>
-            <p>@inlagg.Text</p>
-            @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+    <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare")
+    </h3>
+    <p>@inlagg.Text</p>
+    @if (!string.IsNullOrEmpty(inlagg.BildUrl))
             {
                 <img src="@inlagg.BildUrl" alt="Inläggsbild" style="max-width: 300px;">
             }
+
+            <p><strong>Sporter:</strong>
+                @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
+                {
+                    @foreach (var inlaggSport in inlagg.InlaggSporter)
+                    {
+                        if (inlaggSport.Sport != null) // 🛠️ Kontrollera om Sport finns
+                        {
+                            <span>@inlaggSport.Sport.Namn</span>
+
+                            @(inlaggSport != inlagg.InlaggSporter.Last() ? ", " : "")
+                        }
+                    }
+                }
+                else
+                {
+                    <span>Inga sporter valda</span>
+                }
+            </p>
+
 
             <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
             <hr>

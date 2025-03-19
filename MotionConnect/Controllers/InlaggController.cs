@@ -5,7 +5,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; 
+using System.Linq;
 
 
 public class InlaggController : Controller
@@ -24,41 +24,48 @@ public class InlaggController : Controller
     [HttpGet]
     public async Task<IActionResult> SkapaEttInlagg()
     {
-        var vemInloggad = User.Identity.Name;
-        var anvandare = await _userManager.FindByEmailAsync(vemInloggad);
-        return View(anvandare);
+        if (!User.Identity.IsAuthenticated)
+        {
+            return Unauthorized();
+        }
+
+        var sporter = await _context.Sporter.ToListAsync();
+        ViewBag.Sporter = sporter; // Skickar listan med sporter till vyn
+
+        return View();
     }
+
 
     [HttpGet]
     public async Task<IActionResult> VisaInlagg()
     {
         var inlagg = await _context.Inlagg
             .Include(i => i.Anvandare)
+            .Include(i => i.InlaggSporter)
+            .ThenInclude(isport => isport.Sport) 
             .OrderByDescending(i => i.SkapadesTid)
             .ToListAsync();
 
-       return View(inlagg ?? new List<Inlagg>());
+        return View(inlagg ?? new List<Inlagg>());
     }
 
     [HttpPost]
-public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild)
-{
-    if (!User.Identity.IsAuthenticated)
+    public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild, List<int> sportIds)
     {
-        return Unauthorized();
-    }
+        if (!User.Identity.IsAuthenticated)
+        {
+            return Unauthorized();
+        }
 
-    var anvandare = await _userManager.FindByEmailAsync(User.Identity.Name);
-    if (anvandare == null)
-    {
-        return NotFound("Användaren hittades inte");
-    }
+        var anvandare = await _userManager.FindByEmailAsync(User.Identity.Name);
+        if (anvandare == null)
+        {
+            return NotFound("Användaren hittades inte");
+        }
 
-    string bildUrl = null;
-    
-    if (bild != null && bild.Length > 0)
-    {
-        try
+        // Hantera bilduppladdning
+        string bildUrl = null;
+        if (bild != null && bild.Length > 0)
         {
             var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
             if (!Directory.Exists(uploadsFolder))
@@ -76,27 +83,33 @@ public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild)
 
             bildUrl = "/uploads/" + fileName;
         }
-        catch (Exception ex)
+
+        // Skapa inlägget
+        var nyttInlagg = new Inlagg
         {
-            Console.WriteLine($"❌ FEL vid sparande av bild: {ex.Message}");
-            ModelState.AddModelError("", "Kunde inte spara bilden.");
-            return View();
+            Text = text,
+            BildUrl = bildUrl,
+            SkapadesTid = DateTime.UtcNow,
+            Anvandare = anvandare,
+            AnvandarId = anvandare.Id
+        };
+
+        _context.Inlagg.Add(nyttInlagg);
+        await _context.SaveChangesAsync();
+
+        // Koppla inlägget till valda sporter
+        foreach (var sportId in sportIds)
+        {
+            var inlaggSport = new InlaggSport
+            {
+                InlaggId = nyttInlagg.InlaggId,
+                SportId = sportId
+            };
+            _context.InlaggSporter.Add(inlaggSport);
         }
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("VisaInlagg");
     }
 
-    var nyttInlagg = new Inlagg
-    {
-        Text = text,
-        BildUrl = bildUrl,
-        SkapadesTid = DateTime.UtcNow,
-        Anvandare = anvandare,
-        AnvandarId = anvandare.Id
-    };
-
-    _context.Inlagg.Add(nyttInlagg);
-    await _context.SaveChangesAsync();
-    Console.WriteLine("✅ Inlägg sparat i databasen!");
-
-    return RedirectToAction("VisaInlagg");
-}
 }
