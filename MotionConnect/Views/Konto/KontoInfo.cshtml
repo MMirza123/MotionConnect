@@ -15,6 +15,12 @@
 
     @if (User.Identity.IsAuthenticated && Model != null)
     {
+        <p><strong>Sporter:</strong>
+        @foreach (var anvandareSporter in Model.AnvandareSporter)
+        {
+            <span>@anvandareSporter.Sport.Namn</span>
+        }
+        </p>
         <img src="@Model.ProfilBildUrl" alt="Profilbild">
         <p>@Model.ForNamn @Model.EfterNamn</p>
         <label class="Kontakt-info">Kontaktuppgifter:

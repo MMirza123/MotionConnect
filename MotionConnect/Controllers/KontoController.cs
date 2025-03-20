@@ -4,21 +4,28 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 public class KontoController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly ApplicationDbContext _context;
 
-    public KontoController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+
+    public KontoController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext context)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _context = context;
     }
 
     [HttpGet]
-    public IActionResult SkapaKonto()
+    public async Task<IActionResult> SkapaKonto()
     {
+        var sporter = await _context.Sporter.ToListAsync();
+        ViewBag.Sporter = sporter;
         return View();
     }
 
@@ -31,14 +38,21 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> KontoInfo()
     {
-        string identifire = User.Identity.Name;
-        var anvendare = await _userManager.FindByEmailAsync(identifire);
-        return View(anvendare);
+        if (!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("LoggaIn", "Konto");
+        }
+
+        var anvandare = await _userManager.Users
+        .Include(a => a.AnvandareSporter)
+        .ThenInclude(a => a.Sport)
+        .FirstOrDefaultAsync(a => a.Email == User.Identity.Name);
+        return View(anvandare);
     }
 
 
     [HttpPost]
-    public async Task<IActionResult> SkapaKonto(RegisterViewModel model)
+    public async Task<IActionResult> SkapaKonto(RegisterViewModel model, List<int> sportIds)
     {
         if (!ModelState.IsValid)
         {
@@ -97,6 +111,17 @@ public class KontoController : Controller
             }
             return View(model);
         }
+
+        foreach (var sportId in sportIds)
+        {
+            var anvandareSport = new AnvandareSport
+            {
+                AnvandarId = anvandare.Id,
+                SportId = sportId
+            };
+            _context.AnvandareSporter.Add(anvandareSport);
+        }
+        await _context.SaveChangesAsync();
         // 🛠 Kolla om användaren loggas in
         await _signInManager.SignInAsync(anvandare, isPersistent: false);
         
