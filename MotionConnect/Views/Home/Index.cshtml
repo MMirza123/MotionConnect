@@ -15,6 +15,11 @@
     </form>
 </head>
 
+<h3>Sök upp en användare</h3>
+
+<input type="text" id="sokFalt" placeholder="Sök användare"/>
+<ul id="resultatLista"></ul>
+
 <div class="text-center">
     @if (User.Identity.IsAuthenticated && Model != null)
     {
@@ -26,4 +31,29 @@
     <h1 class="display-4">Welcome för detta hej jag heter markus</h1> 
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<script>
+    document.getElementById("sokFalt").addEventListener("input", function() {
+    var query = this.value;
+
+    if (query.length === 0) {
+        document.getElementById("resultatLista").innerHTML = "";
+        return;
+    }
+
+    fetch(`/Konto/SokKonto?query=${query}`) // 🛠 Fixad backticks för template string
+    .then(response => response.json())
+    .then(data => {
+        var resultatLista = document.getElementById("resultatLista");
+        resultatLista.innerHTML = "";
+
+        data.forEach(anvandare => {  // 🛠 Ändrat "data.foreach()" till "data.forEach()"
+            var li = document.createElement("li");
+            li.textContent = anvandare.forNamn + " " + anvandare.efterNamn; // 🛠 "anvandare" används korrekt här
+            resultatLista.appendChild(li);
+        });
+    })
+    .catch(error => console.error("Fel vid hämtning av data:", error));
+});
+</script>
 

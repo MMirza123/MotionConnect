@@ -50,6 +50,23 @@ public class KontoController : Controller
         return View(anvandare);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> SokKonto(string query)
+    {
+        if(string.IsNullOrWhiteSpace(query))
+        {
+            return Json(new {});
+        }
+
+        var resultat = await _context.Users
+        .Where(u => u.ForNamn.Contains(query) || u.EfterNamn.Contains(query))
+        .Select(u => new { u.ForNamn, u.EfterNamn})
+        .ToListAsync();
+
+        return Json(resultat);
+    }
+
+
 
     [HttpPost]
     public async Task<IActionResult> SkapaKonto(RegisterViewModel model, List<int> sportIds)
@@ -123,8 +140,9 @@ public class KontoController : Controller
         }
         await _context.SaveChangesAsync();
         // 🛠 Kolla om användaren loggas in
+        Console.WriteLine("Hej");
         await _signInManager.SignInAsync(anvandare, isPersistent: false);
-        
+        Console.WriteLine("Hej");
         return RedirectToAction("Index", "Home");
     }
 

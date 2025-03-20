@@ -15,6 +15,7 @@
 
     @if (User.Identity.IsAuthenticated && Model != null)
     {
+        <p>Vänner: @Model.Vanner</p>
         <p><strong>Sporter:</strong>
         @foreach (var anvandareSporter in Model.AnvandareSporter)
         {
