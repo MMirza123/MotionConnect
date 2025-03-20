@@ -1,15 +1,29 @@
 @model ApplicationUser
 
-<h1>Info om användaren</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-@if (User.Identity.IsAuthenticated && Model != null)
-{
-    <img src="@Model.ProfilBildUrl" alt="Profilbild"
-    style="witdh: 150px; height: 150px; object-fit: cover; margin-top: 10px; margin-bottom: 20px;">
-    <p>Namn: @Model.ForNamn</p>
-    <p>Efternamn: @Model.EfterNamn</p>
-    <p>Email: @Model.Email</p>
-    <p>Telefonummer: @Model.PhoneNumber</p>
-    <p>Födelse år: @Model.FodelsAr</p>
-    <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/KontoInfo.css" asp-append-version="true" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Info om användaren</h1>
+
+    @if (User.Identity.IsAuthenticated && Model != null)
+    {
+        <img src="@Model.ProfilBildUrl" alt="Profilbild">
+        <p>@Model.ForNamn @Model.EfterNamn</p>
+        <label class="Kontakt-info">Kontaktuppgifter:
+            <p>✉ @Model.Email</p>
+            <p>📞 @Model.PhoneNumber</p>
+        </label>
+        <p>Födelse år: @Model.FodelsAr</p>
+        <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+    }
+</body>
+
+</html>
