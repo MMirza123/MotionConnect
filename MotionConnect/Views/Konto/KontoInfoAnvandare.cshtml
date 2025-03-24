@@ -16,22 +16,22 @@
     @if (User.Identity.IsAuthenticated && Model != null)
     {
         <p>Vänner:
-        @foreach (var vanner in Model.Vanner)
-        {
-            <span>@vanner.VanAnvandare.ForNamn @vanner.VanAnvandare.EfterNamn</span>
-        }
+            @foreach (var vanner in Model.Vanner)
+            {
+                <span>@vanner.VanAnvandare.ForNamn @vanner.VanAnvandare.EfterNamn</span>
+            }
         </p>
         <p><strong>Sporter:</strong>
-        @foreach (var anvandareSporter in Model.AnvandareSporter)
-        {
-            <span>@anvandareSporter.Sport.Namn</span>
-        }
+            @foreach (var anvandareSporter in Model.AnvandareSporter)
+            {
+                <span>@anvandareSporter.Sport.Namn</span>
+            }
         </p>
 
         <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandare" enctype="multipart/form-data">
-        <input type="file" id="Profilbild" name="bild" accept="image/*"/>
-        <img id="Profilbild1" src="@Model.ProfilBildUrl" alt="Profilbild1">
-        <button type="submit">Ändra bild</button>
+            <input type="file" id="Profilbild" name="bild" accept="image/*" />
+            <img id="Profilbild1" src="@Model.ProfilBildUrl" alt="Profilbild1">
+            <button type="submit">Ändra bild</button>
         </form>
 
         <p>@Model.ForNamn @Model.EfterNamn</p>
@@ -40,18 +40,18 @@
             <p>📞 @Model.PhoneNumber</p>
         </label>
         <p>Födelse år: @Model.FodelsAr</p>
-        <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+        <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandareAndraLagge" enctype="multipart/form-data">
+            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+            <button type="submit">Ändra</button>
+        </form>
     }
 </body>
 <script>
-    document.getElementById("Profilbild").addEventListener("change", function (event) 
-    {
+    document.getElementById("Profilbild").addEventListener("change", function (event) {
         var file = event.target.files[0];
-        if(file)
-        {
+        if (file) {
             var reader = new FileReader();
-            reader.onload = function() 
-            {
+            reader.onload = function () {
                 var imgElement = document.getElementById("Profilbild1");
                 imgElement.src = reader.result;
                 imgElement.style.display = "block";
@@ -60,4 +60,5 @@
         }
     });
 </script>
+
 </html>

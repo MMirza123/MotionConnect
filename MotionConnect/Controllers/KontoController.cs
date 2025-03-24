@@ -134,6 +134,31 @@ public async Task<IActionResult> KontoInfoAnvandare(IFormFile bild)
     return RedirectToAction("KontoInfoAnvandare", "Konto");
 }
 
+[HttpPost]
+public async Task<IActionResult> KontoInfoAnvandareAndraLagge()
+{
+    var userId = _userManager.GetUserId(User);
+    var anvandare = await _userManager.FindByIdAsync(userId);
+
+    if(userId == null)
+    {
+        return RedirectToAction("Index", "Home");
+    }
+
+    if(anvandare.ArProfilOppen)
+    {
+        anvandare.ArProfilOppen = false;
+    }
+    else
+    {
+        anvandare.ArProfilOppen = true;
+    }
+
+    await _userManager.UpdateAsync(anvandare);
+
+    return RedirectToAction("KontoInfoAnvandare", "Konto");
+}
+
 
 [HttpPost]
 public async Task<IActionResult> SkapaKonto(RegisterViewModel model, List<int> sportIds)
