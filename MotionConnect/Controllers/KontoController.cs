@@ -69,16 +69,25 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> KontoInfo(string id)
     {
+        var inloggadId = _userManager.GetUserId(User);
+        var anvandaren = await _userManager.FindByIdAsync(id);
+
         var anvandare = await _userManager.Users
             .Include(u => u.AnvandareSporter)
             .ThenInclude(asport => asport.Sport)
             .FirstOrDefaultAsync(u => u.Id == id);
+
+        bool arVanner = await _context.Vanner
+            .AnyAsync(v => (v.AnvandarId == inloggadId && v.VanId == id) ||
+                            (v.AnvandarId == id && v.VanId == inloggadId));
 
         if (anvandare == null) return NotFound();
         if (anvandare.ArProfilOppen == false)
         {
             return NotFound();
         }
+
+        ViewBag.ArVanner = arVanner;
 
         return View(anvandare);
     }

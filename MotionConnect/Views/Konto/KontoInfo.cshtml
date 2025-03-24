@@ -12,16 +12,27 @@
 
 <body>
     <h1>Info om användaren</h1>
-    <button></button>
+    @if (!(bool)ViewBag.ArVanner)
+    {
+        <form method="post" action="/Vanner/laggTillVan">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit">Bil vänner
+        </button>
+        </form>
+    }
+    else
+    {
+        <label>Vänner!</label>
+    }
 
     @if (User.Identity.IsAuthenticated && Model != null)
     {
 
         <p><strong>Sporter:</strong>
-        @foreach (var anvandareSporter in Model.AnvandareSporter)
-        {
-            <span>@anvandareSporter.Sport.Namn</span>
-        }
+            @foreach (var anvandareSporter in Model.AnvandareSporter)
+            {
+                <span>@anvandareSporter.Sport.Namn</span>
+            }
         </p>
         <img src="@Model.ProfilBildUrl" alt="Profilbild">
         <p>@Model.ForNamn @Model.EfterNamn</p>
