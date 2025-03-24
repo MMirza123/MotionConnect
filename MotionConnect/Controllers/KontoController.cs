@@ -45,7 +45,9 @@ public class KontoController : Controller
 
         var anvandare = await _userManager.Users
         .Include(a => a.AnvandareSporter)
-        .ThenInclude(a => a.Sport)
+            .ThenInclude(a => a.Sport)
+        .Include(a => a.Vanner)
+            .ThenInclude(a => a.VanAnvandare)
         .FirstOrDefaultAsync(a => a.Email == User.Identity.Name);
         return View(anvandare);
     }
