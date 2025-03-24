@@ -36,7 +36,7 @@ public class KontoController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> KontoInfo()
+    public async Task<IActionResult> KontoInfoAnvandare()
     {
         if (!User.Identity.IsAuthenticated)
         {
@@ -53,130 +53,186 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> SokKonto(string query)
     {
-        if(string.IsNullOrWhiteSpace(query))
+        if (string.IsNullOrWhiteSpace(query))
         {
-            return Json(new {});
+            return Json(new { });
         }
 
         var resultat = await _context.Users
         .Where(u => u.ForNamn.Contains(query) || u.EfterNamn.Contains(query))
-        .Select(u => new { u.ForNamn, u.EfterNamn})
+        .Select(u => new { u.Id, u.ForNamn, u.EfterNamn })
         .ToListAsync();
 
         return Json(resultat);
     }
 
-
-
-    [HttpPost]
-    public async Task<IActionResult> SkapaKonto(RegisterViewModel model, List<int> sportIds)
+    [HttpGet]
+    public async Task<IActionResult> KontoInfo(string id)
     {
-        if (!ModelState.IsValid)
+        var anvandare = await _userManager.Users
+            .Include(u => u.AnvandareSporter)
+            .ThenInclude(asport => asport.Sport)
+            .FirstOrDefaultAsync(u => u.Id == id);
+
+        if (anvandare == null) return NotFound();
+        if (anvandare.ArProfilOppen == false)
         {
-            return View(model);
+            return NotFound();
         }
 
-        if (model.Profilbild == null || model.Profilbild.Length == 0)
-        {
-            model.Profilbild = null; // Ingen bild valdes
-        }
+        return View(anvandare);
+    }
 
-        var anvandare = new ApplicationUser
-        {
-            UserName = model.Email,
-            Email = model.Email,
-            PhoneNumber = model.Telefonnummer,
-            ForNamn = model.Fornamn,
-            EfterNamn = model.Efternamn,
-            FodelsAr = model.Fodelsear,
-            ArProfilOppen = model.ArProfilOppen,
-            ProfilBildUrl = model.Profilbild != null ? "/uploads/" + model.Profilbild.FileName : "/uploads/defualt.png"
-        };
 
-        if (model.Profilbild != null && model.Profilbild.Length > 0)
-        {
-            try
-            {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
-
-                var filePath = Path.Combine(uploadsFolder, model.Profilbild.FileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.Profilbild.CopyToAsync(stream);
-                }
-
-                anvandare.ProfilBildUrl = "/uploads/" + model.Profilbild.FileName;
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", "Kunde inte spara profilbilden.");
-                ModelState.AddModelError("", "Kunde inte spara profilbilden.");
-                return View(model);
-            }
-        }
-
-        var result = await _userManager.CreateAsync(anvandare, model.Losenord);
-        if (!result.Succeeded)
-        {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error.Description);
-            }
-            return View(model);
-        }
-
-        foreach (var sportId in sportIds)
-        {
-            var anvandareSport = new AnvandareSport
-            {
-                AnvandarId = anvandare.Id,
-                SportId = sportId
-            };
-            _context.AnvandareSporter.Add(anvandareSport);
-        }
-        await _context.SaveChangesAsync();
-        // 🛠 Kolla om användaren loggas in
-        Console.WriteLine("Hej");
-        await _signInManager.SignInAsync(anvandare, isPersistent: false);
-        Console.WriteLine("Hej");
+[HttpPost]
+public async Task<IActionResult> KontoInfoAnvandare(IFormFile bild)
+{
+    var userId = _userManager.GetUserId(User);
+    var anvandare = await _userManager.FindByIdAsync(userId);
+    
+    if(userId == null)
+    {
         return RedirectToAction("Index", "Home");
     }
 
-    [HttpPost]
-    public async Task<IActionResult> LoggaInPaKontot(string email, string losenord)
+    if(bild != null && bild.Length > 0)
     {
-        var anvandare = await _userManager.FindByEmailAsync(email);
+        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
 
-        if(anvandare == null)
+        if (!string.IsNullOrEmpty(anvandare.ProfilBildUrl) && !anvandare.ProfilBildUrl.Contains("default.png"))
+    {
+        var gammalBildSökväg = Path.Combine(uploadsFolder, Path.GetFileName(anvandare.ProfilBildUrl));
+        if (System.IO.File.Exists(gammalBildSökväg))
         {
-            Console.WriteLine($"Anändaren med epost{email} finns inte");
-            ModelState.AddModelError("", "Användaren finns inte");
-            return View();
+            System.IO.File.Delete(gammalBildSökväg);
+        }
+    }
+
+        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(bild.FileName);
+        var filePath = Path.Combine(uploadsFolder, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await bild.CopyToAsync(stream);
         }
 
-        var result = await _signInManager.PasswordSignInAsync(email, losenord, isPersistent: false, lockoutOnFailure: false);
+        anvandare.ProfilBildUrl = "/uploads/" + fileName;
 
-        if(result.Succeeded)
+        await _userManager.UpdateAsync(anvandare);
+    }
+    return RedirectToAction("KontoInfoAnvandare", "Konto");
+}
+
+
+[HttpPost]
+public async Task<IActionResult> SkapaKonto(RegisterViewModel model, List<int> sportIds)
+{
+    if (!ModelState.IsValid)
+    {
+        return View(model);
+    }
+
+    if (model.Profilbild == null || model.Profilbild.Length == 0)
+    {
+        model.Profilbild = null; // Ingen bild valdes
+    }
+
+    var anvandare = new ApplicationUser
+    {
+        UserName = model.Email,
+        Email = model.Email,
+        PhoneNumber = model.Telefonnummer,
+        ForNamn = model.Fornamn,
+        EfterNamn = model.Efternamn,
+        FodelsAr = model.Fodelsear,
+        ArProfilOppen = model.ArProfilOppen,
+        ProfilBildUrl = model.Profilbild != null ? "/uploads/" + model.Profilbild.FileName : "/uploads/defualt.png"
+    };
+
+    if (model.Profilbild != null && model.Profilbild.Length > 0)
+    {
+        try
         {
-            Console.WriteLine($"Användaren {email} är inloggad");
-            return RedirectToAction("Index", "Home");
-        }
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
 
-        Console.WriteLine($"Inloggningen misslyckades för {email}");
-        ModelState.AddModelError("", "Lösenordet är fel eller tillhör inte användaren");
+            var filePath = Path.Combine(uploadsFolder, model.Profilbild.FileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await model.Profilbild.CopyToAsync(stream);
+            }
+
+            anvandare.ProfilBildUrl = "/uploads/" + model.Profilbild.FileName;
+        }
+        catch (Exception ex)
+        {
+            ModelState.AddModelError("", "Kunde inte spara profilbilden.");
+            ModelState.AddModelError("", "Kunde inte spara profilbilden.");
+            return View(model);
+        }
+    }
+
+    var result = await _userManager.CreateAsync(anvandare, model.Losenord);
+    if (!result.Succeeded)
+    {
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError("", error.Description);
+        }
+        return View(model);
+    }
+
+    foreach (var sportId in sportIds)
+    {
+        var anvandareSport = new AnvandareSport
+        {
+            AnvandarId = anvandare.Id,
+            SportId = sportId
+        };
+        _context.AnvandareSporter.Add(anvandareSport);
+    }
+    await _context.SaveChangesAsync();
+    // 🛠 Kolla om användaren loggas in
+    Console.WriteLine("Hej");
+    await _signInManager.SignInAsync(anvandare, isPersistent: false);
+    Console.WriteLine("Hej");
+    return RedirectToAction("Index", "Home");
+}
+
+[HttpPost]
+public async Task<IActionResult> LoggaInPaKontot(string email, string losenord)
+{
+    var anvandare = await _userManager.FindByEmailAsync(email);
+
+    if (anvandare == null)
+    {
+        Console.WriteLine($"Anändaren med epost{email} finns inte");
+        ModelState.AddModelError("", "Användaren finns inte");
         return View();
     }
 
-    [HttpPost]
-    public async Task<IActionResult> LoggaUtFranKonto()
+    var result = await _signInManager.PasswordSignInAsync(email, losenord, isPersistent: false, lockoutOnFailure: false);
+
+    if (result.Succeeded)
     {
-        await _signInManager.SignOutAsync();
+        Console.WriteLine($"Användaren {email} är inloggad");
         return RedirectToAction("Index", "Home");
     }
+
+    Console.WriteLine($"Inloggningen misslyckades för {email}");
+    ModelState.AddModelError("", "Lösenordet är fel eller tillhör inte användaren");
+    return View();
+}
+
+[HttpPost]
+public async Task<IActionResult> LoggaUtFranKonto()
+{
+    await _signInManager.SignOutAsync();
+    return RedirectToAction("Index", "Home");
+}
 
 
 }

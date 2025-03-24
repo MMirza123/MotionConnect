@@ -12,18 +12,23 @@
 
 <body>
     <h1>Info om användaren</h1>
-    <button></button>
 
     @if (User.Identity.IsAuthenticated && Model != null)
     {
-
+        <p>Vänner: @Model.Vanner</p>
         <p><strong>Sporter:</strong>
         @foreach (var anvandareSporter in Model.AnvandareSporter)
         {
             <span>@anvandareSporter.Sport.Namn</span>
         }
         </p>
-        <img src="@Model.ProfilBildUrl" alt="Profilbild">
+
+        <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandare" enctype="multipart/form-data">
+        <input type="file" id="Profilbild" name="bild" accept="image/*"/>
+        <img id="Profilbild1" src="@Model.ProfilBildUrl" alt="Profilbild1">
+        <button type="submit">Ändra bild</button>
+        </form>
+
         <p>@Model.ForNamn @Model.EfterNamn</p>
         <label class="Kontakt-info">Kontaktuppgifter:
             <p>✉ @Model.Email</p>
@@ -33,5 +38,21 @@
         <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
     }
 </body>
-
+<script>
+    document.getElementById("Profilbild").addEventListener("change", function (event) 
+    {
+        var file = event.target.files[0];
+        if(file)
+        {
+            var reader = new FileReader();
+            reader.onload = function() 
+            {
+                var imgElement = document.getElementById("Profilbild1");
+                imgElement.src = reader.result;
+                imgElement.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </html>

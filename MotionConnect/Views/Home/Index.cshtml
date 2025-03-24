@@ -7,7 +7,7 @@
 <head>
     <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a> <br>
     <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a><br>
-    <a asp-controller="Konto" asp-action="KontoInfo">Konto information</a><br>
+    <a asp-controller="Konto" asp-action="KontoInfoAnvandare">Konto information</a><br>
     <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a>
     <a asp-controller="Inlagg" asp-action="VisaInlagg">VisaInlagg inlagg</a>
     <form method="post" action="/Konto/LoggaUtFranKonto">
@@ -49,7 +49,11 @@
 
         data.forEach(anvandare => {  // 🛠 Ändrat "data.foreach()" till "data.forEach()"
             var li = document.createElement("li");
-            li.textContent = anvandare.forNamn + " " + anvandare.efterNamn; // 🛠 "anvandare" används korrekt här
+
+            var lank = document.createElement("a");
+            lank.href = "Konto/KontoInfo?id=" + anvandare.id;
+            lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; // 🛠 "anvandare" används korrekt här
+            li.appendChild(lank);
             resultatLista.appendChild(li);
         });
     })
