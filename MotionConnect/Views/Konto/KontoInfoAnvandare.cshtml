@@ -15,6 +15,7 @@
 
     @if (User.Identity.IsAuthenticated && Model != null)
     {
+        <p>Antal Vänner: @ViewBag.AntalVanner</p>
         <p>Vänner:
             @foreach (var vanner in Model.Vanner)
             {
