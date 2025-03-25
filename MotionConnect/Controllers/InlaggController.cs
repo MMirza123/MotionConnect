@@ -49,6 +49,27 @@ public class InlaggController : Controller
         return View(inlagg ?? new List<Inlagg>());
     }
 
+    [HttpGet]
+    public async Task<IActionResult> VisaInlaggAnvandare()
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("LoggaInPaKonto", "Konto");
+        }
+
+        var userId = _userManager.GetUserId(User);
+
+        var inlagg = await _context.Inlagg
+            .Where(i => i.AnvandarId == userId)
+            .Include(i => i.Anvandare)
+            .Include(i => i.InlaggSporter)
+            .ThenInclude(isport => isport.Sport) 
+            .OrderByDescending(i => i.SkapadesTid)
+            .ToListAsync();
+        
+        return View(inlagg);
+    }
+
     [HttpPost]
     public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild, List<int> sportIds)
     {
