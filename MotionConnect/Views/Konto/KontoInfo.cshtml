@@ -17,12 +17,16 @@
         <form method="post" action="/Vanner/laggTillVan">
             <input type="hidden" name="id" value="@Model.Id" />
             <button type="submit">Bil vänner
-        </button>
+            </button>
         </form>
     }
     else
     {
-        <label>Vänner!</label>
+        <form method="post" action="/Vanner/taBortVan">
+            <label>Vänner!</label>
+            <input type="hidden" name="id" value="@Model.Id"/>
+            <button type="submit">Sluta följ</button>
+        </form>
     }
 
     @if (User.Identity.IsAuthenticated && Model != null)

@@ -267,7 +267,7 @@ public class KontoController : Controller
         ModelState.AddModelError("", "Lösenordet är fel eller tillhör inte användaren");
         return View();
     }
-
+    
     [HttpPost]
     public async Task<IActionResult> LoggaUtFranKonto()
     {

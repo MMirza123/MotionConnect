@@ -40,6 +40,32 @@ public class VannerController : Controller
         _context.Vanner.Add(vanner);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("KontoInfoAnvandare", "Konto");
+        return RedirectToAction("KontoInfo", "Konto", new { id = id });
     }
+
+    [HttpPost]
+    public async Task<IActionResult> taBortVan(string id)
+    {
+        var userId = _userManager.GetUserId(User);
+        
+        var vanrelation = await _context.Vanner
+            .FirstOrDefaultAsync(v => 
+            (v.AnvandarId == userId && v.VanId == id) || 
+            (v.AnvandarId == id && v.VanId == userId));
+
+        if (userId == null)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        if (vanrelation != null)
+        {
+            _context.Vanner.Remove(vanrelation);
+            await _context.SaveChangesAsync();
+        }
+
+        return RedirectToAction("KontoInfo", "Konto", new { id = id });
+        
+    }
+
 }
