@@ -133,4 +133,20 @@ public class InlaggController : Controller
         return RedirectToAction("VisaInlagg");
     }
 
+    [HttpPost]
+    public async Task<IActionResult> taBortInlagg(int id)
+    {
+        var inlaggId = await _context.Inlagg.FindAsync(id);
+
+        if(inlaggId == null)
+        {
+            return NotFound();
+        }
+
+        _context.Inlagg.Remove(inlaggId);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("VisaInlaggAnvandare", "Inlagg");
+    }
+
 }

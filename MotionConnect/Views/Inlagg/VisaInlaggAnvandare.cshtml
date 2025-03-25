@@ -40,6 +40,10 @@ else
 
 
             <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+            <form method="post" action="/Inlagg/taBortInlagg">
+            <input type="hidden" name="id" value="@inlagg.InlaggId"/>
+                <button type="submit">Ta bort inlägg</button>
+            </form>
             <hr>
         </div>
     }
