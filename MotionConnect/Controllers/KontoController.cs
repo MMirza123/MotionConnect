@@ -89,10 +89,6 @@ public class KontoController : Controller
                             (v.AnvandarId == id && v.VanId == inloggadId));
 
         if (anvandare == null) return NotFound();
-        if (anvandare.ArProfilOppen == false)
-        {
-            return NotFound();
-        }
 
         ViewBag.ArVanner = arVanner;
 
@@ -267,7 +263,7 @@ public class KontoController : Controller
         ModelState.AddModelError("", "Lösenordet är fel eller tillhör inte användaren");
         return View();
     }
-    
+
     [HttpPost]
     public async Task<IActionResult> LoggaUtFranKonto()
     {
