@@ -43,6 +43,10 @@ else
             @if(((List<int?>)ViewBag.HarGillad).Contains(inlagg.InlaggId))
             {
                 <p>Du har gillad detta</p>
+                <form method="post" action="/Inlagg/taBortGillning">
+                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                    <button type="submit">Sluta gilla</button>
+                </form>
             }
             else
             {

@@ -7,6 +7,7 @@ public class Gillning
 {
     [Key]
     public int GillingsId { get; set; }
+
     public int? InlaggId { get; set; }
     public Inlagg Inlagg { get; set; }
 

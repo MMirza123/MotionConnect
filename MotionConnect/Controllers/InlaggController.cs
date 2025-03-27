@@ -44,7 +44,7 @@ public class InlaggController : Controller
         var inlagg = await _context.Inlagg
             .Include(i => i.Anvandare)
             .Include(i => i.InlaggSporter)
-            .ThenInclude(isport => isport.Sport) 
+            .ThenInclude(isport => isport.Sport)
             .OrderByDescending(i => i.SkapadesTid)
             .ToListAsync();
 
@@ -77,14 +77,14 @@ public class InlaggController : Controller
             .Where(i => i.AnvandarId == userId)
             .Include(i => i.Anvandare)
             .Include(i => i.InlaggSporter)
-            .ThenInclude(isport => isport.Sport) 
+            .ThenInclude(isport => isport.Sport)
             .OrderByDescending(i => i.SkapadesTid)
             .ToListAsync();
-        
+
         return View(inlagg);
     }
 
-    
+
 
     [HttpPost]
     public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild, List<int> sportIds)
@@ -154,7 +154,7 @@ public class InlaggController : Controller
     {
         var inlaggId = await _context.Inlagg.FindAsync(id);
 
-        if(inlaggId == null)
+        if (inlaggId == null)
         {
             return NotFound();
         }
@@ -184,6 +184,24 @@ public class InlaggController : Controller
 
         _context.Gillningar.Add(gillning);
         await _context.SaveChangesAsync();
+
+        return RedirectToAction("VisaInlagg", "Inlagg");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> taBortGillning(int id)
+    {
+        var inlagg = await _context.Inlagg.FindAsync(id);
+        var anvandareId = _userManager.GetUserId(User);
+
+        var gillning = await _context.Gillningar
+        .FirstOrDefaultAsync(g => g.AnvandarId == anvandareId && g.InlaggId == id);
+
+        if (gillning != null)
+        {
+            _context.Gillningar.Remove(gillning);
+            await _context.SaveChangesAsync();
+        }
 
         return RedirectToAction("VisaInlagg", "Inlagg");
     }
