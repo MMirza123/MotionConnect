@@ -81,6 +81,11 @@ public class InlaggController : Controller
             .OrderByDescending(i => i.SkapadesTid)
             .ToListAsync();
 
+        var antalGillningarPerInlagg = await _context.Gillningar
+        .GroupBy(g => g.InlaggId)
+        .ToDictionaryAsync(g => g.Key, g => g.Count());
+
+        ViewBag.AntalGillningar = antalGillningarPerInlagg;
         return View(inlagg);
     }
 

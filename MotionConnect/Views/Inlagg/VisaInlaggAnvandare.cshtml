@@ -40,6 +40,7 @@ else
 
 
             <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+            <p>Antal gillningar: @(ViewBag.AntalGillningar.ContainsKey(inlagg.InlaggId) ? ViewBag.AntalGillningar[inlagg.InlaggId] : 0)</p>
             <form method="post" action="/Inlagg/taBortInlagg">
             <input type="hidden" name="id" value="@inlagg.InlaggId"/>
                 <button type="submit">Ta bort inlägg</button>
