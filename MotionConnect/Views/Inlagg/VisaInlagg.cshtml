@@ -40,6 +40,18 @@ else
 
 
             <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+            @if(((List<int?>)ViewBag.HarGillad).Contains(inlagg.InlaggId))
+            {
+                <p>Du har gillad detta</p>
+            }
+            else
+            {
+            <form method="post" action="/Inlagg/GillaInlagg">
+                <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                <button type="submit">Gilla</button>
+            </form>
+            }
+            <p>Antal gillningar: @(ViewBag.AntalGillningar.ContainsKey(inlagg.InlaggId) ? ViewBag.AntalGillningar[inlagg.InlaggId] : 0)</p>
             <hr>
         </div>
     }
