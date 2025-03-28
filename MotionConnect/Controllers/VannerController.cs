@@ -19,7 +19,7 @@ public class VannerController : Controller
         _signInManager = signInManager;
         _context = context;
     }
-
+    
     [HttpPost]
     public async Task<IActionResult> laggTillVan(string id)
     {
@@ -37,7 +37,17 @@ public class VannerController : Controller
             VanId = id
         };
 
+        var notis = new Notis
+        {
+            Meddelande = $"{anvandare.ForNamn} {anvandare.EfterNamn} har blivit din vän",
+            Typ = NotisTyp.Annat,
+            ArLast = false,
+            AnvandarId = id,
+            SkapadesTid = DateTime.UtcNow
+        };
+
         _context.Vanner.Add(vanner);
+        _context.Notiser.Add(notis);
         await _context.SaveChangesAsync();
 
         return RedirectToAction("KontoInfo", "Konto", new { id = id });

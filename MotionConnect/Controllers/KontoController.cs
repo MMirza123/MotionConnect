@@ -95,6 +95,21 @@ public class KontoController : Controller
         return View(anvandare);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> VisaNotiser()
+    {
+        var userId = _userManager.GetUserId(User);
+
+        var notiser = await _context.Notiser
+        .Where(n => n.AnvandarId == userId)
+        .OrderByDescending(n => n.SkapadesTid)
+        .ToListAsync();
+
+
+        return View(notiser);
+    }
+
+
 
     [HttpPost]
     public async Task<IActionResult> KontoInfoAnvandare(IFormFile bild)
