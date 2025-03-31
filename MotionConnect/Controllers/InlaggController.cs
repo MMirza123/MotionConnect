@@ -198,7 +198,8 @@ public class InlaggController : Controller
             Typ = NotisTyp.Gillning,
             ArLast = false,
             AnvandarId = inlagg.AnvandarId,
-            SkapadesTid = DateTime.UtcNow
+            SkapadesTid = DateTime.UtcNow,
+            InlaggId = id
         };
             
 
@@ -218,11 +219,16 @@ public class InlaggController : Controller
         var gillning = await _context.Gillningar
         .FirstOrDefaultAsync(g => g.AnvandarId == anvandareId && g.InlaggId == id);
 
+        var notis = await _context.Notiser
+        .FirstOrDefaultAsync(n => n.AnvandarId == inlagg.AnvandarId && n.InlaggId == id && n.Typ == NotisTyp.Gillning);
+
         if (gillning != null)
-        {
-            _context.Gillningar.Remove(gillning);
-            await _context.SaveChangesAsync();
-        }
+        _context.Gillningar.Remove(gillning);
+
+        if (notis != null)
+        _context.Notiser.Remove(notis);
+            
+        await _context.SaveChangesAsync();
 
         return RedirectToAction("VisaInlagg", "Inlagg");
     }
