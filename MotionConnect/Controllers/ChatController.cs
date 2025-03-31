@@ -33,21 +33,30 @@ public class ChatController : Controller
         return View(anvandare);
     }
 
-    [HttpGet]
-    public async Task<IActionResult> StartaChat(string anvandarId)
-    {
-        var inloggadAnvandare = _userManager.GetUserId(User);
+   [HttpGet]
+public async Task<IActionResult> StartaChat(string anvandarId)
+{
+    var inloggadAnvandare = _userManager.GetUserId(User);
 
-        var meddelande = await _context.MeddelandeMottagre
+    // Hämta alla ChatId där båda användarna är mottagare
+    var chattIds = await _context.MeddelandeMottagare
         .Where(mm => mm.MottagareId == anvandarId || mm.MottagareId == inloggadAnvandare)
         .GroupBy(mm => mm.Meddelande.ChatId)
-        .Where(g => g.Select(x => x.MottagareId).Distinct().Count == 2)
-        .Select(g => g.First().Meddelande.Chat)
-        .FirstOrDefaultAsync(c => !c.ArGroupChat);
+        .Where(g => g.Select(x => x.MottagareId).Distinct().Count() == 2)
+        .Select(g => g.Key) // <-- bara ChatId
+        .ToListAsync();
 
-        ViewBag.Meddelande = meddelande;
+    // Hämta själva chattobjektet
+    var chatt = await _context.Chattar
+        .Where(c => chattIds.Contains(c.ChatId) && !c.ArGruppChat)
+        .Include(c => c.Meddelanden)
+            .ThenInclude(m => m.Avsandare)
+        .FirstOrDefaultAsync();
 
-        return View(meddelande);
-    }
+    ViewBag.Meddelanden = chatt?.Meddelanden;
+
+    return View(chatt);
+}
+
 
 }

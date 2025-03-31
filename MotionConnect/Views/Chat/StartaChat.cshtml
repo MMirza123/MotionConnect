@@ -1,0 +1,15 @@
+<h1>Chatten</h1>
+
+@if (ViewBag.Meddelanden != null)
+{
+    foreach (var m in ViewBag.Meddelanden)
+    {
+        <p><strong>@m.Avsandare.ForNamn</strong>: @m.Text (@m.SkapadesTid)</p>
+    }
+}
+else
+{
+    <p>Ingen chatt hittades ännu.</p>
+}
+
+
