@@ -105,7 +105,6 @@ public class KontoController : Controller
         .OrderByDescending(n => n.SkapadesTid)
         .ToListAsync();
 
-
         return View(notiser);
     }
 

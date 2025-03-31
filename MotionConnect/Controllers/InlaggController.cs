@@ -173,7 +173,10 @@ public class InlaggController : Controller
     [HttpPost]
     public async Task<IActionResult> GillaInlagg(int id)
     {
-        var inlagg = await _context.Inlagg.FindAsync(id);
+        var inlagg = await _context.Inlagg
+        .Include(i => i.Anvandare)
+        .FirstOrDefaultAsync(i => i.InlaggId == id);
+
         var anvandareId = _userManager.GetUserId(User);
 
         if (inlagg == null)
@@ -181,13 +184,26 @@ public class InlaggController : Controller
             return NotFound();
         }
 
+        var anvandare = await _userManager.FindByIdAsync(anvandareId);
+
         var gillning = new Gillning
         {
             InlaggId = inlagg.InlaggId,
             AnvandarId = anvandareId
         };
 
+        var notis = new Notis
+        {
+            Meddelande = $"{anvandare.ForNamn} {anvandare.EfterNamn} har gillad dit inlägg",
+            Typ = NotisTyp.Gillning,
+            ArLast = false,
+            AnvandarId = inlagg.AnvandarId,
+            SkapadesTid = DateTime.UtcNow
+        };
+            
+
         _context.Gillningar.Add(gillning);
+        _context.Notiser.Add(notis);
         await _context.SaveChangesAsync();
 
         return RedirectToAction("VisaInlagg", "Inlagg");
