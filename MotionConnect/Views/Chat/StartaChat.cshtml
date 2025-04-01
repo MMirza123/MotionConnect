@@ -2,7 +2,8 @@
 
 @if (ViewBag.Meddelanden != null)
 {
-    foreach (var m in ViewBag.Meddelanden)
+    @foreach (var m in (List<Meddelande>)ViewBag.Meddelanden)
+
     {
         <p><strong>@m.Avsandare.ForNamn</strong>: @m.Text (@m.SkapadesTid)</p>
     }
@@ -11,5 +12,14 @@ else
 {
     <p>Ingen chatt hittades ännu.</p>
 }
+
+<p>MottagareId från ViewBag: @ViewBag.MottagareId</p>
+
+
+<form method="post" asp-action="skickaText">
+    <input type="hidden" name="mottagarId" value="@ViewBag.MottagareId" />
+    <input type="text" name="text" placeholder="Skriv ditt meddelande här" required />
+    <button type="submit">Skicka</button>
+</form>
 
 

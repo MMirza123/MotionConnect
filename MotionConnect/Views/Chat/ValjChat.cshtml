@@ -1,7 +1,7 @@
 <h1>Hej</h1>
 <label>Välj vem du vill chata med</label><br>
 <form method="get" action="/Chat/StartaChat">
-    <select name="anvnadareId[]" style="height: 50px; width: 300px;">
+    <select name="anvandarId" style="height: 50px; width: 300px;">
         @foreach (var anvandare in ViewBag.Anvandare)
         {
             <option value="@anvandare.Id">@anvandare.ForNamn @anvandare.EfterNamn</option>
