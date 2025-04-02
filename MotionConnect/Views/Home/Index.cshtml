@@ -11,7 +11,7 @@
     <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a>
     <a asp-controller="Inlagg" asp-action="VisaInlagg">VisaInlagg inlagg</a>
     <a asp-controller="Inlagg" asp-action="VisaInlaggAnvandare">VisaInlagg som du skapat</a>
-    <a asp-controller="Konto" asp-action="VisaNotiser">Kolla dina notiser</a>
+    <a asp-controller="Konto" asp-action="VisaNotiser">Kolla dina notiser</a><h2>@ViewBag.Notiser</h2>
     <a asp-controller="Chat" asp-action="ValjChat">Starta Chat</a>
     <form method="post" action="/Konto/LoggaUtFranKonto">
         <button type="submit">Logga ut</button>
@@ -20,7 +20,7 @@
 
 <h3>Sök upp en användare</h3>
 
-<input type="text" id="sokFalt" placeholder="Sök användare"/>
+<input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off"/>
 <ul id="resultatLista"></ul>
 
 <div class="text-center">

@@ -6,6 +6,8 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+
 
 
 namespace MotionConnect.Controllers;
@@ -13,13 +15,18 @@ namespace MotionConnect.Controllers;
 public class HomeController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManger;
+    private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly ApplicationDbContext _context;
 
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManger)
+    public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext context)
     {
         _logger = logger;
-        _userManger = userManger;
+        _userManger = userManager;
+        _signInManager = signInManager;
+        _context = context;
+
     }
 
     public IActionResult Privacy()
@@ -34,6 +41,11 @@ public class HomeController : Controller
 
             string identifier = User.Identity.Name;
             var anvandare = await _userManger.FindByEmailAsync(identifier) ?? await _userManger.FindByNameAsync(identifier);
+
+            var notiser = await _context.Notiser
+            .CountAsync(n => n.AnvandarId == anvandare.Id);
+
+            ViewBag.Notiser = notiser;
                             
             return View(anvandare);
         }

@@ -16,7 +16,7 @@ else
 <p>MottagareId från ViewBag: @ViewBag.MottagareId</p>
 
 
-<form method="post" asp-action="skickaText">
+<form method="post" asp-action="skickaText" autocomplete="off">
     <input type="hidden" name="mottagarId" value="@ViewBag.MottagareId" />
     <input type="text" name="text" placeholder="Skriv ditt meddelande här" required />
     <button type="submit">Skicka</button>
