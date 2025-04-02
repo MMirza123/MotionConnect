@@ -23,6 +23,15 @@
 <input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off"/>
 <ul id="resultatLista"></ul>
 
+<h4>Chatar med:</h4>
+@if (ViewBag.Chattar != null)
+{
+    foreach (var person in (List<ApplicationUser>)ViewBag.Chattar)
+    {
+        <p>@person.ForNamn @person.EfterNamn</p>
+    }
+}
+
 <div class="text-center">
     @if (User.Identity.IsAuthenticated && Model != null)
     {

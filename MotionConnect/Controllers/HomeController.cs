@@ -45,6 +45,36 @@ public class HomeController : Controller
             var notiser = await _context.Notiser
             .CountAsync(n => n.AnvandarId == anvandare.Id);
 
+            var meddelanden = await _context.Meddelanden
+                .Include(m => m.Mottagare)
+                .Include(m => m.Avsandare)
+                .Where(m => m.AvsandareId == anvandare.Id || m.Mottagare.Any(r => r.MottagareId == anvandare.Id))
+                .ToListAsync();
+
+            var chattaMed = new List<ApplicationUser>();
+
+            foreach (var m in meddelanden)
+            {
+                foreach (var mottagare in m.Mottagare)
+                {
+                    if(mottagare.MottagareId != anvandare.Id)
+                    {
+                        var anv = await _userManger.FindByIdAsync(mottagare.MottagareId);
+                        if (anv != null && !chattaMed.Any(a => a.Id == anv.Id))
+                        chattaMed.Add(anv);
+                    }
+                }
+
+                if(m.AvsandareId != anvandare.Id)
+                {
+                    var avsandare = await _userManger.FindByIdAsync(m.AvsandareId);
+                    if (avsandare != null && !chattaMed.Any(a => a.Id == avsandare.Id))
+                        chattaMed.Add(anvandare);
+                }
+            }
+
+            ViewBag.Chattar = chattaMed;
+
             ViewBag.Notiser = notiser;
                             
             return View(anvandare);
