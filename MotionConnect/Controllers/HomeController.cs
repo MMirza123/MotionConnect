@@ -35,50 +35,49 @@ public class HomeController : Controller
     }
 
     public async Task<IActionResult> Index()
-        {
-            if (!User.Identity.IsAuthenticated)
-                return View(null);
+{
+    if (!User.Identity.IsAuthenticated)
+        return View(null);
 
-            string identifier = User.Identity.Name;
-            var anvandare = await _userManger.FindByEmailAsync(identifier) ?? await _userManger.FindByNameAsync(identifier);
+    string identifier = User.Identity.Name;
+    var anvandare = await _userManger.FindByEmailAsync(identifier) ?? await _userManger.FindByNameAsync(identifier);
+    var anvandarId = _userManger.GetUserId(User);
 
-            var notiser = await _context.Notiser
-            .CountAsync(n => n.AnvandarId == anvandare.Id);
+    var notiser = await _context.Notiser
+        .CountAsync(n => n.AnvandarId == anvandare.Id);
 
-            var meddelanden = await _context.Meddelanden
-                .Include(m => m.Mottagare)
-                .Include(m => m.Avsandare)
-                .Where(m => m.AvsandareId == anvandare.Id || m.Mottagare.Any(r => r.MottagareId == anvandare.Id))
-                .ToListAsync();
+    var chattar = await _context.Chattar
+        .Include(c => c.Meddelanden)
+            .ThenInclude(m => m.Mottagare)
+                .ThenInclude(mm => mm.Mottagare) // 🛠 Lägg till detta
+        .Include(c => c.Meddelanden)
+            .ThenInclude(m => m.Avsandare)
+        .Where(c => c.Meddelanden.Any(m =>
+            m.AvsandareId == anvandarId || m.Mottagare.Any(r => r.MottagareId == anvandarId)))
+        .ToListAsync();
 
-            var chattaMed = new List<ApplicationUser>();
+    var motparter = new List<ApplicationUser>();
 
-            foreach (var m in meddelanden)
-            {
-                foreach (var mottagare in m.Mottagare)
-                {
-                    if(mottagare.MottagareId != anvandare.Id)
-                    {
-                        var anv = await _userManger.FindByIdAsync(mottagare.MottagareId);
-                        if (anv != null && !chattaMed.Any(a => a.Id == anv.Id))
-                        chattaMed.Add(anv);
-                    }
-                }
+    foreach (var chatt in chattar)
+    {
+        var andraPersoner = chatt.Meddelanden
+            .Select(m => m.Avsandare)
+            .Concat(chatt.Meddelanden.SelectMany(m => m.Mottagare.Select(r => r.Mottagare)))
+            .Where(p => p.Id != anvandarId)
+            .Distinct()
+            .ToList();
 
-                if(m.AvsandareId != anvandare.Id)
-                {
-                    var avsandare = await _userManger.FindByIdAsync(m.AvsandareId);
-                    if (avsandare != null && !chattaMed.Any(a => a.Id == avsandare.Id))
-                        chattaMed.Add(anvandare);
-                }
-            }
+        motparter.AddRange(andraPersoner);
+    }
 
-            ViewBag.Chattar = chattaMed;
+    motparter = motparter.Distinct().ToList();
 
-            ViewBag.Notiser = notiser;
-                            
-            return View(anvandare);
-        }
+    ViewBag.Chattar = motparter;
+    ViewBag.Notiser = notiser;
+
+    return View(anvandare);
+}
+
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
