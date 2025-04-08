@@ -1,31 +1,96 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ecf9f1;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.min-header {
+  background-color: #2ecc71;
+  padding: 10px;
+  text-align: center;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+
+.test form {
+  display: inline; /* så att form inte bryts till ny rad */
 }
+
+.main-content {
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* Anpassa om header/footer ändras */
+}
+
+.min-footer {
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  color: black;
+  background-color: rgba(159, 231, 245, 0.3);
+  padding: 10px 10px;
+  margin-bottom: 7.5px;
+  display: inline-block;
+  border-width: 5px;
+  border-radius: 25px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+#Logga {
+  color: black;
+  font-size: 24px;
+  background-color: gold;
+}
+
+#Logga:hover {
+  color: white;
+}
+
+#LoggaIn {
+  font-size: 20px;
+  width: 8%;
+  height: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3)
+  
+}
+#LoggaIn:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75)
+}
+
+#LoggaUt {
+  font-size: 20px;
+  width: 10%;
+  height: 40px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-style: none;
+  border-radius: 25px;
+}
+
+#LoggaUt:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
