@@ -38,6 +38,15 @@ body {
   width: 100%;
 }
 
+
+#Profilbildd {
+  justify-content: flex-start;
+  object-fit: contain;
+  width: 100px;
+  height: 150px;
+  border-radius: 20%;
+}
+
 a {
   color: white;
 }

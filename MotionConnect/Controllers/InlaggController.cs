@@ -33,6 +33,7 @@ public class InlaggController : Controller
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
 
@@ -50,6 +51,7 @@ public class InlaggController : Controller
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
         var userId = _userManager.GetUserId(User);
@@ -88,6 +90,7 @@ public class InlaggController : Controller
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
 

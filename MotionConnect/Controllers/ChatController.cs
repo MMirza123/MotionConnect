@@ -28,6 +28,7 @@ public class ChatController : Controller
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
         var anvandare = await _context.Users
@@ -46,6 +47,7 @@ public class ChatController : Controller
         {
             var user = await _userManager.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
         if (string.IsNullOrEmpty(anvandarId))

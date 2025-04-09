@@ -40,6 +40,7 @@ public class HomeController : Controller
         {
             var user = await _userManger.GetUserAsync(User);
             ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+            ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
         if (!User.Identity.IsAuthenticated)

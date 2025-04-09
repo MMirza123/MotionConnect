@@ -18,16 +18,6 @@
         <a href="/Konto/VisaNotiser">Kolla dina notiser</a>
         <a href="/Chat/ValjChat">Starta Chat</a>
     </div>
-
-    <!-- Inloggad användare -->
-    <div class="text-center">
-        @if (User.Identity.IsAuthenticated && Model.Anvandare != null)
-        {
-            <img id="Profilbild" src="@Model.Anvandare.ProfilBildUrl" alt="Profilbild"
-                 style="width: 150px; object-fit: cover; margin-top: 10px;" />
-        }
-    </div>
-
     <!-- Chattinformation -->
     <h4>Chatar med:</h4>
     @if (Model.Chattar != null)
