@@ -1,74 +1,116 @@
-﻿@{
+﻿@model HomeViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-@model ApplicationUser
-
 <head>
     <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
-    <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
-    <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
-    <a asp-controller="Konto" asp-action="KontoInfoAnvandare">Konto information</a>
-    <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a><br>
-    <a asp-controller="Inlagg" asp-action="VisaInlagg">VisaInlagg inlagg</a><br>
-    <a asp-controller="Inlagg" asp-action="VisaInlaggAnvandare">VisaInlagg som du skapat</a><br>
-    <a asp-controller="Konto" asp-action="VisaNotiser">Kolla dina notiser</a><h2>@ViewBag.Notiser</h2><br>
-    <a asp-controller="Chat" asp-action="ValjChat">Starta Chat</a><br>
-    <form method="post" action="/Konto/LoggaUtFranKonto">
-        <button type="submit">Logga ut</button>
-    </form>
 </head>
 
-<h3>Sök upp en användare</h3>
+<body>
+    <!-- Meny -->
+    <div class="navigation">
+        <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
+        <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
+        <a asp-controller="Konto" asp-action="KontoInfoAnvandare">Konto information</a>
+        <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a>
+        <a asp-controller="Inlagg" asp-action="VisaInlagg">Visa alla inlägg</a>
+        <a asp-controller="Inlagg" asp-action="VisaInlaggAnvandare">Visa dina inlägg</a>
+        <a asp-controller="Konto" asp-action="VisaNotiser">Kolla dina notiser</a>
+        <a asp-controller="Chat" asp-action="ValjChat">Starta Chat</a>
 
-<input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off"/>
-<ul id="resultatLista"></ul>
+        <form method="post" action="/Konto/LoggaUtFranKonto">
+            <button type="submit">Logga ut</button>
+        </form>
+    </div>
 
-<h4>Chatar med:</h4>
-@if (ViewBag.Chattar != null)
-{
-    foreach (var person in (List<ApplicationUser>)ViewBag.Chattar)
+    <!-- Inloggad användare -->
+    <div class="text-center">
+        @if (User.Identity.IsAuthenticated && Model.Anvandare != null)
+        {
+            <p>Inloggad som: @Model.Anvandare.ForNamn @Model.Anvandare.EfterNamn</p>
+            <img id="Profilbild" src="@Model.Anvandare.ProfilBildUrl" alt="Profilbild"
+                 style="width: 150px; object-fit: cover; margin-top: 10px;" />
+        }
+    </div>
+
+    <!-- Chattinformation -->
+    <h4>Chatar med:</h4>
+    @if (Model.Chattar != null)
     {
-        <p>@person.ForNamn @person.EfterNamn</p>
-    }
-}
-
-<div class="text-center">
-    @if (User.Identity.IsAuthenticated && Model != null)
-    {
-        <p>Inloggad som: @Model.ForNamn @Model.EfterNamn</p>
-        <img id="Profilbild" src="@Model.ProfilBildUrl" alt="Profilbild" 
-        style="width: 150px; object-fit: cover; margin-top: 10px;">
-        
-    }
-</div>
-
-<script>
-    document.getElementById("sokFalt").addEventListener("input", function() {
-    var query = this.value;
-
-    if (query.length === 0) {
-        document.getElementById("resultatLista").innerHTML = "";
-        return;
+        foreach (var person in Model.Chattar)
+        {
+            <p>@person.ForNamn @person.EfterNamn</p>
+        }
     }
 
-    fetch(`/Konto/SokKonto?query=${query}`) // 🛠 Fixad backticks för template string
-    .then(response => response.json())
-    .then(data => {
-        var resultatLista = document.getElementById("resultatLista");
-        resultatLista.innerHTML = "";
+    <!-- Inlägg -->
+    <section class="inlagg-container">
+        <h1>Alla inlägg som finns:</h1>
+        <p>Antal inlägg i modellen: @(Model?.Inlagg?.Count ?? 0)</p>
 
-        data.forEach(anvandare => {  // 🛠 Ändrat "data.foreach()" till "data.forEach()"
-            var li = document.createElement("li");
 
-            var lank = document.createElement("a");
-            lank.href = "Konto/KontoInfo?id=" + anvandare.id;
-            lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; // 🛠 "anvandare" används korrekt här
-            li.appendChild(lank);
-            resultatLista.appendChild(li);
-        });
-    })
-    .catch(error => console.error("Fel vid hämtning av data:", error));
-});
-</script>
+        @if (Model.Inlagg == null || !Model.Inlagg.Any())
+        {
+            <p>Inga inlägg att visa</p>
+        }
+        else
+        {
+            @foreach (var inlagg in Model.Inlagg)
+            {
+                <div class="post">
+                    <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare")</h3>
+                    <p>@inlagg.Text</p>
+
+                    @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+                    {
+                        <img src="@inlagg.BildUrl" alt="Inläggsbild" style="max-width: 300px;" />
+                    }
+
+                    <p><strong>Sporter:</strong>
+                        @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
+                        {
+                            @foreach (var inlaggSport in inlagg.InlaggSporter)
+                            {
+                                if (inlaggSport.Sport != null)
+                                {
+                                    <span>@inlaggSport.Sport.Namn</span>
+                                    @(inlaggSport != inlagg.InlaggSporter.Last() ? ", " : "")
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <span>Inga sporter valda</span>
+                        }
+                    </p>
+
+                    <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+
+                    @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
+                    {
+                        <p>Du har gillat detta</p>
+                        <form method="post" action="/Inlagg/taBortGillning">
+                            <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                            <button type="submit">Sluta gilla</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form method="post" action="/Inlagg/GillaInlagg">
+                            <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                            <button type="submit">Gilla</button>
+                        </form>
+                    }
+
+                    <p>Antal gillningar: @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</p>
+                    <hr/>
+                </div>
+            }
+        }
+    </section>
+</body>
+
+
+
 

@@ -37,19 +37,21 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
 {
     if (!User.Identity.IsAuthenticated)
-        return View(null);
+        return View(new HomeViewModel());
 
     string identifier = User.Identity.Name;
     var anvandare = await _userManger.FindByEmailAsync(identifier) ?? await _userManger.FindByNameAsync(identifier);
     var anvandarId = _userManger.GetUserId(User);
 
+    // 🔔 Notiser
     var notiser = await _context.Notiser
         .CountAsync(n => n.AnvandarId == anvandare.Id);
 
+    // 💬 Chattar och motparter
     var chattar = await _context.Chattar
         .Include(c => c.Meddelanden)
             .ThenInclude(m => m.Mottagare)
-                .ThenInclude(mm => mm.Mottagare) // 🛠 Lägg till detta
+                .ThenInclude(mm => mm.Mottagare)
         .Include(c => c.Meddelanden)
             .ThenInclude(m => m.Avsandare)
         .Where(c => c.Meddelanden.Any(m =>
@@ -72,13 +74,37 @@ public class HomeController : Controller
 
     motparter = motparter.Distinct().ToList();
 
-    ViewBag.Chattar = motparter;
+    // 📝 Inlägg (exakt som i VisaInlagg)
+    var inlagg = await _context.Inlagg
+        .Include(i => i.Anvandare)
+        .Include(i => i.InlaggSporter)
+            .ThenInclude(isport => isport.Sport)
+        .OrderByDescending(i => i.SkapadesTid)
+        .ToListAsync();
+
+    var antalGillningarPerInlagg = await _context.Gillningar
+        .GroupBy(g => g.InlaggId)
+        .ToDictionaryAsync(g => g.Key, g => g.Count());
+
+    var harGillad = await _context.Gillningar
+        .Where(g => g.AnvandarId == anvandarId)
+        .Select(g => g.InlaggId)
+        .ToListAsync();
+
+    // ✅ ViewModel
+    var model = new HomeViewModel
+    {
+        Anvandare = anvandare,
+        Chattar = motparter,
+        Inlagg = inlagg,
+        HarGillatInlaggIds = harGillad,
+        AntalGillningar = antalGillningarPerInlagg
+    };
+
     ViewBag.Notiser = notiser;
 
-    return View(anvandare);
+    return View(model);
 }
-
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

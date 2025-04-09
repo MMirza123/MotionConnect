@@ -151,7 +151,7 @@ public class InlaggController : Controller
         }
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("VisaInlagg");
+        return RedirectToAction("Index", "Home");
     }
 
     [HttpPost]
@@ -207,7 +207,7 @@ public class InlaggController : Controller
         _context.Notiser.Add(notis);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("VisaInlagg", "Inlagg");
+        return RedirectToAction("Index", "Home");
     }
 
     [HttpPost]
@@ -230,7 +230,7 @@ public class InlaggController : Controller
             
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("VisaInlagg", "Inlagg");
+        return RedirectToAction("Index", "Home");
     }
 
 }

@@ -10,13 +10,17 @@
 
 <body>
     <header class="min-header">
-        <h1><a href="/" id="Logga">MotionConnect</a></h1>
-        <div class="test">
+        <div class="header-wrapper">
+            <a href="/" id="Logga">Motion Connect</a>
             <a asp-controller="Konto" asp-action="LoggaInPaKontot" id="LoggaIn">Logga in</a>
             <form method="post" action="/Konto/LoggaUtFranKonto">
                 <button type="submit" id="LoggaUt">Logga ut</button>
             </form>
         </div>
+            <input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off" />
+            <div id="sok-container">
+                <ul id="resultatLista"></ul>
+            </div>
     </header>
 
     <main class="main-content">
@@ -29,5 +33,34 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+<script>
+    document.getElementById("sokFalt").addEventListener("input", function () {
+        var query = this.value;
+
+        if (query.length === 0) {
+            document.getElementById("resultatLista").innerHTML = "";
+            return;
+        }
+
+        fetch(`/Konto/SokKonto?query=${query}`) // 🛠 Fixad backticks för template string
+            .then(response => response.json())
+            .then(data => {
+                var resultatLista = document.getElementById("resultatLista");
+                resultatLista.innerHTML = "";
+
+                data.forEach(anvandare => {  // 🛠 Ändrat "data.foreach()" till "data.forEach()"
+                    var li = document.createElement("li");
+
+                    var lank = document.createElement("a");
+                    lank.href = "Konto/KontoInfo?id=" + anvandare.id;
+                    lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; // 🛠 "anvandare" används korrekt här
+                    li.appendChild(lank);
+                    resultatLista.appendChild(li);
+                });
+            })
+            .catch(error => console.error("Fel vid hämtning av data:", error));
+    });
+</script>
 
 </html>
