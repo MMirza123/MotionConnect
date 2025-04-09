@@ -29,6 +29,13 @@ public class InlaggController : Controller
             return Unauthorized();
         }
 
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
+
         var sporter = await _context.Sporter.ToListAsync();
         ViewBag.Sporter = sporter; // Skickar listan med sporter till vyn
 
@@ -39,6 +46,12 @@ public class InlaggController : Controller
     [HttpGet]
     public async Task<IActionResult> VisaInlagg()
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
         var userId = _userManager.GetUserId(User);
 
         var inlagg = await _context.Inlagg
@@ -70,6 +83,13 @@ public class InlaggController : Controller
         {
             return RedirectToAction("LoggaInPaKonto", "Konto");
         }
+
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
 
         var userId = _userManager.GetUserId(User);
 
@@ -201,7 +221,7 @@ public class InlaggController : Controller
             SkapadesTid = DateTime.UtcNow,
             InlaggId = id
         };
-            
+
 
         _context.Gillningar.Add(gillning);
         _context.Notiser.Add(notis);
@@ -223,11 +243,11 @@ public class InlaggController : Controller
         .FirstOrDefaultAsync(n => n.AnvandarId == inlagg.AnvandarId && n.InlaggId == id && n.Typ == NotisTyp.Gillning);
 
         if (gillning != null)
-        _context.Gillningar.Remove(gillning);
+            _context.Gillningar.Remove(gillning);
 
         if (notis != null)
-        _context.Notiser.Remove(notis);
-            
+            _context.Notiser.Remove(notis);
+
         await _context.SaveChangesAsync();
 
         return RedirectToAction("Index", "Home");

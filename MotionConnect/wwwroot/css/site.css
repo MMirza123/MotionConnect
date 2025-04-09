@@ -19,6 +19,9 @@ body {
   align-items: center;
   gap: 10px;
 }
+.header-wrapper p {
+  color: white;
+}
 
 .main-content {
   padding: 20px;
@@ -36,7 +39,7 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 a:link {
@@ -68,7 +71,7 @@ a:active {
 #LoggaIn:hover,
 #LoggaUt:hover {
   color: white;
-  box-shadow: 1px 1px 40px #ADD8E6;
+  box-shadow: 1px 1px 20px #ADD8E6;
   background-color:  rgba(173, 216, 230, 0.75);;
 }
 
@@ -126,5 +129,6 @@ a:active {
 #resultatLista:empty {
   display: none;
 }
+
 
 

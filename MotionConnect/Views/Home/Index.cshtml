@@ -10,25 +10,19 @@
 <body>
     <!-- Meny -->
     <div class="navigation">
-        <a asp-controller="Konto" asp-action="SkapaKonto">Skapa en ny användare</a>
-        <a asp-controller="Konto" asp-action="LoggaInPaKontot">Logga in</a>
-        <a asp-controller="Konto" asp-action="KontoInfoAnvandare">Konto information</a>
-        <a asp-controller="Inlagg" asp-action="SkapaEttInlagg">Skapa ett inlägg</a>
-        <a asp-controller="Inlagg" asp-action="VisaInlagg">Visa alla inlägg</a>
-        <a asp-controller="Inlagg" asp-action="VisaInlaggAnvandare">Visa dina inlägg</a>
-        <a asp-controller="Konto" asp-action="VisaNotiser">Kolla dina notiser</a>
-        <a asp-controller="Chat" asp-action="ValjChat">Starta Chat</a>
-
-        <form method="post" action="/Konto/LoggaUtFranKonto">
-            <button type="submit">Logga ut</button>
-        </form>
+        <a href="/Konto/SkapaKonto">Ny användare</a>
+        <a href="/Konto/KontoInfoAnvandare">Konto information</a>
+        <a href="/Inlagg/SkapaEttInlagg">Skapa ett inlägg</a>
+        <a href="/Inlagg/VisaInlagg">Visa alla inlägg</a>
+        <a href="/Inlagg/VisaInlaggAnvandare">Visa dina inlägg</a>
+        <a href="/Konto/VisaNotiser">Kolla dina notiser</a>
+        <a href="/Chat/ValjChat">Starta Chat</a>
     </div>
 
     <!-- Inloggad användare -->
     <div class="text-center">
         @if (User.Identity.IsAuthenticated && Model.Anvandare != null)
         {
-            <p>Inloggad som: @Model.Anvandare.ForNamn @Model.Anvandare.EfterNamn</p>
             <img id="Profilbild" src="@Model.Anvandare.ProfilBildUrl" alt="Profilbild"
                  style="width: 150px; object-fit: cover; margin-top: 10px;" />
         }

@@ -43,6 +43,13 @@ public class KontoController : Controller
             return RedirectToAction("LoggaIn", "Konto");
         }
 
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
+
         var anvandare = await _userManager.Users
         .Include(a => a.AnvandareSporter)
             .ThenInclude(a => a.Sport)
@@ -60,6 +67,13 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> SokKonto(string query)
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
+
         if (string.IsNullOrWhiteSpace(query))
         {
             return Json(new { });
@@ -76,6 +90,12 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> KontoInfo(string id)
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
         var inloggadId = _userManager.GetUserId(User);
         var anvandaren = await _userManager.FindByIdAsync(id);
 
@@ -98,6 +118,12 @@ public class KontoController : Controller
     [HttpGet]
     public async Task<IActionResult> VisaNotiser()
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
         var userId = _userManager.GetUserId(User);
 
         var notiser = await _context.Notiser

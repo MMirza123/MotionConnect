@@ -2,3 +2,27 @@ body {
     background-color: #ADD8E6;
 }
 
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation a {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    text-align: center;
+    border-width: 5px;
+    border-radius: 25px;
+}
+
+.navigation a:hover {
+    color: white;
+    box-shadow: 1px 1px 20px #000000;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+

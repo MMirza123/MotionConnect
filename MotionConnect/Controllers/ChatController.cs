@@ -24,6 +24,12 @@ public class ChatController : Controller
     [HttpGet]
     public async Task<IActionResult> ValjChat()
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
         var anvandare = await _context.Users
         .Select(u => new { u.Id, u.ForNamn, u.EfterNamn })
         .ToListAsync();
@@ -36,6 +42,12 @@ public class ChatController : Controller
     [HttpGet]
     public async Task<IActionResult> StartaChat(string anvandarId)
     {
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        }
+
         if (string.IsNullOrEmpty(anvandarId))
         {
             Console.WriteLine("❌ anvandarId är null eller tom!");
