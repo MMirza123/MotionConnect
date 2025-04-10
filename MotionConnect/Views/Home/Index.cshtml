@@ -18,85 +18,93 @@
         <a href="/Konto/VisaNotiser">Kolla dina notiser</a>
         <a href="/Chat/ValjChat">Starta Chat</a>
     </div>
-    <!-- Chattinformation -->
-    <h4>Chatar med:</h4>
-    <div class="chat-Wrap">
-    @if (Model.Chattar != null)
-    {
-        foreach (var person in Model.Chattar)
-        {
-                <a href="/Chat/StartaChat?anvandarId=@person.Id" class="ChatMed">@person.ForNamn @person.EfterNamn
-                <img id="ProfilbildChat" src="@person.ProfilBildUrl">
-                </a>
-        }
-    }
-    </div>
-
-    <!-- Inlägg -->
-    <section class="inlagg-container">
-        <h1>Alla inlägg som finns:</h1>
-        <p>Antal inlägg i modellen: @(Model?.Inlagg?.Count ?? 0)</p>
-
-
-        @if (Model.Inlagg == null || !Model.Inlagg.Any())
-        {
-            <p>Inga inlägg att visa</p>
-        }
-        else
-        {
-            @foreach (var inlagg in Model.Inlagg)
-            {
-                <div class="post">
-                    <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare")</h3>
-                    <p>@inlagg.Text</p>
-
-                    @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+    <div class="Contetn-layout">
+        <div class="vänster-kolumn">
+        <!-- Chattinformation -->
+            <h4>Chatar med:</h4>
+            <div class="chat-Wrap">
+                @if (Model.Chattar != null)
+                {
+                    foreach (var person in Model.Chattar)
                     {
-                        <img src="@inlagg.BildUrl" alt="Inläggsbild" style="max-width: 300px;" />
+                        <a href="/Chat/StartaChat?anvandarId=@person.Id" class="ChatMed">@person.ForNamn @person.EfterNamn
+                        <img id="ProfilbildChat" src="@person.ProfilBildUrl">
+                        </a>
                     }
+                }
+            </div>
+        </div>
 
-                    <p><strong>Sporter:</strong>
-                        @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
-                        {
-                            @foreach (var inlaggSport in inlagg.InlaggSporter)
+        <div class="mitten-kolumn">
+        <!-- Inlägg -->
+            <section class="inlagg-container">
+                <h1>Alla inlägg som finns:</h1>
+                <p>Antal inlägg i modellen: @(Model?.Inlagg?.Count ?? 0)</p>
+
+
+                @if (Model.Inlagg == null || !Model.Inlagg.Any())
+                {
+                    <p>Inga inlägg att visa</p>
+                }
+                else
+                {
+                    @foreach (var inlagg in Model.Inlagg)
+                    {
+                        <div class="post">
+                            <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare") <small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></h3>
+                            <p>@inlagg.Text</p>
+
+                            @if (!string.IsNullOrEmpty(inlagg.BildUrl))
                             {
-                                if (inlaggSport.Sport != null)
-                                {
-                                    <span>@inlaggSport.Sport.Namn</span>
-                                    @(inlaggSport != inlagg.InlaggSporter.Last() ? ", " : "")
-                                }
+                                <img id="InlaggBild" src="@inlagg.BildUrl" alt="Inläggsbild" />
                             }
-                        }
-                        else
-                        {
-                            <span>Inga sporter valda</span>
-                        }
-                    </p>
 
-                    <p><small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></p>
+                            <p>
+                                <strong>Sporter:</strong>
+                                @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
+                                {
+                                    @foreach (var inlaggSport in inlagg.InlaggSporter)
+                                    {
+                                        if (inlaggSport.Sport != null)
+                                        {
+                                            <span>@inlaggSport.Sport.Namn</span>
+                                            @(inlaggSport != inlagg.InlaggSporter.Last() ? ", " : "")
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    <span>Inga sporter valda</span>
+                                }
+                            </p>
 
-                    @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
-                    {
-                        <p>Du har gillat detta</p>
-                        <form method="post" action="/Inlagg/taBortGillning">
-                            <input type="hidden" name="id" value="@inlagg.InlaggId" />
-                            <button type="submit">Sluta gilla</button>
-                        </form>
+                            @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
+                            {
+                                <p>Du har gillat detta</p>
+                                <form method="post" action="/Inlagg/taBortGillning">
+                                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                                    <button type="submit">Sluta gilla</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form method="post" action="/Inlagg/GillaInlagg">
+                                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                                    <button type="submit">Gilla</button>
+                                </form>
+                            }
+
+                            <p>Antal gillningar: @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</p>
+                        </div>
                     }
-                    else
-                    {
-                        <form method="post" action="/Inlagg/GillaInlagg">
-                            <input type="hidden" name="id" value="@inlagg.InlaggId" />
-                            <button type="submit">Gilla</button>
-                        </form>
-                    }
+                }
+            </section>
+        </div>
 
-                    <p>Antal gillningar: @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</p>
-                    <hr/>
-                </div>
-            }
-        }
-    </section>
+        <div class="Höger-kolumn">
+            <h1>Hej</h1>
+        </div>
+    </div>
 </body>
 
 
