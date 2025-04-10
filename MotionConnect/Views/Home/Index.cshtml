@@ -20,13 +20,17 @@
     </div>
     <!-- Chattinformation -->
     <h4>Chatar med:</h4>
+    <div class="chat-Wrap">
     @if (Model.Chattar != null)
     {
         foreach (var person in Model.Chattar)
         {
-            <p>@person.ForNamn @person.EfterNamn</p>
+                <a href="/Chat/StartaChat?anvandarId=@person.Id" class="ChatMed">@person.ForNamn @person.EfterNamn
+                <img id="ProfilbildChat" src="@person.ProfilBildUrl">
+                </a>
         }
     }
+    </div>
 
     <!-- Inlägg -->
     <section class="inlagg-container">

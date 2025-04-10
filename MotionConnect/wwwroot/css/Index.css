@@ -26,3 +26,34 @@ body {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+.chat-Wrap {
+    background-color: white;
+    width: 300px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.ChatMed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: black;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+.ChatMed:hover {
+    border-left: 5px solid rgba(13, 13, 13, 0.75);
+    background-color: rgba(217, 215, 215, 0.25); 
+}
+
+#ProfilbildChat {
+    width: 75px;
+    height: 60px;
+    object-fit: contain;
+}
