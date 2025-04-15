@@ -1,0 +1,76 @@
+@model ApplicationUser
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/KontoInfo.css" asp-append-version="true" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Info om användaren</h1>
+    @if (!(bool)ViewBag.ArVanner && !Model.ArProfilOppen)
+    {
+        <form method="post" action="/Vanner/laggTillVan">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit">Bil vänner
+            </button>
+        </form>
+        @if (User.Identity.IsAuthenticated && Model != null)
+        {
+
+            <p><strong>Sporter:</strong>
+                @foreach (var anvandareSporter in Model.AnvandareSporter)
+                {
+                    <span>@anvandareSporter.Sport.Namn</span>
+                }
+            </p>
+            <img src="@Model.ProfilBildUrl" alt="Profilbild">
+            <p>@Model.ForNamn @Model.EfterNamn</p>
+            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+        }
+    }
+    else 
+    {
+        if (!(bool)ViewBag.ArVanner)
+        {
+        <form method="post" action="/Vanner/laggTillVan">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit">Bil vänner
+            </button>
+        </form>
+        }
+        else
+        {
+            <form method="post" action="/Vanner/taBortVan">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <label>Vänner!</label>
+                <button type="submit">Sluta följ</button>
+            </form>
+        }
+
+        @if (User.Identity.IsAuthenticated && Model != null)
+        {
+
+            <p><strong>Sporter:</strong>
+                @foreach (var anvandareSporter in Model.AnvandareSporter)
+                {
+                    <span>@anvandareSporter.Sport.Namn</span>
+                }
+            </p>
+            <img src="@Model.ProfilBildUrl" alt="Profilbild">
+            <p>@Model.ForNamn @Model.EfterNamn</p>
+            <label class="Kontakt-info">Kontaktuppgifter:
+                <p>@Model.Email</p>
+                <p>@Model.PhoneNumber</p>
+            </label>
+            <p>Födelse år: @Model.FodelsAr</p>
+            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
+        }
+    }
+</body>
+
+</html>

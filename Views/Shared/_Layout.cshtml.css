@@ -1,0 +1,20 @@
+﻿/* Egen ren start */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+

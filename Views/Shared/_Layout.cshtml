@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MotionConnect</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header class="min-header">
+        <div class="header-wrapper">
+            @if (User.Identity.IsAuthenticated && ViewBag.AnvandareNamn != null && ViewBag.Profilbild != null) 
+            {
+                <img id="Profilbildd" src="@ViewBag.Profilbild" alt="Profilbild"/>
+                <p>@ViewBag.AnvandareNamn</p>
+            }
+            <a href="/" id="Logga">Motion Connect</a>
+            <a asp-controller="Konto" asp-action="LoggaInPaKontot" id="LoggaIn">Logga in</a>
+            <form method="post" action="/Konto/LoggaUtFranKonto">
+                <button type="submit" id="LoggaUt">Logga ut</button>
+            </form>
+        </div>
+        <input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off" />
+            <div id="sok-container">
+                <ul id="resultatLista"></ul>
+            </div>
+    </header>
+
+    <main class="main-content">
+        @RenderBody()
+    </main>
+
+    <footer class="min-footer">
+        <p>&copy; 2025 - MotionConnect</p>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+<script>
+    document.getElementById("sokFalt").addEventListener("input", function () {
+        var query = this.value;
+
+        if (query.length === 0) {
+            document.getElementById("resultatLista").innerHTML = "";
+            return;
+        }
+
+        fetch(`/Konto/SokKonto?query=${query}`) 
+            .then(response => response.json())
+            .then(data => {
+                var resultatLista = document.getElementById("resultatLista");
+                resultatLista.innerHTML = "";
+
+                data.forEach(anvandare => {  
+                    var li = document.createElement("li");
+
+                    var lank = document.createElement("a");
+                    lank.href = "Konto/KontoInfo?id=" + anvandare.id;
+                    lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; 
+                    li.appendChild(lank);
+                    resultatLista.appendChild(li);
+                });
+            })
+            .catch(error => console.error("Fel vid hämtning av data:", error));
+    });
+</script>
+
+</html>

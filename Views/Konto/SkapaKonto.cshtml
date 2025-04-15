@@ -1,0 +1,89 @@
+@model RegisterViewModel
+
+@if(!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<h1>Skapa ett nytt konto hej</h1>
+
+<form method="post" action="/Konto/SkapaKonto" enctype="multipart/form-data" autocomplete="off">
+
+    <label>Förnamn:</label><br>
+    <input type="text" asp-for="Fornamn" id="Fornamn" required /><br>
+    <span asp-validation-for="Fornamn"></span><br>
+
+    <label>Efternamn:</label><br>
+    <input type="text" asp-for="Efternamn" id="Efternamn" required /><br>
+    <span asp-validation-for="Efternamn"></span><br>
+
+    <label>Email:</label><br>
+    <input type="email" asp-for="Email" id="Email" placeholder="Lars@gmail.com" required /><br>
+    <span asp-validation-for="Email"></span><br>
+
+    <label>Telefonnummer:</label><br>
+    <input type="tel" asp-for="Telefonnummer" id="Telefonnummer" placeholder="0123456789" required /><br>
+    <span asp-validation-for="Telefonnummer"></span><br>
+
+    <label>Födelseår:</label><br>
+    <input type="date" asp-for="Fodelsear" id="Fodelsear" required /><br>
+    <span asp-validation-for="Fodelsear"></span><br>
+
+    <label>Lösenord:</label><br>
+    <input type="password" asp-for="Losenord" id="Losenord" required /><br>
+    <span asp-validation-for="Losenord"></span><br>
+
+    <label>Bekräfta lösenord:</label><br>
+    <input type="password" asp-for="BekraftaLosenord" id="BekraftaLosenord" required /><br>
+    <span asp-validation-for="BekraftaLosenord"></span><br>
+
+    <label>Välj favoritsporter:</label><br>
+    <select name="sportIds[]" multiple class="form-control" style="height: 150px; width: 250px;">
+        @foreach (var sport in ViewBag.Sporter)
+        {
+            <option value="@sport.SportId">@sport.Namn</option>
+        }
+    </select><br>
+
+    <label>Profil bild:</label><br>
+    <input type="file" asp-for="Profilbild" id="Profilbild" accept="image/*" /><br>
+    <img id="Forhandsvisning" src="#" alt="Forhansvisning"
+        style="display: none; width: 150px; object-fit: cover; margin-top: 10px;"><br>
+
+    <label>Vill du ha privat konto eller öppen (kan ändras efter registrering):</label><br>
+
+    <input type="radio" asp-for="ArProfilOppen" id="ArProfilenOppen1" value="True" checked />
+    <label for="ArProfilenOppen1">Öppen (Alla kan se dina inlägg och följa dig)</label><br>
+
+    <input type="radio" asp-for="ArProfilOppen" id="ArProfilenOppen2" value="False" />
+    <label for="ArProfilenOppen2">Privat (Bara de som följer dig kan se dina inlägg och följare)</label><br>
+
+
+    <button type="submit">Skapa användare</button>
+</form>
+
+@section Scripts {
+        <script>
+        document.getElementById("Profilbild").addEventListener("change", function (event) {
+            var file = event.target.files[0]; 
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                    var imgElement = document.getElementById("Forhandsvisning");
+                    imgElement.src = reader.result;
+                    imgElement.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+
+        <partial name="_ValidationScriptsPartial" />
+
+}
