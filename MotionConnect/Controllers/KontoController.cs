@@ -276,7 +276,7 @@ public class KontoController : Controller
             _context.AnvandareSporter.Add(anvandareSport);
         }
         await _context.SaveChangesAsync();
-        // 🛠 Kolla om användaren loggas in
+        //Kolla om användaren loggas in
         Console.WriteLine("Hej");
         await _signInManager.SignInAsync(anvandare, isPersistent: false);
         Console.WriteLine("Hej");

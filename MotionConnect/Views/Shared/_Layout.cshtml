@@ -48,18 +48,18 @@
             return;
         }
 
-        fetch(`/Konto/SokKonto?query=${query}`) // 🛠 Fixad backticks för template string
+        fetch(`/Konto/SokKonto?query=${query}`) 
             .then(response => response.json())
             .then(data => {
                 var resultatLista = document.getElementById("resultatLista");
                 resultatLista.innerHTML = "";
 
-                data.forEach(anvandare => {  // 🛠 Ändrat "data.foreach()" till "data.forEach()"
+                data.forEach(anvandare => {  
                     var li = document.createElement("li");
 
                     var lank = document.createElement("a");
                     lank.href = "Konto/KontoInfo?id=" + anvandare.id;
-                    lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; // 🛠 "anvandare" används korrekt här
+                    lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; 
                     li.appendChild(lank);
                     resultatLista.appendChild(li);
                 });

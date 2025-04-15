@@ -1,10 +1,10 @@
 trigger:
   branches:
     include:
-      - main # Se till att detta är rätt branch
+      - main 
 
 pool:
-  name: Default # Se till att detta matchar din self-hosted agent-pool
+  name: Default 
 
 steps:
   - script: echo "Agent is running!"

@@ -27,9 +27,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder); // 👈 Viktigt för att ASP.NET Identity ska fungera
+        base.OnModelCreating(builder); 
 
-        // 🏀 Användare ↔ Sporter (M:M via AnvandareSporter)
         builder.Entity<AnvandareSport>()
             .HasKey(us => new { us.AnvandarId, us.SportId });
 
@@ -47,7 +46,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .Property(i => i.InlaggId)
             .ValueGeneratedOnAdd();
 
-        // 🏆 Inlägg ↔ Sporter (M:M via InlaggSporter)
         builder.Entity<InlaggSport>()
             .HasKey(ps => new { ps.InlaggId, ps.SportId });
 
@@ -61,7 +59,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .WithMany(s => s.InlaggSporter)
             .HasForeignKey(ps => ps.SportId);
 
-        // 👥 Användare ↔ Vänner (M:M via Vanner)
         builder.Entity<Van>()
             .HasKey(v => new { v.AnvandarId, v.VanId });
 
@@ -81,7 +78,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         .HasOne(v => v.Avsandare)
         .WithMany()
         .HasForeignKey(v => v.AvsandareId)
-        .OnDelete(DeleteBehavior.Restrict); // Förhindra dubbelriktad delete
+        .OnDelete(DeleteBehavior.Restrict); 
 
         builder.Entity<VanForFragan>()
             .HasOne(v => v.Mottagare)
@@ -89,61 +86,54 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .HasForeignKey(v => v.MottagareId)
             .OnDelete(DeleteBehavior.Restrict);
 
-
-        // 👥 Användare ↔ Grupper (M:M via GruppMedlemmar)
         builder.Entity<GruppMedlem>()
-            .HasKey(gm => new { gm.GruppId, gm.AnvandarId }); // RÄTTAD primärnyckel!
+            .HasKey(gm => new { gm.GruppId, gm.AnvandarId }); 
 
         builder.Entity<GruppMedlem>()
             .HasOne(gm => gm.Grupp)
             .WithMany(g => g.GruppMedlemmar)
             .HasForeignKey(gm => gm.GruppId)
-            .OnDelete(DeleteBehavior.Cascade); // Om en grupp tas bort, tas medlemmarna bort
+            .OnDelete(DeleteBehavior.Cascade); 
 
         builder.Entity<GruppMedlem>()
             .HasOne(gm => gm.Anvandare)
             .WithMany(u => u.GruppMedlemskap)
             .HasForeignKey(gm => gm.AnvandarId)
-            .OnDelete(DeleteBehavior.Restrict); // Hindrar multiple cascade paths
+            .OnDelete(DeleteBehavior.Restrict); 
 
-        // 📝 Inlägg → Kommentarer (1:N)
         builder.Entity<Kommentar>()
             .HasOne(c => c.Inlagg)
             .WithMany(p => p.Kommentarer)
             .HasForeignKey(c => c.InlaggId);
 
-        // 👍 Inlägg → Gillningar (1:N)
         builder.Entity<Gillning>()
             .HasOne(l => l.Inlagg)
             .WithMany(p => p.Gillningar)
             .HasForeignKey(l => l.InlaggId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // 👍 Kommentarer → Gillningar (1:N)
         builder.Entity<Gillning>()
             .HasOne(l => l.Kommentar)
             .WithMany(c => c.Gillningar)
             .HasForeignKey(l => l.KommentarId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // 🔔 Användare → Notiser (1:N)
         builder.Entity<Notis>()
             .HasOne(n => n.Anvandare)
             .WithMany(u => u.Notiser)
             .HasForeignKey(n => n.AnvandarId);
 
-        // 📩 Användare → Meddelanden (1:N)
         builder.Entity<Meddelande>()
             .HasOne(m => m.Avsandare)
             .WithMany()
             .HasForeignKey(m => m.AvsandareId)
-            .OnDelete(DeleteBehavior.NoAction); // Rättar multiple cascade paths
+            .OnDelete(DeleteBehavior.NoAction); 
 
         builder.Entity<Meddelande>()
             .HasOne(m => m.Chat)
             .WithMany(c => c.Meddelanden)
             .HasForeignKey(m => m.ChatId)
-            .OnDelete(DeleteBehavior.Cascade); // Om en chatt tas bort, tas meddelanden bort
+            .OnDelete(DeleteBehavior.Cascade); 
 
         builder.Entity<MeddelandeMottagare>()
         .HasKey(mm => mm.MeddelandeMottagreId);

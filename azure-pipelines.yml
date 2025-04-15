@@ -1,16 +1,16 @@
 trigger:
   branches:
     include:
-      - main  # Kör pipeline när kod pushas till main
+      - main 
 
 pool:
-  vmImage: 'ubuntu-latest'  # Bygg på en Linux-miljö
+  vmImage: 'ubuntu-latest'  
 
 steps:
   - task: UseDotNet@2
     inputs:
       packageType: 'sdk'
-      version: '8.0.x'  # Ändra om du använder .NET 6 eller 7
+      version: '8.0.x'  
 
   - script: dotnet restore
     displayName: 'Restore NuGet packages'

@@ -21,12 +21,9 @@ public class Notis
 
     [Required]
     public NotisTyp Typ { get; set; }
-
-    // Valfria kopplingar
     public int? InlaggId { get; set; }
     public Inlagg Inlagg { get; set; }
 
     public int? MeddelandeId { get; set; }
-    // Om du har en Meddelande-klass, annars kan du lägga till senare
 }
 

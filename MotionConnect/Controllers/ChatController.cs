@@ -52,7 +52,7 @@ public class ChatController : Controller
 
         if (string.IsNullOrEmpty(anvandarId))
         {
-            Console.WriteLine("❌ anvandarId är null eller tom!");
+            Console.WriteLine("AnvandarId är null eller tom!");
             return RedirectToAction("ValjChat");
         }
 
@@ -71,7 +71,7 @@ public class ChatController : Controller
             ))
             .FirstOrDefaultAsync();
 
-        Console.WriteLine($"📥 Meddelanden i chatt: {chatt?.Meddelanden?.Count ?? 0}");
+        Console.WriteLine($"Meddelanden i chatt: {chatt?.Meddelanden?.Count ?? 0}");
 
         ViewBag.Meddelanden = chatt?.Meddelanden.ToList();
 

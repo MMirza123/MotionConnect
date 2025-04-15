@@ -9,7 +9,5 @@ public class Grupp
     public string GruppNamn { get; set; }
 
     public DateTime SkapadesTid { get; set; } = DateTime.UtcNow;
-
-    // Relation till GruppMedlem (M:M mellan Användare och Grupper)
     public ICollection<GruppMedlem> GruppMedlemmar { get; set; }
 }

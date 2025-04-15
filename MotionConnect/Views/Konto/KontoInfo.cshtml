@@ -64,8 +64,8 @@
             <img src="@Model.ProfilBildUrl" alt="Profilbild">
             <p>@Model.ForNamn @Model.EfterNamn</p>
             <label class="Kontakt-info">Kontaktuppgifter:
-                <p>✉ @Model.Email</p>
-                <p>📞 @Model.PhoneNumber</p>
+                <p>@Model.Email</p>
+                <p>@Model.PhoneNumber</p>
             </label>
             <p>Födelse år: @Model.FodelsAr</p>
             <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>

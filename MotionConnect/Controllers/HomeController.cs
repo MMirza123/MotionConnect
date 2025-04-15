@@ -50,11 +50,11 @@ public class HomeController : Controller
         var anvandare = await _userManger.FindByEmailAsync(identifier) ?? await _userManger.FindByNameAsync(identifier);
         var anvandarId = _userManger.GetUserId(User);
 
-        // 🔔 Notiser
+        //Notiser
         var notiser = await _context.Notiser
             .CountAsync(n => n.AnvandarId == anvandare.Id);
 
-        // 💬 Chattar och motparter
+        //Chattar och motparter
         var chattar = await _context.Chattar
             .Include(c => c.Meddelanden)
                 .ThenInclude(m => m.Mottagare)
@@ -81,7 +81,7 @@ public class HomeController : Controller
 
         motparter = motparter.Distinct().ToList();
 
-        // 📝 Inlägg (exakt som i VisaInlagg)
+        //Inlägg (exakt som i VisaInlagg)
         var inlagg = await _context.Inlagg
             .Include(i => i.Anvandare)
             .Include(i => i.InlaggSporter)
@@ -98,7 +98,7 @@ public class HomeController : Controller
             .Select(g => g.InlaggId)
             .ToListAsync();
 
-        // ✅ ViewModel
+        //ViewModel
         var model = new HomeViewModel
         {
             Anvandare = anvandare,

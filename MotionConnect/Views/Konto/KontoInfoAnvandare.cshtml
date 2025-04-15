@@ -37,8 +37,8 @@
 
         <p>@Model.ForNamn @Model.EfterNamn</p>
         <label class="Kontakt-info">Kontaktuppgifter:
-            <p>✉ @Model.Email</p>
-            <p>📞 @Model.PhoneNumber</p>
+            <p>@Model.Email</p>
+            <p>@Model.PhoneNumber</p>
         </label>
         <p>Födelse år: @Model.FodelsAr</p>
         <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandareAndraLagge" enctype="multipart/form-data">
