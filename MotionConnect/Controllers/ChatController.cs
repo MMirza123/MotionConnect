@@ -58,7 +58,6 @@ public class ChatController : Controller
 
         var inloggadAnvandare = _userManager.GetUserId(User);
 
-        // Hitta chatten där båda är med (som avsändare/mottagare)
         var chatt = await _context.Chattar
             .Include(c => c.Meddelanden)
                 .ThenInclude(m => m.Avsandare)
@@ -86,7 +85,6 @@ public class ChatController : Controller
     {
         var anvandareId = _userManager.GetUserId(User);
 
-        // Hitta existerande privat chatt mellan de två
         var chat = await _context.Chattar
             .Include(c => c.Meddelanden)
                 .ThenInclude(m => m.Mottagare)
@@ -97,7 +95,6 @@ public class ChatController : Controller
             ))
             .FirstOrDefaultAsync();
 
-        // Om ingen finns – skapa ny
         if (chat == null)
         {
             chat = new Chat { ArGruppChat = false, SkapadTid = DateTime.UtcNow };
@@ -105,7 +102,6 @@ public class ChatController : Controller
             await _context.SaveChangesAsync();
         }
 
-        // Skapa och koppla meddelande
         var meddelande = new Meddelande
         {
             Text = text,
