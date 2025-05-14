@@ -3,42 +3,68 @@
     ViewData["Title"] = "Home Page";
 }
 
+@using System.Globalization
+
 <head>
     <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 </head>
 
 <body>
     <!-- Meny -->
-    <div class="navigation">
-        <a href="/Konto/SkapaKonto">Ny användare</a>
-        <a href="/Konto/KontoInfoAnvandare">Konto information</a>
-        <a href="/Inlagg/SkapaEttInlagg">Skapa ett inlägg</a>
-        <a href="/Inlagg/VisaInlagg">Visa alla inlägg</a>
-        <a href="/Inlagg/VisaInlaggAnvandare">Visa dina inlägg</a>
-        <a href="/Konto/VisaNotiser">Kolla dina notiser</a>
-        <a href="/Chat/ValjChat">Starta Chat</a>
-    </div>
     <div class="Contetn-layout">
         <div class="vänster-kolumn">
-            <h4>Chatar med:</h4>
+            <h3 class="rubriker-h3">Chattar</h3>
             <div class="chat-Wrap">
                 @if (Model.Chattar != null)
                 {
                     foreach (var person in Model.Chattar)
                     {
                         <a href="/Chat/StartaChat?anvandarId=@person.Id" class="ChatMed">@person.ForNamn @person.EfterNamn
-                        <img id="ProfilbildChat" src="@person.ProfilBildUrl">
+                            <img id="ProfilbildChat" src="@person.ProfilBildUrl">
                         </a>
                     }
+                }
+            </div>
+            <h3 class="rubriker-h3">Dina grupper</h3>
+            <div class="chat-Wrap">
+                @if (ViewBag.Grupper != null)
+                {
+                    foreach (var grupp in ViewBag.Grupper)
+                    {
+                        <a href="@Url.Action("VisaGruppChat", "Chat", new { gruppId = grupp.GruppId })" class="ChatMed">
+                            @grupp.GruppNamn
+                        </a>
+                    }
+                }
+                else
+                {
+                    <p>Inga grupper att visa.</p>
                 }
             </div>
         </div>
 
         <div class="mitten-kolumn">
             <section class="inlagg-container">
-                <h1>Alla inlägg som finns:</h1>
-                <p>Antal inlägg i modellen: @(Model?.Inlagg?.Count ?? 0)</p>
+                <div class="inlagg-rubrik">
+                    <h1>Inlägg: @(Model?.Inlagg?.Count ?? 0) </h1>
+                    <div class="dropdown">
+                        <button class="dropp-knapp">Sortera efter</button>
+                        <div class="dropdown-val">
+                            @if (ViewBag.Sporter != null)
+                            {
+                                foreach (var sport in ViewBag.Sporter)
+                                {
+                                    <a href="@Url.Action("Index", "Home", new { sportId = sport.SportId })">@sport.Namn</a>
+                                }
+                            }
+                            else
+                            {
+                                <p>Inga sporter att visa.</p>
+                            }
 
+                        </div>
+                    </div>
+                </div>
 
                 @if (Model.Inlagg == null || !Model.Inlagg.Any())
                 {
@@ -49,15 +75,28 @@
                     @foreach (var inlagg in Model.Inlagg)
                     {
                         <div class="post">
-                            <h3>@(inlagg.Anvandare != null ? $"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}" : "Okänd användare") <small>Skapades: @inlagg.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</small></h3>
-                            <p>@inlagg.Text</p>
+                            <p class="inlaggText">
+                                @if (inlagg.Anvandare != null)
+                                {
+                                    <img src="@inlagg.Anvandare.ProfilBildUrl" alt="Profilbild"
+                                        style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%; vertical-align: middle;" />
+                                    @($"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}")
+                                }
+                                else
+                                {
+                                    <span>Okänd användare</span>
+                                }
+                                <small>@inlagg.SkapadesTid.ToString("d MMM yyyy")</small>
+                            </p>
+
+                            <p class="inlaggText">@inlagg.Text</p>
 
                             @if (!string.IsNullOrEmpty(inlagg.BildUrl))
                             {
                                 <img id="InlaggBild" src="@inlagg.BildUrl" alt="Inläggsbild" />
                             }
 
-                            <p>
+                            <p class="inlaggText">
                                 <strong>Sporter:</strong>
                                 @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
                                 {
@@ -66,7 +105,7 @@
                                         if (inlaggSport.Sport != null)
                                         {
                                             <span>@inlaggSport.Sport.Namn</span>
-                                            @(inlaggSport != inlagg.InlaggSporter.Last() ? ", " : "")
+                                            @(inlaggSport != inlagg.InlaggSporter.Last() ? "" : "")
                                         }
                                     }
                                 }
@@ -75,24 +114,46 @@
                                     <span>Inga sporter valda</span>
                                 }
                             </p>
-
                             @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
                             {
-                                <p>Du har gillat detta</p>
-                                <form method="post" action="/Inlagg/taBortGillning">
-                                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
-                                    <button type="submit">Sluta gilla</button>
-                                </form>
+                                <p class="inlaggText">
+                                    &#10084; Du och @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ?
+                               Model.AntalGillningar[inlagg.InlaggId] : 0) andra
+                                    &#9997; @(Model.AntalKommentarer.ContainsKey(inlagg.InlaggId) ?
+                                Model.AntalKommentarer[inlagg.InlaggId] : 0)
+                                </p>
                             }
                             else
                             {
-                                <form method="post" action="/Inlagg/GillaInlagg">
-                                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
-                                    <button type="submit">Gilla</button>
-                                </form>
+                                <p class="inlaggText">
+                                    &#10084; @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ?
+                               Model.AntalGillningar[inlagg.InlaggId] : 0)
+                                    &#9997; @(Model.AntalKommentarer.ContainsKey(inlagg.InlaggId) ?
+                                Model.AntalKommentarer[inlagg.InlaggId] : 0)
+                                </p>
                             }
 
-                            <p>Antal gillningar: @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</p>
+                            <div class="Gilla">
+                                @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
+                                {
+                                    <form method="post" action="/Inlagg/taBortGillning" class="Gillaknapp">
+                                        <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                                        <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                        <button id="slutaGillaKnapp" type="submit">&#10084;</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form method="post" action="/Inlagg/GillaInlagg" class="Gillaknapp">
+                                        <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                                        <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                        <button id="gillaKnapp" type="submit">&#10084;</button>
+                                    </form>
+                                }
+                                <a href="/Inlagg/KommentarInlagg?inlaggId=@inlagg.InlaggId" id="antalKommentarer">
+                                    &#9997; Kommentera
+                                </a>
+                            </div>
                         </div>
                     }
                 }
@@ -100,11 +161,12 @@
         </div>
 
         <div class="Höger-kolumn">
-            <h1>Hej</h1>
+            <a href="/Konto/SkapaKonto">Ny användare</a>
+            <a href="/Konto/KontoInfoAnvandare">Konto information</a>
+            <a href="/Inlagg/SkapaEttInlagg">Skapa ett inlägg</a>
+            <a href="/Konto/VisaNotiser">Kolla dina notiser: <span id="antalNotiser">@ViewBag.notiser</span></a>
+            <a href="/Chat/ValjChat">Starta Chat</a>
+            <a href="/Chat/SkapaGruppChat">Starta gruppchat</a>
         </div>
     </div>
 </body>
-
-
-
-

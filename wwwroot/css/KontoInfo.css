@@ -1,43 +1,105 @@
-body
-{
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-h1 {
-    margin-top: 25px;
-    margin-bottom: 25px;
+.profil-container {
+    padding: 20px;
 }
 
-img
-{
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profil-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profilbild {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-style: solid;
-    border-color:springgreen;
-    border-radius: 100px;
-    border-width: 5px;
+    border-radius: 50%;
+    border: 5px solid springgreen;
+    margin-bottom: 20px;
 }
 
-p 
-{
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-style: solid;
+h2 {
+    margin-bottom: 10px;
+    color: #333;
 }
 
-label
-{
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-style: solid;
+.profil-status {
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.Kontakt-info p
-{
-   border-style: none;
+.info-grupp {
+    margin-bottom: 20px;
 }
 
+.sport-tag {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+.kontakt-info {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.kontakt-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.vänskaps-form {
+    margin-top: 20px;
+}
+
+.lägg-till-vän-knapp,
+.avsluta-vänskap-knapp {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.avsluta-vänskap-knapp {
+    background-color: #f44336;
+}
+
+.lägg-till-vän-knapp:hover {
+    background-color: #45a049;
+}
+
+.avsluta-vänskap-knapp:hover {
+    background-color: #e53935;
+}
+
+.vän-status {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}

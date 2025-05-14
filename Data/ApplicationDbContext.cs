@@ -27,7 +27,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder); 
+        base.OnModelCreating(builder);
 
         builder.Entity<AnvandareSport>()
             .HasKey(us => new { us.AnvandarId, us.SportId });
@@ -78,7 +78,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         .HasOne(v => v.Avsandare)
         .WithMany()
         .HasForeignKey(v => v.AvsandareId)
-        .OnDelete(DeleteBehavior.Restrict); 
+        .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<VanForFragan>()
             .HasOne(v => v.Mottagare)
@@ -87,19 +87,19 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<GruppMedlem>()
-            .HasKey(gm => new { gm.GruppId, gm.AnvandarId }); 
+            .HasKey(gm => new { gm.GruppId, gm.AnvandarId });
 
         builder.Entity<GruppMedlem>()
             .HasOne(gm => gm.Grupp)
             .WithMany(g => g.GruppMedlemmar)
             .HasForeignKey(gm => gm.GruppId)
-            .OnDelete(DeleteBehavior.Cascade); 
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<GruppMedlem>()
             .HasOne(gm => gm.Anvandare)
             .WithMany(u => u.GruppMedlemskap)
             .HasForeignKey(gm => gm.AnvandarId)
-            .OnDelete(DeleteBehavior.Restrict); 
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<Kommentar>()
             .HasOne(c => c.Inlagg)
@@ -119,21 +119,28 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<Notis>()
-            .HasOne(n => n.Anvandare)
+            .HasOne(n => n.Anvandare) // Mottagaren av notisen
             .WithMany(u => u.Notiser)
-            .HasForeignKey(n => n.AnvandarId);
+            .HasForeignKey(n => n.AnvandarId)
+            .OnDelete(DeleteBehavior.Restrict); // Förhindrar kaskadborttagning
+
+        builder.Entity<Notis>()
+            .HasOne(n => n.Avsandare) // Avsändaren av notisen
+            .WithMany()
+            .HasForeignKey(n => n.AvsandareId)
+            .OnDelete(DeleteBehavior.Restrict); // Förhindrar multipla cascade paths
 
         builder.Entity<Meddelande>()
             .HasOne(m => m.Avsandare)
             .WithMany()
             .HasForeignKey(m => m.AvsandareId)
-            .OnDelete(DeleteBehavior.NoAction); 
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.Entity<Meddelande>()
             .HasOne(m => m.Chat)
             .WithMany(c => c.Meddelanden)
             .HasForeignKey(m => m.ChatId)
-            .OnDelete(DeleteBehavior.Cascade); 
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<MeddelandeMottagare>()
         .HasKey(mm => mm.MeddelandeMottagreId);

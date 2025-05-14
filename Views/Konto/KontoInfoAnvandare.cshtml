@@ -1,65 +1,150 @@
 @model ApplicationUser
+@using System.Globalization
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/KontoInfo.css" asp-append-version="true" />
-    <title>Document</title>
+    <title>Min Profil</title>
+    <link rel="stylesheet" href="~/css/KontoInfoAnvandaren.css" asp-append-version="true" />
 </head>
 
 <body>
-    <h1>Info om användaren</h1>
+    <div class="profil-container">
 
-    @if (User.Identity.IsAuthenticated && Model != null)
-    {
-        <p>Antal Vänner: @ViewBag.AntalVanner</p>
-        <p>Vänner:
-            @foreach (var vanner in Model.Vanner)
-            {
-                <span>@vanner.VanAnvandare.ForNamn @vanner.VanAnvandare.EfterNamn</span>
-            }
-        </p>
-        <p><strong>Sporter:</strong>
-            @foreach (var anvandareSporter in Model.AnvandareSporter)
-            {
-                <span>@anvandareSporter.Sport.Namn</span>
-            }
-        </p>
+        @if (User.Identity.IsAuthenticated && Model != null)
+        {
+            <div class="profil-info">
+                <div class="profil-bild">
+                    <img id="Profilbild1" src="@Model.ProfilBildUrl" alt="Profilbild" />
+                    <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandare"
+                        enctype="multipart/form-data">
+                        <div class="fil-uppladdare">
+                            <input type="file" id="Profilbild" name="bild" accept="image/*" hidden />
+                            <label for="Profilbild" class="ladda-upp-knapp">Välj profilbild</label>
+                        </div>
+                        <button type="submit" class="bild-knapp">Ändra Bild</button>
+                    </form>
+                </div>
 
-        <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandare" enctype="multipart/form-data">
-            <input type="file" id="Profilbild" name="bild" accept="image/*" />
-            <img id="Profilbild1" src="@Model.ProfilBildUrl" alt="Profilbild1">
-            <button type="submit">Ändra bild</button>
-        </form>
+                <div class="profil-detaljer">
+                    @* <p><strong>Email:</strong> @Model.Email</p>
+                    <p><strong>Telefonnummer:</strong> @Model.PhoneNumber</p>
+                    <p><strong>Födelseår:</strong> @Model.FodelsAr</p> *@
 
-        <p>@Model.ForNamn @Model.EfterNamn</p>
-        <label class="Kontakt-info">Kontaktuppgifter:
-            <p>@Model.Email</p>
-            <p>@Model.PhoneNumber</p>
-        </label>
-        <p>Födelse år: @Model.FodelsAr</p>
-        <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandareAndraLagge" enctype="multipart/form-data">
-            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
-            <button type="submit">Ändra</button>
-        </form>
-    }
-</body>
-<script>
-    document.getElementById("Profilbild").addEventListener("change", function (event) {
-        var file = event.target.files[0];
-        if (file) {
-            var reader = new FileReader();
-            reader.onload = function () {
-                var imgElement = document.getElementById("Profilbild1");
-                imgElement.src = reader.result;
-                imgElement.style.display = "block";
-            };
-            reader.readAsDataURL(file);
+                    <div class="vanner">
+                        <h2>@Model.ForNamn @Model.EfterNamn</h2>
+                        <p><strong>Vänner:</strong> @ViewBag.AntalVanner</p>
+                        <p><strong>Inlägg:</strong> @ViewBag.Inlagg.Count</p>
+                        @* <p><strong>Vänner:</strong>
+                            @foreach (var vanner in Model.Vanner)
+                            {
+                                <span>@vanner.VanAnvandare.ForNamn @vanner.VanAnvandare.EfterNamn</span>
+                            }
+                        </p> *@
+                    </div>
+
+                    <div class="sporter">
+                        <p><strong>Sporter:</strong></p>
+                        @foreach (var anvandareSporter in Model.AnvandareSporter)
+                        {
+                            <span>@anvandareSporter.Sport.Namn</span>
+                        }
+                    </div>
+
+                    <form method="post" asp-controller="Konto" asp-action="KontoInfoAnvandareAndraLagge"
+                        enctype="multipart/form-data">
+                        <p><strong>Läge:</strong> @(Model.ArProfilOppen ? "Öppen" : "Privat")
+                            <button type="submit" class="profil-knapp">Ändra Läge</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="inlagg-container">
+                    @if (ViewBag.inlagg != null && ((List<Inlagg>)ViewBag.inlagg).Any())
+                    {
+                        <h2>Dina inlägg</h2>
+
+                        <div class="post">
+                            @foreach (var inlagg in (List<Inlagg>)ViewBag.inlagg)
+                            {
+                                <div class="inlagg-box">
+                                    <h3>
+                                        <img id="Profilbild2" src="@Model.ProfilBildUrl" alt="Profilbild" />
+                                        @Model.ForNamn @Model.EfterNamn
+                                        <small>@inlagg.SkapadesTid.ToString("d MMM yyyy")</small>
+                                        @* <div class="dropner">
+                                            <button onclick="minFunktion()" class="taBortInlagg">. . .</button>
+                                            <div id="minDropner" class="dropner-content">
+                                                <a>Ta tabort inlägg</a>
+                                            </div>
+                                        </div> *@
+                                    </h3>
+
+                                    <p>@inlagg.Text</p>
+
+                                    @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+                                    {
+                                        <img id="inlaggBild" src="@inlagg.BildUrl" alt="Inläggsbild" />
+                                    }
+
+                                    <p><strong>Sporter:</strong>
+                                        @foreach (var s in inlagg.InlaggSporter)
+                                        {
+                                            @s.Sport.Namn
+                                            @(s != inlagg.InlaggSporter.Last() ? ", " : "")
+                                        }
+                                    </p>
+                                    <p><strong>Gillningar:</strong> @(ViewBag.AntalLikes.ContainsKey(inlagg.InlaggId) ?
+                            ViewBag.AntalLikes[inlagg.InlaggId] : 0)</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p>Du har inte skapad någgra inlägg ännu</p>
+                    }
+                </div>
+            </div>
         }
-    });
-</script>
+    </div>
 
+    <script>
+        document.getElementById("Profilbild").addEventListener("change", function (event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                    var imgElement = document.getElementById("Profilbild1");
+                    imgElement.src = reader.result;
+                    imgElement.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        @* function minFunktion()
+        {
+            document.getElementById("minDropner").classList.toggle("show");
+        }
+
+        window.onclick = function(event)
+        {
+            if (!event.target.matches('.taBortInlagg'))
+            {
+                var dropner = document.getElementsByClassName("dropner-content");
+                var i;
+                for (i = 0; i < dropner.length; i++)
+                {
+                    var oppenDropNer = dropner[i];
+                    if (oppenDropNer.classList.contains('show'))
+                    {
+                        oppenDropNer.classList.remove('show');
+                    }
+                }
+            }
+        } *@
+    </script>
+</body>
 </html>

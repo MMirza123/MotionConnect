@@ -15,15 +15,23 @@ public class Notis
 
     public DateTime SkapadesTid { get; set; } = DateTime.UtcNow;
 
+    // Denna egenskap representerar mottagarens ID
     [Required]
     public string AnvandarId { get; set; }
     public ApplicationUser Anvandare { get; set; }
 
     [Required]
     public NotisTyp Typ { get; set; }
+    
     public int? InlaggId { get; set; }
     public Inlagg Inlagg { get; set; }
 
     public int? MeddelandeId { get; set; }
+
+    // Ny egenskap: avsändarens ID
+    [Required]
+    public string AvsandareId { get; set; }
+    // Navigeringsegenskap för avsändaren
+    public ApplicationUser Avsandare { get; set; }
 }
 

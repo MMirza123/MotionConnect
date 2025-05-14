@@ -1,0 +1,113 @@
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using System.Globalization
+
+<head>
+    <link rel="stylesheet" href="~/css/Kommentarinlagg.css" asp-append-version="true" />
+</head>
+
+<body>
+    @foreach (var inlagg in Model.Inlagg)
+    {
+        <div class="inlagg">
+            <p>
+                @if (inlagg.Anvandare != null)
+                {
+                    <img src="@inlagg.Anvandare.ProfilBildUrl" alt="Profilbild" class="profilbild" />
+                    @($"{inlagg.Anvandare.ForNamn} {inlagg.Anvandare.EfterNamn}")
+                }
+                else
+                {
+                    <span>Okänd användare</span>
+                }
+                <small class="skapdaes-tid">@inlagg.SkapadesTid.ToString("d MMM yyyy")</small>
+            </p>
+            <p>@inlagg.Text</p>
+            @if (!string.IsNullOrEmpty(inlagg.BildUrl))
+            {
+                <img id="InlaggBild" src="@inlagg.BildUrl" alt="Inläggsbild" />
+            }
+            <p>
+                <strong>Sporter:</strong>
+                @if (inlagg.InlaggSporter != null && inlagg.InlaggSporter.Any())
+                {
+                    @foreach (var inlaggSport in inlagg.InlaggSporter)
+                    {
+                        if (inlaggSport.Sport != null)
+                        {
+                            <span>@inlaggSport.Sport.Namn</span>
+                            @(inlaggSport != inlagg.InlaggSporter.Last() ? "" : "")
+                        }
+                    }
+                }
+                else
+                {
+                    <span>Inga sporter valda</span>
+                }
+            </p>
+        </div>
+        <div class="Gilla">
+            @if (Model.HarGillatInlaggIds.Contains(inlagg.InlaggId))
+            {
+                <form method="post" action="/Inlagg/taBortGillning" class="Gillaknapp">
+                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                    <input type="hidden" name="returnUrl" value="@Context.Request.Path?inlaggId=@inlagg.InlaggId" />
+                    <button id="slutaGillaKnapp" type="submit">&#10084;  @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</button>
+                </form>
+            }
+            else
+            {
+                <form method="post" action="/Inlagg/GillaInlagg" class="Gillaknapp">
+                    <input type="hidden" name="id" value="@inlagg.InlaggId" />
+                    <input type="hidden" name="returnUrl" value="@Context.Request.Path?inlaggId=@inlagg.InlaggId" />
+                    <button id="gillaKnapp" type="submit">&#10084;  @(Model.AntalGillningar.ContainsKey(inlagg.InlaggId) ? Model.AntalGillningar[inlagg.InlaggId] : 0)</button>
+                </form>
+            }
+            <a id="antalKommentarer">&#9997 @(Model.AntalKommentarer.ContainsKey(inlagg.InlaggId) ? Model.AntalKommentarer[inlagg.InlaggId] : 0)</a>
+        </div>
+        <div class="kommentar-låda">
+            <div class="kommentar-container">
+                @foreach (var kommentar in inlagg.Kommentarer)
+                {
+                    <p class="kommentar-profil">
+                        @if (kommentar.Anvandare != null)
+                        {
+                            <img src="@kommentar.Anvandare.ProfilBildUrl" alt="Profilbild" class="profilbild">
+                            <span>@kommentar.Anvandare.ForNamn @kommentar.Anvandare.EfterNamn</span>
+                        }
+                        else
+                        {
+                            <span>Okänd användare</span>
+                        }
+                        <small class="skapdaes-tid">@kommentar.SkapadTid.ToString("d MMM yyyy")</small>
+                    </p>
+                    <p class="kommentar-text">@kommentar.Text</p>
+                }
+                @if (!inlagg.Kommentarer.Any())
+                {
+                    <p id="utan-kommentar">Inga kommentarer ännu</p>
+                }
+            </div>
+            <div class="kommentar-formulär">
+                <form method="post" asp-action="skickaKommentar" autocomplete="off">
+                    <input type="hidden" name="inlaggId" value="@inlagg.InlaggId" />
+                    <div class="kommentar-input-wrap">
+                        <textarea class="kommentar-textarea" name="text" placeholder="Skriv en kommentar..."></textarea>
+                        <button type="submit" class="kommentar-knapp">➤</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+</body>
+<script>
+    document.querySelectorAll("textarea[id^='kommentar-textarea']").forEach(function (textarea) {
+        textarea.addEventListener("input", function () {
+            this.style.height = "auto";
+            this.style.height = (this.scrollHeight) + "px";
+        });
+    }); 
+</script>

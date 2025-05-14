@@ -10,4 +10,5 @@ public class HomeViewModel
     public List<Inlagg> Inlagg { get; set; }
     public List<int?> HarGillatInlaggIds { get; set; } = new();
     public Dictionary<int?, int> AntalGillningar { get; set; } = new();
+    public Dictionary<int, int> AntalKommentarer { get; set; } = new();
 }

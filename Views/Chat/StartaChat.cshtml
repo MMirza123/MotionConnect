@@ -1,25 +1,46 @@
-<h1>Chatten</h1>
+<head>
+    <link rel="stylesheet" href="~/css/StartaChat.css" asp-append-version="true" />
+</head>
 
-@if (ViewBag.Meddelanden != null)
-{
-    @foreach (var m in (List<Meddelande>)ViewBag.Meddelanden)
+<body>
+    <div class="chatt-container">
+        @if (ViewBag.MottagareNamn != null)
+        {
+            <h2 class="mottagare-rubrik">@ViewBag.MottagareNamn</h2>
+        }
 
-    {
-        <p><strong>@m.Avsandare.ForNamn</strong>: @m.Text (@m.SkapadesTid)</p>
-    }
-}
-else
-{
-    <p>Ingen chatt hittades ännu.</p>
-}
+        <div class="meddelande-låda">
+            <div class="meddelanden-container">
+                @if (ViewBag.Meddelanden != null)
+                {
+                    foreach (var m in (List<Meddelande>)ViewBag.Meddelanden)
+                    {
+                        <div class="meddelande @(m.AvsandareId == (string)ViewBag.InloggadId ? "mitt-meddelande" : "annat-meddelande")">
+                            <span class="text">@m.Text</span>
+                            <span class="tid">@m.SkapadesTid.ToString("HH:mm dd/MM")</span>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="tom-chatt">Ingen konversation hittades ännu.</p>
+                }
+            </div>
 
-<p>MottagareId från ViewBag: @ViewBag.MottagareId</p>
-
-
-<form method="post" asp-action="skickaText" autocomplete="off">
-    <input type="hidden" name="mottagarId" value="@ViewBag.MottagareId" />
-    <input type="text" name="text" placeholder="Skriv ditt meddelande här" required />
-    <button type="submit">Skicka</button>
-</form>
-
+            <div class="meddelande-formulär">
+                <form method="post" asp-action="skickaText" autocomplete="off">
+                    <input type="hidden" name="mottagarId" value="@ViewBag.MottagareId" />
+                    <input type="text" name="text" class="textfält" placeholder="Skriv ett meddelande..." required />
+                    <button type="submit" class="skicka-knapp">Skicka</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var container = document.querySelector('.meddelanden-container');
+        container.scrollTop = container.scrollHeight;
+    };
+</script>
 

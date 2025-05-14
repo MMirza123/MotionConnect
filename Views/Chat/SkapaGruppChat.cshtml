@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppchat</title>
+</head>
+<body>
+    <h3>Välj chat</h3>
+    <form method="post" action="/Chat/StartaGruppChat">
+        <input type="text" name="gruppNamn" placeholder="Namn på gruppen" required /><br><br>
+        <select name="valdaAnvandareIds" multiple style="height: 200px; width: 300px;">
+            @foreach (var anvandare in ViewBag.Anvandare)
+            {
+                <option value="@anvandare.Id">@anvandare.ForNamn @anvandare.EfterNamn</option>
+            }
+        </select><br><br>
+
+        <button type="submit">Skapa Gruppchatt</button>
+    </form>
+</body>

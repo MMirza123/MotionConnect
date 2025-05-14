@@ -1,76 +1,68 @@
 @model ApplicationUser
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/KontoInfo.css" asp-append-version="true" />
-    <title>Document</title>
+    <title>Profil - @Model.ForNamn @Model.EfterNamn</title>
 </head>
 
 <body>
-    <h1>Info om användaren</h1>
-    @if (!(bool)ViewBag.ArVanner && !Model.ArProfilOppen)
-    {
-        <form method="post" action="/Vanner/laggTillVan">
-            <input type="hidden" name="id" value="@Model.Id" />
-            <button type="submit">Bil vänner
-            </button>
-        </form>
-        @if (User.Identity.IsAuthenticated && Model != null)
-        {
+    <div class="profil-container">
+        <h1>Profilinformation</h1>
 
-            <p><strong>Sporter:</strong>
-                @foreach (var anvandareSporter in Model.AnvandareSporter)
-                {
-                    <span>@anvandareSporter.Sport.Namn</span>
-                }
+        <div class="profil-card">
+            <img src="@Model.ProfilBildUrl" alt="Profilbild" class="profilbild" />
+            <h2>@Model.ForNamn @Model.EfterNamn</h2>
+            <p>Antal Vänner: @ViewBag.AntalVanner</p>
+
+            <p class="profil-status">
+                Profilstatus: <strong>@(Model.ArProfilOppen ? "Öppen 🔓" : "Privat 🔒")</strong>
             </p>
-            <img src="@Model.ProfilBildUrl" alt="Profilbild">
-            <p>@Model.ForNamn @Model.EfterNamn</p>
-            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
-        }
-    }
-    else 
-    {
-        if (!(bool)ViewBag.ArVanner)
-        {
-        <form method="post" action="/Vanner/laggTillVan">
-            <input type="hidden" name="id" value="@Model.Id" />
-            <button type="submit">Bil vänner
-            </button>
-        </form>
-        }
-        else
-        {
-            <form method="post" action="/Vanner/taBortVan">
-                <input type="hidden" name="id" value="@Model.Id" />
-                <label>Vänner!</label>
-                <button type="submit">Sluta följ</button>
-            </form>
-        }
 
-        @if (User.Identity.IsAuthenticated && Model != null)
-        {
+            @if (User.Identity.IsAuthenticated && Model != null)
+            {
+                <div class="info-grupp">
+                    <h3>Sportintressen:</h3>
+                    <p>
+                        @foreach (var anvandareSporter in Model.AnvandareSporter)
+                        {
+                            <span class="sport-tag">@anvandareSporter.Sport.Namn</span>
+                        }
+                    </p>
+                </div>
 
-            <p><strong>Sporter:</strong>
-                @foreach (var anvandareSporter in Model.AnvandareSporter)
+                @if ((bool)ViewBag.ArVanner)
                 {
-                    <span>@anvandareSporter.Sport.Namn</span>
+                    <form method="post" action="/Vanner/taBortVan" class="vänskaps-form">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <button type="submit" class="avsluta-vänskap-knapp">Sluta följ</button>
+                    </form>
+                    <p class="vän-status">Ni är vänner! 👥</p>
                 }
-            </p>
-            <img src="@Model.ProfilBildUrl" alt="Profilbild">
-            <p>@Model.ForNamn @Model.EfterNamn</p>
-            <label class="Kontakt-info">Kontaktuppgifter:
-                <p>@Model.Email</p>
-                <p>@Model.PhoneNumber</p>
-            </label>
-            <p>Födelse år: @Model.FodelsAr</p>
-            <p>Lägge: @(Model.ArProfilOppen ? "Öppen" : "Privat")</p>
-        }
-    }
+                else
+                {
+                    <form method="post" action="/Vanner/laggTillVan" class="vänskaps-form">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <button type="submit" class="lägg-till-vän-knapp">Bli vänner</button>
+                    </form>
+                }
+
+                @if (Model.ArProfilOppen || (bool)ViewBag.ArVanner)
+                {
+                    <div class="kontakt-info">
+                        <h3>Kontaktuppgifter:</h3>
+                        <p>Email: @Model.Email</p>
+                        <p>Telefon: @Model.PhoneNumber</p>
+                        <p>Födelseår: @Model.FodelsAr</p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
 </body>
 
 </html>

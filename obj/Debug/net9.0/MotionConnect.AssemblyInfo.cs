@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MotionConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bebdfba6f3218f400cd9db8f0e095e9cc7c8c09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e0d36f5e9ab2b9b519d6e917c49ae7893ad2d1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MotionConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MotionConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,52 +1,118 @@
+
+/* */
+
 body {
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
-  
 }
 
 .min-header {
   background-color: black;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .header-wrapper p {
   color: white;
 }
+.header-wrapper img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
 
 .main-content {
-  padding: 20px;
-  min-height: calc(100vh - 160px); /* Anpassa om header/footer ändras */
+  padding: 10px; 
+  margin-top: 90px;
 }
 
-.min-footer {
-  background-color: black;
+#Logga {
+  font-size: 26px;
+  font-weight: bold;
   color: white;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
-#Profilbildd {
-  justify-content: flex-start;
-  object-fit: contain;
+#LoggaIn, #LoggaUt {
+  font-size: 16px;
   width: 100px;
-  height: 150px;
-  border-radius: 20%;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  background-color: rgba(173, 216, 230, 0.4);
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  color: white;
+}
+
+#LoggaIn:hover, #LoggaUt:hover {
+  box-shadow: 0 0 8px #ADD8E6;
+  background-color: rgba(173, 216, 230, 0.75);
+}
+
+#sok-wrapper {
+  position: relative;
+  width: 400px;
+  margin-top: 10px;
+}
+
+#sokFalt {
+  width: 350px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+
+#sok-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 370px;
+  z-index: 9999;
+}
+
+#resultatLista {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top:2px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#resultatLista li  {
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 7px;
+}
+#resultatLista li:hover {
+  background-color: rgba(255,255, 255, 0.75);
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:link {
@@ -57,82 +123,6 @@ a:visited {
   text-decoration: none;
 }
 
-#Logga,
-#LoggaIn,
-#LoggaUt {
-  margin-top: 10px;
-  color: white;
-  background-color: rgba(173, 216, 230, 0.4);
-  height: 40px;
-  line-height: 40px;
-  font-size: 20px;
-  text-align: center;
-  border-width: 5px;
-  border-radius: 25px;
-}
-#Logga:hover,
-#LoggaIn:hover,
-#LoggaUt:hover {
-  color: white;
-  box-shadow: 1px 1px 20px #ADD8E6;
-  background-color:  rgba(173, 216, 230, 0.75);;
-}
-
-#Logga {
-  width: 200px;
-}
-
-#LoggaIn {
-  width: 120px;
-}
-
-#LoggaUt {
-  width: 120px;
-  border-style: none;
-}
-
-#sokFalt {
-  margin-top: 10px;
-  width: 300px;
-  height: 35px;
-  border: #90EE90;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-#sokFalt:focus {
-  outline: none;
-}
-
-#sok-container {
-  position: relative;
-  width: 304px;
-}
-#resultatLista {
-  position: absolute;
-  left: 0; 
-  background-color: white;
-  border: 1px solid black;
-  width: 303px;
-  max-height: 200px;
-  overflow-y: auto;
-  padding: 0;
-  margin: 0;
-  list-style-type: circle;
-  z-index: 10;
-}
-#resultatLista li a {
-  display: block;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-}
-#resultatLista li a:hover {
-  border-left: 5px solid rgba(0, 0, 0, 0.75);
-  background-color:  rgba(0, 0, 0, 0.25);
-}
-#resultatLista:empty {
-  display: none;
-}
 
 
 

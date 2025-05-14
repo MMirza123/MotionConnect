@@ -1,17 +1,37 @@
 @model List<Notis>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Min Profil</title>
+    <link rel="stylesheet" href="~/css/VisaNotiser.css" asp-append-version="true" />
 </head>
+
 <body>
-    @foreach (var notis in Model)
-    {
-        <h3>@notis.Meddelande</h3>
-        <p>Skapad: @notis.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</p>
-    }
+    <div class="notis-container">
+        <h1>Dina Notiser</h1>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="notis-lista">
+                @foreach (var notis in Model)
+                {
+                    <div class="notis">
+                        
+                            <h3>@notis.Avsandare.ForNamn @notis.Avsandare.EfterNamn</h3>
+                            <p>@notis.Meddelande</p>
+                            <p class="tid">Skapad: @notis.SkapadesTid.ToString("yyyy-MM-dd HH:mm")</p>     
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="inga-notiser">Du har inga notiser just nu!</p>
+        }
+    </div>
 </body>
+</html>

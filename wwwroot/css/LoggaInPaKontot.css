@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+    min-height: 100vh; /* Byt från height:100vh till min-height */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    margin: 100px auto 0 auto; /* 🛠️ Så den hamnar snyggt nedanför headern */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.hint {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.hint a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.hint a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    background-color: #ffdddd;
+    color: red;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.validation-error {
+    color: red;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}

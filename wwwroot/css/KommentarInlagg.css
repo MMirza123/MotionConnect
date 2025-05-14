@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+    min-height: 100vh;
+}
+
+/* Inläggsutseende */
+.inlagg {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0 auto;
+    max-width: 750px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profilbild {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.skapdaes-tid {
+    color: grey;
+    font-size: 0.9em;
+}
+
+.Gilla {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 25px;
+    margin: 0px auto 0 auto;
+    max-width: 750px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Gillaknapp {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+#antalKommentarer {
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+/* Kommentarsektion med scroll */
+.kommentar-låda {
+    max-width: 790px;
+    margin: 0 auto 40px auto;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 350px;
+}
+
+/* Innehåll + formulär – ordningen är omvänd */
+.kommentar-scroll {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Kommentarformuläret som alltid visas längst ner */
+.kommentar-formulär {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+}
+
+.kommentar-input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.kommentar-textarea {
+    width: 100%;
+    min-height: 40px;
+    max-height: 150px;
+    resize: none;
+    overflow-y: hidden;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 10px 50px 10px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.kommentar-knapp {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kommentar-knapp:hover {
+    background-color: #45a049;
+}
+
+.kommentar-container {
+    flex: 1;
+    padding: 15px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kommentar-profil {
+    font-size: 16px;
+    margin: 0;
+}
+
+.kommentar-text {
+    margin: 0;
+    background-color: grey;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 16px;
+    max-width: 600px;
+    word-break: break-word;
+}
+
+#utan-kommentar {
+    color: grey;
+    font-style: italic;
+}

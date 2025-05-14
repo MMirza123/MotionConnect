@@ -1,8 +1,8 @@
 @model RegisterViewModel
 
-@if(!ViewData.ModelState.IsValid)
+@if (!ViewData.ModelState.IsValid)
 {
-    <div class="alert alert-danger">
+    <div class="alert">
         @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
         {
             <p>@error.ErrorMessage</p>
@@ -10,67 +10,100 @@
     </div>
 }
 
-<h1>Skapa ett nytt konto hej</h1>
+<!DOCTYPE html>
+<html lang="sv">
 
-<form method="post" action="/Konto/SkapaKonto" enctype="multipart/form-data" autocomplete="off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/SkapaKonto.css" asp-append-version="true" />
+    <title>Skapa Konto - Motion Connect</title>
+</head>
 
-    <label>Förnamn:</label><br>
-    <input type="text" asp-for="Fornamn" id="Fornamn" required /><br>
-    <span asp-validation-for="Fornamn"></span><br>
+<body>
+    <div class="register-container">
+        <h1>Skapa ett nytt konto</h1>
+        <p class="subtitle">Bli en del av Motion Connect!</p>
 
-    <label>Efternamn:</label><br>
-    <input type="text" asp-for="Efternamn" id="Efternamn" required /><br>
-    <span asp-validation-for="Efternamn"></span><br>
+        <form method="post" action="/Konto/SkapaKonto" enctype="multipart/form-data" autocomplete="off" class="register-form">
+            <div class="input-group">
+                <label>Förnamn</label>
+                <input type="text" asp-for="Fornamn" required />
+                <span asp-validation-for="Fornamn"></span>
+            </div>
 
-    <label>Email:</label><br>
-    <input type="email" asp-for="Email" id="Email" placeholder="Lars@gmail.com" required /><br>
-    <span asp-validation-for="Email"></span><br>
+            <div class="input-group">
+                <label>Efternamn</label>
+                <input type="text" asp-for="Efternamn" required />
+                <span asp-validation-for="Efternamn"></span>
+            </div>
 
-    <label>Telefonnummer:</label><br>
-    <input type="tel" asp-for="Telefonnummer" id="Telefonnummer" placeholder="0123456789" required /><br>
-    <span asp-validation-for="Telefonnummer"></span><br>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" asp-for="Email" placeholder="exempel@mail.com" required />
+                <span asp-validation-for="Email"></span>
+            </div>
 
-    <label>Födelseår:</label><br>
-    <input type="date" asp-for="Fodelsear" id="Fodelsear" required /><br>
-    <span asp-validation-for="Fodelsear"></span><br>
+            <div class="input-group">
+                <label>Telefonnummer</label>
+                <input type="tel" asp-for="Telefonnummer" placeholder="0701234567" required />
+                <span asp-validation-for="Telefonnummer"></span>
+            </div>
 
-    <label>Lösenord:</label><br>
-    <input type="password" asp-for="Losenord" id="Losenord" required /><br>
-    <span asp-validation-for="Losenord"></span><br>
+            <div class="input-group">
+                <label>Födelseår</label>
+                <input type="date" asp-for="Fodelsear" required />
+                <span asp-validation-for="Fodelsear"></span>
+            </div>
 
-    <label>Bekräfta lösenord:</label><br>
-    <input type="password" asp-for="BekraftaLosenord" id="BekraftaLosenord" required /><br>
-    <span asp-validation-for="BekraftaLosenord"></span><br>
+            <div class="input-group">
+                <label>Lösenord</label>
+                <input type="password" asp-for="Losenord" placeholder="••••••••" required />
+                <span asp-validation-for="Losenord"></span>
+            </div>
 
-    <label>Välj favoritsporter:</label><br>
-    <select name="sportIds[]" multiple class="form-control" style="height: 150px; width: 250px;">
-        @foreach (var sport in ViewBag.Sporter)
-        {
-            <option value="@sport.SportId">@sport.Namn</option>
-        }
-    </select><br>
+            <div class="input-group">
+                <label>Bekräfta lösenord</label>
+                <input type="password" asp-for="BekraftaLosenord" placeholder="••••••••" required />
+                <span asp-validation-for="BekraftaLosenord"></span>
+            </div>
 
-    <label>Profil bild:</label><br>
-    <input type="file" asp-for="Profilbild" id="Profilbild" accept="image/*" /><br>
-    <img id="Forhandsvisning" src="#" alt="Forhansvisning"
-        style="display: none; width: 150px; object-fit: cover; margin-top: 10px;"><br>
+            <div class="form-group">
+                <label>Välj sporter:</label>
+                <div class="sport-checkbox-group">
+                    @foreach (var sport in ViewBag.Sporter)
+                    {
+                        <label class="sport-checkbox">
+                            <input type="checkbox" name="sportIds" value="@sport.SportId" />
+                            <span class="checkbox-label">@sport.Namn</span>
+                        </label>
+                    }
+                </div>
+            </div>
 
-    <label>Vill du ha privat konto eller öppen (kan ändras efter registrering):</label><br>
+            <div class="input-group">
+                <label>Profilbild</label>
+                <input type="file" asp-for="Profilbild" accept="image/*" />
+                <img id="Forhandsvisning" src="#" alt="Förhandsvisning" class="preview-img" style="display: none;">
+            </div>
 
-    <input type="radio" asp-for="ArProfilOppen" id="ArProfilenOppen1" value="True" checked />
-    <label for="ArProfilenOppen1">Öppen (Alla kan se dina inlägg och följa dig)</label><br>
+            <div class="input-group">
+                <label>Välj kontotyp</label>
+                <div class="radio-group">
+                    <input type="radio" asp-for="ArProfilOppen" value="True" checked />
+                    <label>Öppen profil</label>
+                    <input type="radio" asp-for="ArProfilOppen" value="False" />
+                    <label>Privat profil</label>
+                </div>
+            </div>
 
-    <input type="radio" asp-for="ArProfilOppen" id="ArProfilenOppen2" value="False" />
-    <label for="ArProfilenOppen2">Privat (Bara de som följer dig kan se dina inlägg och följare)</label><br>
+            <button type="submit" class="register-button">Skapa Konto</button>
+        </form>
+    </div>
 
-
-    <button type="submit">Skapa användare</button>
-</form>
-
-@section Scripts {
-        <script>
+    <script>
         document.getElementById("Profilbild").addEventListener("change", function (event) {
-            var file = event.target.files[0]; 
+            var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function () {
@@ -83,7 +116,7 @@
         });
     </script>
 
+    <partial name="_ValidationScriptsPartial" />
+</body>
 
-        <partial name="_ValidationScriptsPartial" />
-
-}
+</html>

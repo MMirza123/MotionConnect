@@ -1,100 +1,241 @@
 body {
-    background-color: #ADD8E6;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
 }
 
-.navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.navigation a {
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 17px;
-    text-align: center;
-    border-width: 5px;
-    border-radius: 25px;
-}
-
-.navigation a:hover {
-    color: white;
-    box-shadow: 1px 1px 20px #000000;
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
+/* Layout för sidan */
 .Contetn-layout {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
     gap: 10px;
 }
 
+/* Vänsterkolumn - Chat */
 .vänster-kolumn {
     flex: 1;
     max-width: 300px;
-    border: 5px solid black;
+    max-height: 650px;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-.mitten-kolumn {
-    flex: 2;
-    max-width: 700px;
-    border: 5px solid black;
-}
-
-.Höger-kolumn {
-    flex: 1;
-    max-width: 150px;
-    border: 5px solid black;
-}
-
 
 .chat-Wrap {
-    background-color: white;
-    width: 300px;
-    max-height: 260px;
+    background-color: #1c1c1c;
+    max-height: 500px;
     overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
 }
 
+/* En användare i chatten */
 .ChatMed {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    color: black;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: white;
     text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 100%;
+    transition: background-color 0.3s;
 }
+
 .ChatMed:hover {
-    border-left: 5px solid rgba(13, 13, 13, 0.75);
-    background-color: rgba(217, 215, 215, 0.25); 
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 #ProfilbildChat {
-    width: 75px;
-    height: 60px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.inlagg-container
-{
+/* Mittenkolumn - Inlägg */
+.mitten-kolumn {
+    flex: 2;
+    max-width: 750px;
+    max-height: 650px;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.kommentar {
+
+}
+
+.inlagg-rubrik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-val {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-val a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropp-knapp {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none; 
+}
+
+.dropdown-val a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-val {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropp-knapp {background-color: rgba(0, 0, 0, 0.5);}
+
+.inlagg-container {
     display: flex;
     flex-direction: column;
 }
 
 .post {
-    border: 5px solid black;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.inlaggText {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 #InlaggBild {
-    max-width: 700px;
-    max-height: 250px;
+    max-height: 200px;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.Gilla {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 25px;
+    margin: 0px auto 0 auto;
+    max-width: 750px;
+    width: 96%;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Gillaknapp {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+#antalKommentarer {
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+#antalKommentarer:hover {
+    background-color: grey;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Gilla-knappar */
+#gillaKnapp, #slutaGillaKnapp {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#gillaKnapp {
+    color: black;
+}
+
+#gillaKnapp:hover, #slutaGillaKnapp:hover {
+    background-color: grey;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#slutaGillaKnapp {
+    color: red;
+}
+
+/* Högerkolumn - Exempel */
+.Höger-kolumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    max-height: 650px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.Höger-kolumn a {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.Höger-kolumn a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px #ffffff;
+}
+
+/* Allmänna små justeringar */
+h1, h2, h3, p {
+    color: #333;
+}
+
+#antalNotiser {
+    color: white;
+    background-color: red;
+    border-radius: 25px;
+    position: relative;
+    top: -15px;
+    right: -15px;
+    padding: 5px 10px;
 }

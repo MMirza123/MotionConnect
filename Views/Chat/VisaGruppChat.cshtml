@@ -1,0 +1,59 @@
+@model Grupp
+@{
+    ViewBag.Title = "Gruppchatt";
+    var meddelanden = ViewBag.Meddelanden as List<Meddelande>;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppchat</title>
+    <link rel="stylesheet" href="~/css/VisaGruppChat.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="gruppchat-container">
+        <div class="gruppchat-header">
+            @Model.GruppNamn<br />
+            <small>Medlemmar: @string.Join(", ", Model.GruppMedlemmar.Select(m => m.Anvandare.ForNamn + " " +
+                m.Anvandare.EfterNamn))</small>
+        </div>
+
+
+        <div class="meddelande-box">
+            <div class="meddelanden-container">
+                @if (meddelanden != null && meddelanden.Any())
+                {
+                    foreach (var m in meddelanden)
+                    {
+                        var cssClass = m.Avsandare.Id == (string)ViewBag.InloggadId ? "mitt-meddelande" : "annat-meddelande";
+
+                        <div class="meddelande @cssClass">
+                            <span class="meddelande-avsandare">@m.Avsandare.ForNamn:</span>
+                            <span class="text">@m.Text</span>
+                            <span class="meddelande-tid">(@m.SkapadesTid.ToString("HH:mm dd/MM"))</span>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Inga meddelanden ännu.</p>
+                }
+
+            </div>
+            <div class="meddelande-formulär">
+                <form method="post" asp-action="SkickaTillGrupp" autocomplete="off">
+                    <input type="hidden" name="gruppId" value="@Model.GruppId" />
+                    <input type="text" name="text" class="textfält" placeholder="Skriv ett meddelande" required />
+                    <button type="submit" class="skicka-knapp">Skicka</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var container = document.querySelector('.meddelanden-container');
+        container.scrollTop = container.scrollHeight;
+    };
+</script>

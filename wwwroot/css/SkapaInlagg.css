@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.skapa-inlagg-container {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 0px auto 0 auto; 
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.inlagg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+textarea,
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Stil för checkboxarna */
+.sport-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-height: 150px; /* Begränsa höjden för att skapa scroll */
+    overflow-y: auto;
+    border-radius: 10px;  /* Lägg till scrollbar */
+}
+
+.sport-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sport-checkbox:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.sport-checkbox:checked {
+    background-color: #66a6ff;
+}
+
+.sport-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; /* Döljer checkboxen */
+    pointer-events: none; /* Gör så att den inte kan klickas */
+}
+
+.checkbox-label {
+    margin-top: 2px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sport-checkbox input[type="checkbox"]:checked + .checkbox-label:before {
+    content: '\2713'; /* Unicode för check-symbol */
+    color: green;
+    margin-right: 10px;
+}
+
+.preview-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.publish-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.publish-button:hover {
+    background-color: #45a049;
+}

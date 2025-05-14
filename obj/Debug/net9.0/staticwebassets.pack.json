@@ -2,15 +2,47 @@
   "Files": [
     {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css",
-      "PackagePath": "staticwebassets/MotionConnect.mr7r45gx5d.bundle.scp.css"
+      "PackagePath": "staticwebassets/MotionConnect.5dvwfqjfiy.bundle.scp.css"
     },
     {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css",
       "PackagePath": "staticwebassets/css/Index.css"
     },
     {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css",
+      "PackagePath": "staticwebassets/css/KommentarInlagg.css"
+    },
+    {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
       "PackagePath": "staticwebassets/css/KontoInfo.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css",
+      "PackagePath": "staticwebassets/css/KontoInfoAnvandaren.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css",
+      "PackagePath": "staticwebassets/css/LoggaInPaKontot.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css",
+      "PackagePath": "staticwebassets/css/SkapaInlagg.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css",
+      "PackagePath": "staticwebassets/css/SkapaKonto.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css",
+      "PackagePath": "staticwebassets/css/StartaChat.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css",
+      "PackagePath": "staticwebassets/css/VisaGruppChat.css"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css",
+      "PackagePath": "staticwebassets/css/VisaNotiser.css"
     },
     {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css",
@@ -313,10 +345,6 @@
       "PackagePath": "staticwebassets/uploads/ManchesterCity.png"
     },
     {
-      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/Messi.jpg",
-      "PackagePath": "staticwebassets/uploads/Messi.jpg"
-    },
-    {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/One peice.jpeg",
       "PackagePath": "staticwebassets/uploads/One peice.jpeg"
     },
@@ -349,6 +377,10 @@
       "PackagePath": "staticwebassets/uploads/b7b155e1-b062-4da1-b82e-58c86ef04a9d.jpeg"
     },
     {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg",
+      "PackagePath": "staticwebassets/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg"
+    },
+    {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/da9069a8-41ba-4579-91ff-787f36b638cb.jpeg",
       "PackagePath": "staticwebassets/uploads/da9069a8-41ba-4579-91ff-787f36b638cb.jpeg"
     },
@@ -359,6 +391,10 @@
     {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/e3cc9770-3e33-43e4-8bf9-ed836219be96.jpg",
       "PackagePath": "staticwebassets/uploads/e3cc9770-3e33-43e4-8bf9-ed836219be96.jpg"
+    },
+    {
+      "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg",
+      "PackagePath": "staticwebassets/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg"
     },
     {
       "Id": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/fd1dfa3e-aae0-4481-ab27-7fa9b4a11710.jpeg",

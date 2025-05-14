@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+}
+
+.notis-container {
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.notis-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notis {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.notis:hover {
+    background-color: #f1f1f1;
+}
+
+.notis h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.notis .tid {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+.inga-notiser {
+    color: #555;
+    font-size: 18px;
+    margin-top: 20px;
+}

@@ -1,38 +1,54 @@
+<head>
+    <link rel="stylesheet" href="~/css/SkapaInlagg.css" asp-append-version="true" />
+    <title>Skapa Inlägg - Motion Connect</title>
+</head>
 
-<h4>Skapa ett inlägg</h4>
+<body>
+    <div class="skapa-inlagg-container">
+        <h1>Skapa ett nytt inlägg</h1>
 
-<form method="post" action="/Inlagg/SkapaEttInlagg" enctype="multipart/form-data" autocomplete="off">  
-    <label>Skriv ditt inlägg är:</label>
-    <textarea id="text" name="text" rows="15" cols="50" placeholder="Skriv ditt inlägg är..."></textarea><br>
+        <form method="post" action="/Inlagg/SkapaEttInlagg" enctype="multipart/form-data" autocomplete="off"
+            class="inlagg-form">
 
-    <label>Välj sporter:</label><br>
-    <select name="sportIds[]" multiple class="form-control" style="height: 150px; width: 250px;">
-    @foreach (var sport in ViewBag.Sporter)
-    {
-        <option value="@sport.SportId">@sport.Namn</option>
-    }
-    </select><br>
-    
+            <div class="form-group">
+                <label for="text">Text till inlägget:</label>
+                <textarea id="text" name="text" rows="8" placeholder="Skriv något inspirerande..." required></textarea>
+            </div>
 
-    <label>Välj bil om du vill</label>
-    <input type="file" id="Bild" name="Bild" accept="image/*" /><br>
-    <img id="Forhandsvisning" src="#" alt="Forhansvisning"
-        style="display: none; width: 150px; object-fit: cover; margin-top: 10px;"><br>
+            <div class="form-group">
+                <label>Välj sporter:</label>
+                <div class="sport-checkbox-group">
+                    @foreach (var sport in ViewBag.Sporter)
+                    {
+                        <label class="sport-checkbox">
+                            <input type="checkbox" name="sportIds" value="@sport.SportId" />
+                            <span class="checkbox-label">@sport.Namn</span>
+                        </label>
+                    }
+                </div>
+            </div>
 
-    <button type="submit">Publicera inlägg</button>
-</form>
+            <div class="form-group">
+                <label for="Bild">Ladda upp en bild (valfritt):</label>
+                <input type="file" id="Bild" name="Bild" accept="image/*" />
+                <img id="Forhandsvisning" src="#" alt="Förhandsvisning" class="preview-img" style="display: none;">
+            </div>
 
+            <button type="submit" class="publish-button">Publicera Inlägg</button>
+        </form>
+    </div>
+</body>
 <script>
-        document.getElementById("Bild").addEventListener("change", function (event) {
-            var file = event.target.files[0]; 
-            if (file) {
-                var reader = new FileReader();
-                reader.onload = function () {
-                    var imgElement = document.getElementById("Forhandsvisning");
-                    imgElement.src = reader.result;
-                    imgElement.style.display = "block";
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+    document.getElementById("Bild").addEventListener("change", function (event) {
+        var file = event.target.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var imgElement = document.getElementById("Forhandsvisning");
+                imgElement.src = reader.result;
+                imgElement.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>

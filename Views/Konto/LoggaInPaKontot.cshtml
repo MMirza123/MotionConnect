@@ -1,8 +1,8 @@
 @model ApplicationUser
 
-@if(!ViewData.ModelState.IsValid)
+@if (!ViewData.ModelState.IsValid)
 {
-    <div class="alert alert-danger">
+    <div class="alert">
         @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
         {
             <p>@error.ErrorMessage</p>
@@ -10,17 +10,38 @@
     </div>
 }
 
-<h1>Logga inlägg på ditt konto</h1>
+<!DOCTYPE html>
+<html lang="sv">
 
-<form method="post" action="/Konto/LoggaInPaKontot" autocomplete="off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/LoggaInPaKontot.css" asp-append-version="true" />
+    <title>Logga In</title>
+</head>
 
-    <label>Email:</label>
-    <input type="email" asp-for="Email" id="Email" placeholder="Lars@gmail.com" required /><br>
-    <span asp-validation-for="Email"></span><br>
+<body>
+    <div class="login-container">
+        <h1>Välkommen tillbaka!</h1>
+        <p class="subtitle">Logga in på ditt konto</p>
 
-    <label>Lösenord:</label>
-    <input type="password" name="losenord" id="Loserord" required /><br>
-    <br>
+        <form method="post" action="/Konto/LoggaInPaKontot" autocomplete="off" class="login-form">
+            <div class="input-group">
+                <label for="Email">Email</label>
+                <input type="email" asp-for="Email" id="Email" placeholder="exempel@mail.com" required />
+                <span asp-validation-for="Email" class="validation-error"></span>
+            </div>
 
-    <button type="submit">Logga in</button>
-</form>
+            <div class="input-group">
+                <label for="Loserord">Lösenord</label>
+                <input type="password" name="losenord" id="Loserord" placeholder="••••••••" required />
+            </div>
+
+            <button type="submit" class="login-button">Logga in</button>
+        </form>
+
+        <p class="hint">Har du inget konto? <a href="/Konto/SkapaKonto">Skapa ett här!</a></p>
+    </div>
+</body>
+
+</html>

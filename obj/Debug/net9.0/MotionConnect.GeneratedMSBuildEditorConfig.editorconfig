@@ -28,12 +28,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[/Users/markusmirza/MotionConnect/MotionConnect/Views/Chat/SkapaGruppChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdC9Ta2FwYUdydXBwQ2hhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/markusmirza/MotionConnect/MotionConnect/Views/Chat/StartaChat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdC9TdGFydGFDaGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/markusmirza/MotionConnect/MotionConnect/Views/Chat/ValjChat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdC9WYWxqQ2hhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markusmirza/MotionConnect/MotionConnect/Views/Chat/VisaGruppChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdC9WaXNhR3J1cHBDaGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/markusmirza/MotionConnect/MotionConnect/Views/Home/Index.cshtml]
@@ -44,16 +52,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/markusmirza/MotionConnect/MotionConnect/Views/Inlagg/KommentarInlagg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5sYWdnL0tvbW1lbnRhcklubGFnZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/markusmirza/MotionConnect/MotionConnect/Views/Inlagg/SkapaEttInlagg.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5sYWdnL1NrYXBhRXR0SW5sYWdnLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/markusmirza/MotionConnect/MotionConnect/Views/Inlagg/VisaInlagg.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5sYWdnL1Zpc2FJbmxhZ2cuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/markusmirza/MotionConnect/MotionConnect/Views/Inlagg/VisaInlaggAnvandare.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5sYWdnL1Zpc2FJbmxhZ2dBbnZhbmRhcmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/markusmirza/MotionConnect/MotionConnect/Views/Konto/KontoInfo.cshtml]

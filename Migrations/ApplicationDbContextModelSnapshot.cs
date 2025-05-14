@@ -266,11 +266,8 @@ namespace MotionConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KommentarId"));
 
-                    b.Property<string>("AnvandarId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("AnvandareId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("InlaggId")
@@ -500,6 +497,10 @@ namespace MotionConnect.Migrations
                     b.Property<bool>("ArLast")
                         .HasColumnType("bit");
 
+                    b.Property<string>("AvsandareId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("InlaggId")
                         .HasColumnType("int");
 
@@ -519,6 +520,8 @@ namespace MotionConnect.Migrations
                     b.HasKey("NotisId");
 
                     b.HasIndex("AnvandarId");
+
+                    b.HasIndex("AvsandareId");
 
                     b.HasIndex("InlaggId");
 
@@ -681,7 +684,9 @@ namespace MotionConnect.Migrations
                 {
                     b.HasOne("ApplicationUser", "Anvandare")
                         .WithMany("Kommentarer")
-                        .HasForeignKey("AnvandareId");
+                        .HasForeignKey("AnvandareId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Inlagg", "Inlagg")
                         .WithMany("Kommentarer")
@@ -792,7 +797,13 @@ namespace MotionConnect.Migrations
                     b.HasOne("ApplicationUser", "Anvandare")
                         .WithMany("Notiser")
                         .HasForeignKey("AnvandarId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ApplicationUser", "Avsandare")
+                        .WithMany()
+                        .HasForeignKey("AvsandareId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Inlagg", "Inlagg")
@@ -800,6 +811,8 @@ namespace MotionConnect.Migrations
                         .HasForeignKey("InlaggId");
 
                     b.Navigation("Anvandare");
+
+                    b.Navigation("Avsandare");
 
                     b.Navigation("Inlagg");
                 });

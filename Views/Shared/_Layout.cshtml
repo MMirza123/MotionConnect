@@ -11,21 +11,30 @@
 <body>
     <header class="min-header">
         <div class="header-wrapper">
-            @if (User.Identity.IsAuthenticated && ViewBag.AnvandareNamn != null && ViewBag.Profilbild != null) 
+            @if (User.Identity.IsAuthenticated && ViewBag.AnvandareNamn != null && ViewBag.Profilbild != null)
             {
-                <img id="Profilbildd" src="@ViewBag.Profilbild" alt="Profilbild"/>
+                <img id="Profilbildd" src="@ViewBag.Profilbild" alt="Profilbild" />
                 <p>@ViewBag.AnvandareNamn</p>
             }
-            <a href="/" id="Logga">Motion Connect</a>
-            <a asp-controller="Konto" asp-action="LoggaInPaKontot" id="LoggaIn">Logga in</a>
-            <form method="post" action="/Konto/LoggaUtFranKonto">
-                <button type="submit" id="LoggaUt">Logga ut</button>
-            </form>
+            @if (User.Identity.IsAuthenticated == false)
+            {
+                <a asp-controller="Konto" asp-action="LoggaInPaKontot" id="LoggaIn">Logga in</a>
+            }
+            else
+            {
+                <form method="post" action="/Konto/LoggaUtFranKonto">
+                    <button type="submit" id="LoggaUt">Logga ut</button>
+                </form>
+            }
         </div>
-        <input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off" />
-            <div id="sok-container">
+        <a href="/" id="Logga">Motion Connect</a>
+        <div id="sok-wrapper">
+            <input type="text" id="sokFalt" placeholder="Sök användare" autocomplete="off" />
+            <div id="sok-container" hidden>
                 <ul id="resultatLista"></ul>
             </div>
+        </div>
+
     </header>
 
     <main class="main-content">
@@ -42,30 +51,39 @@
 <script>
     document.getElementById("sokFalt").addEventListener("input", function () {
         var query = this.value;
+        var resultatLista = document.getElementById("resultatLista");
+        var sokContainer = document.getElementById("sok-container");
 
         if (query.length === 0) {
-            document.getElementById("resultatLista").innerHTML = "";
+            resultatLista.innerHTML = "";
+            sokContainer.hidden = true; //Göm när inget söks
             return;
         }
 
-        fetch(`/Konto/SokKonto?query=${query}`) 
+        fetch(`/Konto/SokKonto?query=${query}`)
             .then(response => response.json())
             .then(data => {
-                var resultatLista = document.getElementById("resultatLista");
                 resultatLista.innerHTML = "";
 
-                data.forEach(anvandare => {  
-                    var li = document.createElement("li");
+                if (data.length > 0) {
+                    sokContainer.hidden = false; //Visa om det finns resultat
+                    data.forEach(anvandare => {
+                        var li = document.createElement("li");
 
-                    var lank = document.createElement("a");
-                    lank.href = "Konto/KontoInfo?id=" + anvandare.id;
-                    lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`; 
-                    li.appendChild(lank);
-                    resultatLista.appendChild(li);
-                });
+                        var lank = document.createElement("a");
+                        lank.href = "Konto/KontoInfo?id=" + anvandare.id;
+                        lank.textContent = `${anvandare.forNamn} ${anvandare.efterNamn}`;
+                        li.appendChild(lank);
+                        resultatLista.appendChild(li);
+                    });
+                } else {
+                    sokContainer.hidden = true; //Göm om ingen träff
+                }
             })
-            .catch(error => console.error("Fel vid hämtning av data:", error));
+            .catch(error => {
+                console.error("Fel vid hämtning av data:", error);
+                sokContainer.hidden = true; //Göm om fel inträffar
+            });
     });
 </script>
-
 </html>

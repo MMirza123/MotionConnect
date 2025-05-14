@@ -22,6 +22,95 @@ public class InlaggController : Controller
     }
 
     [HttpGet]
+    public async Task<IActionResult> KommentarInlagg(int? sportId, int inlaggId)
+    {
+        //Kollar om det är en användare inloggad
+        if (User.Identity.IsAuthenticated)
+        {
+            var user = await _userManager.GetUserAsync(User); //Hämtar den inloggande användarens uppgifter
+            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}"; //En säck som skickas till html sidan med "För- och efternamn på den inloggade användaren"
+            ViewBag.ProfilBild = user.ProfilBildUrl; //En säck som skickas med profilbild för den inloggade användaren
+        }
+
+        //Om ingen är inloggad ska en tom HomeViewModel skickas
+        if (!User.Identity.IsAuthenticated)
+            return View(new HomeViewModel());
+
+        //Hämmtar hela namnet på den inloggade användaren
+        string identifier = User.Identity.Name;
+        //Hitta mailen(unika nyckeln) på anävändaren går bara att hitta med hela namnet, annars hitta namnet
+        var anvandare = await _userManager.FindByEmailAsync(identifier) ?? await _userManager.FindByNameAsync(identifier);
+        //Hämta användarens unika id
+        var anvandarId = _userManager.GetUserId(User);
+
+        //Hätar dett inlägg där den inkomande parametern med inlaggsId matchar inläggsIdet som finns i databasen.
+        //Det som tas ed är användaren som skapade inlägget och sporterna som tillhör inlägget
+        var inlaggQuery = _context.Inlagg
+            .Include(i => i.Anvandare)
+            .Include(i => i.Kommentarer)
+                .ThenInclude(i => i.Anvandare)
+            .Include(i => i.InlaggSporter)
+                .ThenInclude(isport => isport.Sport)
+            .AsQueryable()
+            .Where(i => i.InlaggId == inlaggId)
+            .AsQueryable();
+
+        if (sportId.HasValue)
+        {
+            inlaggQuery = inlaggQuery
+                .Where(i => i.InlaggSporter.Any(s => s.SportId == sportId));
+        }
+
+        var inlagg = await inlaggQuery
+            .OrderByDescending(i => i.SkapadesTid)
+            .ToListAsync();
+
+        // Sortera kommentarerna i varje inlägg i stigande ordning (äldsta först)
+        foreach (var i in inlagg)
+        {
+            i.Kommentarer = i.Kommentarer.OrderBy(k => k.SkapadTid).ToList();
+        }
+
+
+        ViewBag.ValdSportId = sportId;
+
+        var sporterMedInlagg = await _context.InlaggSporter
+            .Include(i => i.Sport)
+            .GroupBy(i => i.SportId)
+            .Select(i => i.First().Sport)
+            .ToListAsync();
+
+        ViewBag.Sporter = sporterMedInlagg;
+
+        // Räkna hur många gillningar varje inlägg har
+        var antalGillningarPerInlagg = await _context.Gillningar
+            .GroupBy(g => g.InlaggId)
+            .ToDictionaryAsync(g => g.Key, g => g.Count());
+
+        // Hämta lista på inlägg som den inloggade användaren har gillat
+        var harGillad = await _context.Gillningar
+            .Where(g => g.AnvandarId == anvandarId)
+            .Select(g => g.InlaggId)
+            .ToListAsync();
+
+        var antalKommentarePerInlagg = await _context.Kommentarer
+            .GroupBy(k => k.InlaggId)
+            .ToDictionaryAsync(k => k.Key, k => k.Count());
+
+        var model = new HomeViewModel
+        {
+            Anvandare = anvandare,
+            HarGillatInlaggIds = harGillad,
+            AntalGillningar = antalGillningarPerInlagg,
+            AntalKommentarer = antalKommentarePerInlagg,
+            Inlagg = inlagg ?? new List<Inlagg>()
+        };
+
+        return View(model);
+    }
+
+    // Visar formulär för att skapa ett nytt inlägg
+    [HttpGet]
     public async Task<IActionResult> SkapaEttInlagg()
     {
         if (!User.Identity.IsAuthenticated)
@@ -29,6 +118,7 @@ public class InlaggController : Controller
             return Unauthorized();
         }
 
+        // Visar namn och profilbild i vyn om användaren är inloggad
         if (User.Identity.IsAuthenticated)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -36,84 +126,15 @@ public class InlaggController : Controller
             ViewBag.ProfilBild = user.ProfilBildUrl;
         }
 
-
+        // Hämtar alla sporter till en dropdown eller checkbox-lista
         var sporter = await _context.Sporter.ToListAsync();
-        ViewBag.Sporter = sporter; // Skickar listan med sporter till vyn
+        ViewBag.Sporter = sporter;
 
         return View();
     }
 
 
-    [HttpGet]
-    public async Task<IActionResult> VisaInlagg()
-    {
-        if (User.Identity.IsAuthenticated)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
-            ViewBag.ProfilBild = user.ProfilBildUrl;
-        }
-
-        var userId = _userManager.GetUserId(User);
-
-        var inlagg = await _context.Inlagg
-            .Include(i => i.Anvandare)
-            .Include(i => i.InlaggSporter)
-            .ThenInclude(isport => isport.Sport)
-            .OrderByDescending(i => i.SkapadesTid)
-            .ToListAsync();
-
-        var antalGillningarPerInlagg = await _context.Gillningar
-        .GroupBy(g => g.InlaggId)
-        .ToDictionaryAsync(g => g.Key, g => g.Count());
-
-        var harGillad = await _context.Gillningar
-        .Where(g => g.AnvandarId == userId)
-        .Select(g => g.InlaggId)
-        .ToListAsync();
-
-        ViewBag.HarGillad = harGillad;
-        ViewBag.AntalGillningar = antalGillningarPerInlagg;
-
-        return View(inlagg ?? new List<Inlagg>());
-    }
-
-    [HttpGet]
-    public async Task<IActionResult> VisaInlaggAnvandare()
-    {
-        if (!User.Identity.IsAuthenticated)
-        {
-            return RedirectToAction("LoggaInPaKonto", "Konto");
-        }
-
-        if (User.Identity.IsAuthenticated)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
-            ViewBag.ProfilBild = user.ProfilBildUrl;
-        }
-
-
-        var userId = _userManager.GetUserId(User);
-
-        var inlagg = await _context.Inlagg
-            .Where(i => i.AnvandarId == userId)
-            .Include(i => i.Anvandare)
-            .Include(i => i.InlaggSporter)
-            .ThenInclude(isport => isport.Sport)
-            .OrderByDescending(i => i.SkapadesTid)
-            .ToListAsync();
-
-        var antalGillningarPerInlagg = await _context.Gillningar
-        .GroupBy(g => g.InlaggId)
-        .ToDictionaryAsync(g => g.Key, g => g.Count());
-
-        ViewBag.AntalGillningar = antalGillningarPerInlagg;
-        return View(inlagg);
-    }
-
-
-
+    // Skapar ett nytt inlägg och sparar bild och koppling till sporter
     [HttpPost]
     public async Task<IActionResult> SkapaEttInlagg(string text, IFormFile bild, List<int> sportIds)
     {
@@ -128,7 +149,7 @@ public class InlaggController : Controller
             return NotFound("Användaren hittades inte");
         }
 
-        // Hantera bilduppladdning
+        // Hanterar uppladdning av bild om det finns en
         string bildUrl = null;
         if (bild != null && bild.Length > 0)
         {
@@ -149,7 +170,7 @@ public class InlaggController : Controller
             bildUrl = "/uploads/" + fileName;
         }
 
-        // Skapa inlägget
+        // Skapar själva inlägget
         var nyttInlagg = new Inlagg
         {
             Text = text,
@@ -162,7 +183,7 @@ public class InlaggController : Controller
         _context.Inlagg.Add(nyttInlagg);
         await _context.SaveChangesAsync();
 
-        // Koppla inlägget till valda sporter
+        // Länkar inlägget till valda sporter
         foreach (var sportId in sportIds)
         {
             var inlaggSport = new InlaggSport
@@ -177,6 +198,7 @@ public class InlaggController : Controller
         return RedirectToAction("Index", "Home");
     }
 
+    // Tar bort ett inlägg från databasen
     [HttpPost]
     public async Task<IActionResult> taBortInlagg(int id)
     {
@@ -193,12 +215,13 @@ public class InlaggController : Controller
         return RedirectToAction("VisaInlaggAnvandare", "Inlagg");
     }
 
+    // Hanterar när en användare gillar ett inlägg
     [HttpPost]
-    public async Task<IActionResult> GillaInlagg(int id)
+    public async Task<IActionResult> GillaInlagg(int id, string returnUrl)
     {
         var inlagg = await _context.Inlagg
-        .Include(i => i.Anvandare)
-        .FirstOrDefaultAsync(i => i.InlaggId == id);
+            .Include(i => i.Anvandare)
+            .FirstOrDefaultAsync(i => i.InlaggId == id);
 
         var anvandareId = _userManager.GetUserId(User);
 
@@ -215,35 +238,49 @@ public class InlaggController : Controller
             AnvandarId = anvandareId
         };
 
-        var notis = new Notis
-        {
-            Meddelande = $"{anvandare.ForNamn} {anvandare.EfterNamn} har gillad dit inlägg",
-            Typ = NotisTyp.Gillning,
-            ArLast = false,
-            AnvandarId = inlagg.AnvandarId,
-            SkapadesTid = DateTime.UtcNow,
-            InlaggId = id
-        };
-
-
         _context.Gillningar.Add(gillning);
-        _context.Notiser.Add(notis);
+
+        if (anvandareId != inlagg.AnvandarId)
+        {
+            // Skapar en notis till den som äger inlägget
+            var notis = new Notis
+            {
+                Meddelande = $"{anvandare.ForNamn} {anvandare.EfterNamn} har gillad dit inlägg",
+                Typ = NotisTyp.Gillning,
+                ArLast = false,
+                AnvandarId = inlagg.AnvandarId,
+                AvsandareId = anvandareId,
+                SkapadesTid = DateTime.UtcNow,
+                InlaggId = id
+            };
+
+            _context.Notiser.Add(notis);
+        }
+
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Index", "Home");
+        if (!string.IsNullOrEmpty(returnUrl) && returnUrl.Contains("KommentarInlagg"))
+        {
+            var inlaggIdQuery = System.Web.HttpUtility.ParseQueryString(new Uri("http://dummy" + returnUrl).Query);
+            var inlaggId = int.Parse(inlaggIdQuery["inlaggId"]);
+            return RedirectToAction("KommentarInlagg", "Inlagg", new { inlaggId });
+        }
+
+        return Redirect(returnUrl ?? "/");
     }
 
+    // Tar bort gillning och tillhörande notis
     [HttpPost]
-    public async Task<IActionResult> taBortGillning(int id)
+    public async Task<IActionResult> taBortGillning(int id, string returnUrl)
     {
         var inlagg = await _context.Inlagg.FindAsync(id);
         var anvandareId = _userManager.GetUserId(User);
 
         var gillning = await _context.Gillningar
-        .FirstOrDefaultAsync(g => g.AnvandarId == anvandareId && g.InlaggId == id);
+            .FirstOrDefaultAsync(g => g.AnvandarId == anvandareId && g.InlaggId == id);
 
         var notis = await _context.Notiser
-        .FirstOrDefaultAsync(n => n.AnvandarId == inlagg.AnvandarId && n.InlaggId == id && n.Typ == NotisTyp.Gillning);
+            .FirstOrDefaultAsync(n => n.AnvandarId == inlagg.AnvandarId && n.InlaggId == id && n.Typ == NotisTyp.Gillning);
 
         if (gillning != null)
             _context.Gillningar.Remove(gillning);
@@ -253,7 +290,42 @@ public class InlaggController : Controller
 
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Index", "Home");
+        await _context.SaveChangesAsync();
+
+        if (!string.IsNullOrEmpty(returnUrl) && returnUrl.Contains("KommentarInlagg"))
+        {
+            var inlaggIdQuery = System.Web.HttpUtility.ParseQueryString(new Uri("http://dummy" + returnUrl).Query);
+            var inlaggId = int.Parse(inlaggIdQuery["inlaggId"]);
+            return RedirectToAction("KommentarInlagg", "Inlagg", new { inlaggId });
+        }
+
+        return Redirect(returnUrl ?? "/");
     }
 
+    [HttpPost]
+    public async Task<IActionResult> skickaKommentar(string text, int inlaggId)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        ViewBag.AnvandareNamn = $"{user.ForNamn} {user.EfterNamn}";
+        ViewBag.ProfilBild = user.ProfilBildUrl;
+
+        var userId = _userManager.GetUserId(User);
+        if (userId == null)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        var kommentar = new Kommentar
+        {
+            Text = text,
+            SkapadTid = DateTime.UtcNow,
+            InlaggId = inlaggId,
+            AnvandareId = userId
+        };
+
+        _context.Kommentarer.Add(kommentar);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("KommentarInlagg", new { inlaggId });
+    }
 }

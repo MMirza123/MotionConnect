@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+    min-height: 100vh;
+}
+
+.register-container {
+    margin: 0px auto 30px auto;
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1em;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-group {
+    text-align: left;
+}
+/* Stil för checkboxarna */
+.sport-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-height: 150px; /* Begränsa höjden för att skapa scroll */
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;  /* Lägg till scrollbar */
+}
+
+.sport-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sport-checkbox:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.sport-checkbox:checked {
+    background-color: #66a6ff;
+}
+
+.sport-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; /* Döljer checkboxen */
+    pointer-events: none; /* Gör så att den inte kan klickas */
+}
+
+.checkbox-label {
+    margin-top: 2px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sport-checkbox input[type="checkbox"]:checked + .checkbox-label:before {
+    content: '\2713'; /* Unicode för check-symbol */
+    color: green;
+    margin-right: 10px;
+}
+
+.preview-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.register-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    background-color: #ffdddd;
+    color: red;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 8px;
+}

@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+    min-height: 100vh;
+}
+
+.profil-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.profil-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profil-bild {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.profil-bild img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid springgreen;
+    margin-bottom: 10px;
+}
+
+.profil-detaljer {
+    flex: 2;
+}
+
+.profil-detaljer p, .vanner p, .sporter span {
+    font-size: 17px;
+    color: #555;
+}
+
+.sporter span, .vanner span {
+    display: inline-block;
+    background-color: #e0f7fa;
+    padding: 5px 10px;
+    margin: 5px 0 0 0;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.profil-knapp,.bild-knapp {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.profil-knapp {
+    margin-left: 10px;
+}
+
+.profil-knapp:hover,.bild-knapp:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+#Profilbild1 {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 10px auto; /* Centrerar bilden */
+    background-color: #f0f0f0; /* Ljus bakgrund om ingen bild finns */
+}
+#Profilbild2 {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    vertical-align: middle;
+    border: 2px solid #ccc;
+    border-radius: 50%;/* Centrerar bilden */
+    background-color: #f0f0f0; /* Ljus bakgrund om ingen bild finns */
+}
+
+/* .dropner {
+    float: right;
+    position: relative;
+}
+
+.taBortInlagg {
+    border: none;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.taBortInlagg:hover{
+    background-color: #ccc;
+}
+
+.dropner-content {
+    display: none;
+    position: absolute;
+    background-color: #89f7fe;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropner-content a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.show {display: block;} */
+
+.ladda-upp-knapp {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.ladda-upp-knapp:hover {
+    background-color: #45a049;
+}
+
+.inlagg-container {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+}
+
+.inlagg-box {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #f9f9f9;
+}
+
+#inlaggBild {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+

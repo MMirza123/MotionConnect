@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jeC7eXp+fO/XP5iMUScBEPyqbZsBS2T4tfc588SpLLM=",
+  "Hash": "8pBu+nIHfTYmhCCZlbGGfVS8Qj8rGSNam8oOetOREcY=",
   "Source": "MotionConnect",
   "BasePath": "_content/MotionConnect",
   "Mode": "Default",
@@ -1613,6 +1613,27 @@
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5gwcu5cqwp-yczhk1l207.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/SkapaInlagg#[.{fingerprint=yczhk1l207}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "xwlzmdicqu",
+      "Integrity": "saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5lpiox8ik0-xtxxf3hu2r.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
@@ -1653,6 +1674,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6blydp8ttp-2s0cvlm7dw.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/SkapaKonto#[.{fingerprint=2s0cvlm7dw}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ll924arlkt",
+      "Integrity": "54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6qc7xlg7lq-hrwsygsryq.gz",
@@ -1884,6 +1926,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8w512ksf4a-slnhp4ee4e.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/VisaNotiser#[.{fingerprint=slnhp4ee4e}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "oabhnsskmt",
+      "Integrity": "kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8xykfy6qmd-r4e9w2rdcm.gz",
@@ -2243,12 +2306,12 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-mr7r45gx5d.gz",
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-5dvwfqjfiy.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Computed",
       "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MotionConnect",
-      "RelativePath": "MotionConnect#[.{fingerprint=mr7r45gx5d}]?.styles.css.gz",
+      "RelativePath": "MotionConnect#[.{fingerprint=5dvwfqjfiy}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -2257,8 +2320,8 @@
       "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/bundle/MotionConnect.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "20a6w6dula",
-      "Integrity": "3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=",
+      "Fingerprint": "jgrl8bq2yz",
+      "Integrity": "vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/bundle/MotionConnect.styles.css"
@@ -2411,12 +2474,12 @@
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-mr7r45gx5d.gz",
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-5dvwfqjfiy.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Computed",
       "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MotionConnect",
-      "RelativePath": "MotionConnect#[.{fingerprint=mr7r45gx5d}]!.bundle.scp.css.gz",
+      "RelativePath": "MotionConnect#[.{fingerprint=5dvwfqjfiy}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -2425,8 +2488,8 @@
       "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "20a6w6dula",
-      "Integrity": "3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=",
+      "Fingerprint": "jgrl8bq2yz",
+      "Integrity": "vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css"
@@ -2516,12 +2579,12 @@
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-ncy6z09nfb.gz",
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-5bbahjn1x7.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MotionConnect",
-      "RelativePath": "css/KontoInfo#[.{fingerprint=ncy6z09nfb}]?.css.gz",
+      "RelativePath": "css/KontoInfo#[.{fingerprint=5bbahjn1x7}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2530,8 +2593,8 @@
       "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6asgc5oje9",
-      "Integrity": "LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg=",
+      "Fingerprint": "yjtg54pjoo",
+      "Integrity": "nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css"
@@ -2852,6 +2915,27 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/k8f62ej0pi-z5ejqgo3yh.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/LoggaInPaKontot#[.{fingerprint=z5ejqgo3yh}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "n33bkk949b",
+      "Integrity": "c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/kq97rzwtvi-tdbxkamptv.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
@@ -2999,6 +3083,27 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/lrt6bp55ba-4n8mp5jjfu.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/VisaGruppChat#[.{fingerprint=4n8mp5jjfu}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "b6c8y4ylhv",
+      "Integrity": "Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nezrqnk58p-muycvpuwrr.gz",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
@@ -3060,6 +3165,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nv8z390awt-frqjbfg18y.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/KontoInfoAnvandaren#[.{fingerprint=frqjbfg18y}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ow6v21zilz",
+      "Integrity": "SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nykuk4g5o1-jd9uben2k1.gz",
@@ -3398,12 +3524,12 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-tc5zf1werq.gz",
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-49dvsrmvii.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MotionConnect",
-      "RelativePath": "css/site#[.{fingerprint=tc5zf1werq}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=49dvsrmvii}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -3412,8 +3538,8 @@
       "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "xp8sfdfbuc",
-      "Integrity": "23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY=",
+      "Fingerprint": "n4jmpfnyez",
+      "Integrity": "V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css"
@@ -3438,6 +3564,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/s8wnu071gr-y1dfptce2i.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/KommentarInlagg#[.{fingerprint=y1dfptce2i}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9l4h2iiqk9",
+      "Integrity": "fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/sf8kf2lula-cosvhxvwiu.gz",
@@ -3608,12 +3755,12 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-8eb5s7w56f.gz",
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-krcqzoy3jx.gz",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MotionConnect",
-      "RelativePath": "css/Index#[.{fingerprint=8eb5s7w56f}]?.css.gz",
+      "RelativePath": "css/Index#[.{fingerprint=krcqzoy3jx}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -3622,8 +3769,8 @@
       "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "l86ikqhkbk",
-      "Integrity": "68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI=",
+      "Fingerprint": "55syjgw826",
+      "Integrity": "+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css"
@@ -3881,6 +4028,27 @@
       "OriginalItemSpec": "/Users/markusmirza/.nuget/packages/microsoft.aspnetcore.identity.ui/9.0.3/staticwebassets/V5/lib/jquery/LICENSE.txt"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/yiv49sfcfv-nn1drvs65f.gz",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/StartaChat#[.{fingerprint=nn1drvs65f}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hl1gpq7gal",
+      "Integrity": "FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ym8tkpcl2i-y7v9cxd14o.gz",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
@@ -4042,8 +4210,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "mr7r45gx5d",
-      "Integrity": "7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=",
+      "Fingerprint": "5dvwfqjfiy",
+      "Integrity": "yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/bundle/MotionConnect.styles.css"
@@ -4063,8 +4231,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "mr7r45gx5d",
-      "Integrity": "7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=",
+      "Fingerprint": "5dvwfqjfiy",
+      "Integrity": "yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css"
@@ -4084,11 +4252,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8eb5s7w56f",
-      "Integrity": "8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40=",
+      "Fingerprint": "krcqzoy3jx",
+      "Integrity": "4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/Index.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/KommentarInlagg#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y1dfptce2i",
+      "Integrity": "KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/KommentarInlagg.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
@@ -4105,11 +4294,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ncy6z09nfb",
-      "Integrity": "mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU=",
+      "Fingerprint": "5bbahjn1x7",
+      "Integrity": "PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/KontoInfo.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/KontoInfoAnvandaren#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "frqjbfg18y",
+      "Integrity": "O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/KontoInfoAnvandaren.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/LoggaInPaKontot#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z5ejqgo3yh",
+      "Integrity": "d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/LoggaInPaKontot.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css",
@@ -4126,11 +4357,116 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tc5zf1werq",
-      "Integrity": "I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8=",
+      "Fingerprint": "49dvsrmvii",
+      "Integrity": "KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/SkapaInlagg#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yczhk1l207",
+      "Integrity": "QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/SkapaInlagg.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/SkapaKonto#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2s0cvlm7dw",
+      "Integrity": "8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/SkapaKonto.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/StartaChat#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nn1drvs65f",
+      "Integrity": "o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/StartaChat.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/VisaGruppChat#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4n8mp5jjfu",
+      "Integrity": "QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/VisaGruppChat.css"
+    },
+    {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "css/VisaNotiser#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "slnhp4ee4e",
+      "Integrity": "QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/VisaNotiser.css"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/favicon.ico",
@@ -5750,6 +6086,27 @@
       "OriginalItemSpec": "wwwroot/uploads/b7b155e1-b062-4da1-b82e-58c86ef04a9d.jpeg"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "uploads/c42842ed-f115-4724-8836-2f311968894f#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3hpzkldl5r",
+      "Integrity": "SXzWOmPfBpDRJY9J3JrAV1p8ZtyMTNir84u1C3ENKRw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/da9069a8-41ba-4579-91ff-787f36b638cb.jpeg",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
@@ -5813,6 +6170,27 @@
       "OriginalItemSpec": "wwwroot/uploads/e3cc9770-3e33-43e4-8bf9-ed836219be96.jpg"
     },
     {
+      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg",
+      "SourceId": "MotionConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
+      "BasePath": "_content/MotionConnect",
+      "RelativePath": "uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lv58kv2yku",
+      "Integrity": "wd9uMJtr80B4lxZKjXmIrqcM/IwS1bNgZ9LofoGXSsc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg"
+    },
+    {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/fd1dfa3e-aae0-4481-ab27-7fa9b4a11710.jpeg",
       "SourceId": "MotionConnect",
       "SourceType": "Discovered",
@@ -5874,27 +6252,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/ManchesterCity.png"
-    },
-    {
-      "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/Messi.jpg",
-      "SourceId": "MotionConnect",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/",
-      "BasePath": "_content/MotionConnect",
-      "RelativePath": "uploads/Messi#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "r1c04w27qr",
-      "Integrity": "/yATjpS+0I0UEms0/LlK278O+ITADojmoZ/UpK5cGLA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/uploads/Messi.jpg"
     },
     {
       "Identity": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/One peice.jpeg",
@@ -5962,13 +6319,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/Index.8eb5s7w56f.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-8eb5s7w56f.gz",
+      "Route": "css/Index.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-krcqzoy3jx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001677852349"
+          "Quality": "0.000853970965"
         }
       ],
       "ResponseHeaders": [
@@ -5978,19 +6335,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595"
+          "Value": "1170"
         },
         {
           "Name": "ETag",
-          "Value": "\"68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI=\""
+          "Value": "\"+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -6006,26 +6363,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40=\""
+          "Value": "W/\"4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "8eb5s7w56f"
-        },
-        {
-          "Name": "label",
-          "Value": "css/Index.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40="
+          "Value": "sha256-4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c="
         }
       ]
     },
     {
-      "Route": "css/Index.8eb5s7w56f.css",
+      "Route": "css/Index.css",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6035,7 +6384,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1625"
+          "Value": "3772"
         },
         {
           "Name": "Content-Type",
@@ -6043,11 +6392,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40=\""
+          "Value": "\"4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c="
+        }
+      ]
+    },
+    {
+      "Route": "css/Index.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-krcqzoy3jx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1170"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE="
+        }
+      ]
+    },
+    {
+      "Route": "css/Index.krcqzoy3jx.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-krcqzoy3jx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000853970965"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1170"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "krcqzoy3jx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c="
+        }
+      ]
+    },
+    {
+      "Route": "css/Index.krcqzoy3jx.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3772"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6057,7 +6551,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8eb5s7w56f"
+          "Value": "krcqzoy3jx"
         },
         {
           "Name": "label",
@@ -6065,13 +6559,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40="
+          "Value": "sha256-4PnaNL9tkb+lJi300tbe42M7b6iTM8ZreEl3ZXK477c="
         }
       ]
     },
     {
-      "Route": "css/Index.8eb5s7w56f.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-8eb5s7w56f.gz",
+      "Route": "css/Index.krcqzoy3jx.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-krcqzoy3jx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6080,7 +6574,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595"
+          "Value": "1170"
         },
         {
           "Name": "Content-Type",
@@ -6088,11 +6582,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI=\""
+          "Value": "\"+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Fri, 09 May 2025 08:01:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6110,7 +6604,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8eb5s7w56f"
+          "Value": "krcqzoy3jx"
         },
         {
           "Name": "label",
@@ -6118,18 +6612,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI="
+          "Value": "sha256-+fWX3qoQ4Q1eD+HNHStrowy+OS9FXBwG3U6bRSMzUFE="
         }
       ]
     },
     {
-      "Route": "css/Index.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-8eb5s7w56f.gz",
+      "Route": "css/KommentarInlagg.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/s8wnu071gr-y1dfptce2i.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001677852349"
+          "Quality": "0.001060445387"
         }
       ],
       "ResponseHeaders": [
@@ -6139,15 +6633,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595"
+          "Value": "942"
         },
         {
           "Name": "ETag",
-          "Value": "\"68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI=\""
+          "Value": "\"fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6167,19 +6661,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40=\""
+          "Value": "W/\"KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40="
+          "Value": "sha256-KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8="
         }
       ]
     },
     {
-      "Route": "css/Index.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/Index.css",
+      "Route": "css/KommentarInlagg.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6188,7 +6682,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1625"
+          "Value": "2582"
         },
         {
           "Name": "Content-Type",
@@ -6196,11 +6690,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40=\""
+          "Value": "\"KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6210,13 +6704,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8CDHxSqteKtkfST6AZioxiKqlLx2Fgdm4ybyHH24i40="
+          "Value": "sha256-KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8="
         }
       ]
     },
     {
-      "Route": "css/Index.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/uplas9c7g3-8eb5s7w56f.gz",
+      "Route": "css/KommentarInlagg.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/s8wnu071gr-y1dfptce2i.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6225,7 +6719,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595"
+          "Value": "942"
         },
         {
           "Name": "Content-Type",
@@ -6233,11 +6727,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI=\""
+          "Value": "\"fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:52:43 GMT"
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6255,18 +6749,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-68OlYG/NBH7HpGDT2uMadoMxfM5noBaQbgOXx7xHZxI="
+          "Value": "sha256-fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4="
         }
       ]
     },
     {
-      "Route": "css/KontoInfo.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-ncy6z09nfb.gz",
+      "Route": "css/KommentarInlagg.y1dfptce2i.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/s8wnu071gr-y1dfptce2i.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004504504505"
+          "Quality": "0.001060445387"
         }
       ],
       "ResponseHeaders": [
@@ -6276,19 +6770,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "221"
+          "Value": "942"
         },
         {
           "Name": "ETag",
-          "Value": "\"LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg=\""
+          "Value": "\"fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -6304,18 +6798,187 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU=\""
+          "Value": "W/\"KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "y1dfptce2i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KommentarInlagg.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU="
+          "Value": "sha256-KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8="
         }
       ]
     },
     {
-      "Route": "css/KontoInfo.css",
+      "Route": "css/KommentarInlagg.y1dfptce2i.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KommentarInlagg.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y1dfptce2i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KommentarInlagg.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KoPZrmyGmhW6xpKNHkyOh3o1QUSJTJQjTPG5aDKH1D8="
+        }
+      ]
+    },
+    {
+      "Route": "css/KommentarInlagg.y1dfptce2i.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/s8wnu071gr-y1dfptce2i.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "942"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 12:06:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y1dfptce2i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KommentarInlagg.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fZuI5NsIME4dTkb1nxQugW1V4OttyeCjM2A1fSkWKG4="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfo.5bbahjn1x7.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-5bbahjn1x7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001547987616"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "645"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5bbahjn1x7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KontoInfo.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfo.5bbahjn1x7.css",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6325,7 +6988,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536"
+          "Value": "1728"
         },
         {
           "Name": "Content-Type",
@@ -6333,121 +6996,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU=\""
+          "Value": "\"PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU="
-        }
-      ]
-    },
-    {
-      "Route": "css/KontoInfo.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-ncy6z09nfb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "221"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg="
-        }
-      ]
-    },
-    {
-      "Route": "css/KontoInfo.ncy6z09nfb.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-ncy6z09nfb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.004504504505"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "221"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ncy6z09nfb"
+          "Value": "5bbahjn1x7"
         },
         {
           "Name": "label",
@@ -6455,13 +7018,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU="
+          "Value": "sha256-PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE="
         }
       ]
     },
     {
-      "Route": "css/KontoInfo.ncy6z09nfb.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
+      "Route": "css/KontoInfo.5bbahjn1x7.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-5bbahjn1x7.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6470,7 +7033,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536"
+          "Value": "645"
         },
         {
           "Name": "Content-Type",
@@ -6478,56 +7041,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU=\""
+          "Value": "\"nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ncy6z09nfb"
-        },
-        {
-          "Name": "label",
-          "Value": "css/KontoInfo.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-mblfomcOV7OkAFqyK8UMm1WcaNOD1N1F+lQ3g5+HzhU="
-        }
-      ]
-    },
-    {
-      "Route": "css/KontoInfo.ncy6z09nfb.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-ncy6z09nfb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "221"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 10:28:54 GMT"
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6545,7 +7063,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ncy6z09nfb"
+          "Value": "5bbahjn1x7"
         },
         {
           "Name": "label",
@@ -6553,7 +7071,901 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LvMeuzszMi8xz1o6KpKKN1G21rPnr0iH/04gMP3WGjg="
+          "Value": "sha256-nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfo.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-5bbahjn1x7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001547987616"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "645"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfo.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfo.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1728"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxtV1INCkx6Nx+5yTvuoNDjW19DHZEM0U0st83lO9hE="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfo.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/h11nqzv76g-5bbahjn1x7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "645"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 11:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nv51R4ANTcg2f9LGNoWNrJv+07nl0VrsWXTwJ8TK4mM="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nv8z390awt-frqjbfg18y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001042752868"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "958"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nv8z390awt-frqjbfg18y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "958"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.frqjbfg18y.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nv8z390awt-frqjbfg18y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001042752868"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "958"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "frqjbfg18y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KontoInfoAnvandaren.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.frqjbfg18y.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/KontoInfoAnvandaren.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "frqjbfg18y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KontoInfoAnvandaren.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9V2Q2LqaesL1137U383J1zoW7A14HiIk86exEUT4q4="
+        }
+      ]
+    },
+    {
+      "Route": "css/KontoInfoAnvandaren.frqjbfg18y.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/nv8z390awt-frqjbfg18y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "958"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:12:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "frqjbfg18y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/KontoInfoAnvandaren.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SDW7Q29umDKHXfokKwfkUk8K0VLOc+IKl5y8dUpgCY8="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/k8f62ej0pi-z5ejqgo3yh.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001366120219"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "731"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/k8f62ej0pi-z5ejqgo3yh.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.z5ejqgo3yh.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/k8f62ej0pi-z5ejqgo3yh.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001366120219"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "731"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z5ejqgo3yh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/LoggaInPaKontot.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.z5ejqgo3yh.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/LoggaInPaKontot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z5ejqgo3yh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/LoggaInPaKontot.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d6h8O3pM9OhqF+nPVf6o4vJjETwLHYc9a7x04kCRm9I="
+        }
+      ]
+    },
+    {
+      "Route": "css/LoggaInPaKontot.z5ejqgo3yh.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/k8f62ej0pi-z5ejqgo3yh.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 12:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z5ejqgo3yh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/LoggaInPaKontot.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c9iyGU9RCn5dkUTsIP7x9vcjmGtiLNH21ygFoOgqj+4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.49dvsrmvii.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-49dvsrmvii.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001317523057"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "49dvsrmvii"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.49dvsrmvii.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "49dvsrmvii"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.49dvsrmvii.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-49dvsrmvii.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "49dvsrmvii"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0="
         }
       ]
     },
@@ -6596,12 +8008,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-tc5zf1werq.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-49dvsrmvii.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001225490196"
+          "Quality": "0.001317523057"
         }
       ],
       "ResponseHeaders": [
@@ -6611,15 +8023,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "815"
+          "Value": "758"
         },
         {
           "Name": "ETag",
-          "Value": "\"23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY=\""
+          "Value": "\"V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6639,13 +8051,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8=\""
+          "Value": "W/\"KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8="
+          "Value": "sha256-KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk="
         }
       ]
     },
@@ -6660,7 +8072,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2224"
+          "Value": "2027"
         },
         {
           "Name": "Content-Type",
@@ -6668,11 +8080,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8=\""
+          "Value": "\"KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6682,13 +8094,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8="
+          "Value": "sha256-KKOdVK7P9DCJZveg/MwfCJx80btBny65Z5MQhl558qk="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-tc5zf1werq.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-49dvsrmvii.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6697,7 +8109,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "815"
+          "Value": "758"
         },
         {
           "Name": "Content-Type",
@@ -6705,11 +8117,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY=\""
+          "Value": "\"V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Thu, 08 May 2025 13:23:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6727,18 +8139,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY="
+          "Value": "sha256-V085NbmTA+x/sv/xOICtiGucpaa8DhSSvHw1obkyho0="
         }
       ]
     },
     {
-      "Route": "css/site.tc5zf1werq.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-tc5zf1werq.gz",
+      "Route": "css/SkapaInlagg.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5gwcu5cqwp-yczhk1l207.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001225490196"
+          "Quality": "0.001063829787"
         }
       ],
       "ResponseHeaders": [
@@ -6748,15 +8160,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "815"
+          "Value": "939"
         },
         {
           "Name": "ETag",
-          "Value": "\"23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY=\""
+          "Value": "\"saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaInlagg.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaInlagg.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5gwcu5cqwp-yczhk1l207.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "939"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaInlagg.yczhk1l207.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5gwcu5cqwp-yczhk1l207.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001063829787"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "939"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6776,27 +8325,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8=\""
+          "Value": "W/\"QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tc5zf1werq"
+          "Value": "yczhk1l207"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/SkapaInlagg.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8="
+          "Value": "sha256-QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I="
         }
       ]
     },
     {
-      "Route": "css/site.tc5zf1werq.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/site.css",
+      "Route": "css/SkapaInlagg.yczhk1l207.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaInlagg.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6805,7 +8354,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2224"
+          "Value": "2391"
         },
         {
           "Name": "Content-Type",
@@ -6813,11 +8362,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8=\""
+          "Value": "\"QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6827,21 +8376,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tc5zf1werq"
+          "Value": "yczhk1l207"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/SkapaInlagg.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-I2ePb3fgEorXpAHl58x080DzktP01+uAJPLzO74vdH8="
+          "Value": "sha256-QtUMTpoYPW4/yqXmRhUsJLiue91e5XfwmKuTK0cpT+I="
         }
       ]
     },
     {
-      "Route": "css/site.tc5zf1werq.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/rvydpqc6kb-tc5zf1werq.gz",
+      "Route": "css/SkapaInlagg.yczhk1l207.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/5gwcu5cqwp-yczhk1l207.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6850,7 +8399,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "815"
+          "Value": "939"
         },
         {
           "Name": "Content-Type",
@@ -6858,11 +8407,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY=\""
+          "Value": "\"saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 10:49:07 GMT"
+          "Value": "Tue, 06 May 2025 14:09:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6880,15 +8429,1207 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tc5zf1werq"
+          "Value": "yczhk1l207"
         },
         {
           "Name": "label",
-          "Value": "css/site.css.gz"
+          "Value": "css/SkapaInlagg.css.gz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-23F0SKsdrN3Z1cGAK9gDHPEqhGQ+Yj4ADOaryfS84XY="
+          "Value": "sha256-saPTcBabGw9+hc61SXAovyDsKgj/uWgsp/Ud1f47hqs="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.2s0cvlm7dw.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6blydp8ttp-2s0cvlm7dw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001010101010"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "989"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2s0cvlm7dw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/SkapaKonto.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.2s0cvlm7dw.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2s0cvlm7dw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/SkapaKonto.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.2s0cvlm7dw.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6blydp8ttp-2s0cvlm7dw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "989"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2s0cvlm7dw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/SkapaKonto.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6blydp8ttp-2s0cvlm7dw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001010101010"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "989"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/SkapaKonto.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qFuWnfqtqlajd07i0+u6E9tCC2KA8h9hHKbuey5sKY="
+        }
+      ]
+    },
+    {
+      "Route": "css/SkapaKonto.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/6blydp8ttp-2s0cvlm7dw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "989"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:45:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-54ZzYisFeGSXKFTYbx6FICNz8Yt+KkF/hEwUJ3R067w="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/yiv49sfcfv-nn1drvs65f.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001358695652"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "735"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/yiv49sfcfv-nn1drvs65f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "735"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.nn1drvs65f.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/yiv49sfcfv-nn1drvs65f.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001358695652"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "735"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nn1drvs65f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/StartaChat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.nn1drvs65f.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/StartaChat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nn1drvs65f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/StartaChat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o2BjyTrv9jwK8Z9NLCj4o8xD1AI/eg0/p2nO6KTYutI="
+        }
+      ]
+    },
+    {
+      "Route": "css/StartaChat.nn1drvs65f.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/yiv49sfcfv-nn1drvs65f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "735"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 12:08:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nn1drvs65f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/StartaChat.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FT2MeknFRA1sOzmmFKUfzDfdluAdVteSxQXz2+tRyag="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.4n8mp5jjfu.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/lrt6bp55ba-4n8mp5jjfu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001333333333"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4n8mp5jjfu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaGruppChat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.4n8mp5jjfu.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4n8mp5jjfu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaGruppChat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.4n8mp5jjfu.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/lrt6bp55ba-4n8mp5jjfu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4n8mp5jjfu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaGruppChat.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/lrt6bp55ba-4n8mp5jjfu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001333333333"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaGruppChat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QLLJ/RkYucRC9BZ9JbThnraFPiSwb8i7Ft0W15KrdlY="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaGruppChat.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/lrt6bp55ba-4n8mp5jjfu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:13:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xb7fKC13daD1D5oHBjwNmSemn+hQFk+bER+TAy3ocoU="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8w512ksf4a-slnhp4ee4e.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002169197397"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1011"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8w512ksf4a-slnhp4ee4e.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.slnhp4ee4e.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8w512ksf4a-slnhp4ee4e.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002169197397"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "slnhp4ee4e"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaNotiser.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.slnhp4ee4e.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/css/VisaNotiser.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1011"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "slnhp4ee4e"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaNotiser.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMVhqgEFW3KwJPTxUrXrPcduSsiimsKtr4Jme6kz5Cs="
+        }
+      ]
+    },
+    {
+      "Route": "css/VisaNotiser.slnhp4ee4e.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/8w512ksf4a-slnhp4ee4e.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:06:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "slnhp4ee4e"
+        },
+        {
+          "Name": "label",
+          "Value": "css/VisaNotiser.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kIXvLueJZya+8bff4helLjVCRizLftBMbhu1MBdUkpc="
         }
       ]
     },
@@ -35978,13 +38719,13 @@
       ]
     },
     {
-      "Route": "MotionConnect.bundle.scp.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-mr7r45gx5d.gz",
+      "Route": "MotionConnect.5dvwfqjfiy.bundle.scp.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-5dvwfqjfiy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004524886878"
+          "Quality": "0.010989010989"
         }
       ],
       "ResponseHeaders": [
@@ -35994,19 +38735,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "220"
+          "Value": "90"
         },
         {
           "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -36022,18 +38763,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "W/\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "5dvwfqjfiy"
+        },
+        {
+          "Name": "label",
+          "Value": "MotionConnect.bundle.scp.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
     {
-      "Route": "MotionConnect.bundle.scp.css",
+      "Route": "MotionConnect.5dvwfqjfiy.bundle.scp.css",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -36043,7 +38792,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "324"
+          "Value": "70"
         },
         {
           "Name": "Content-Type",
@@ -36051,121 +38800,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
-        }
-      ]
-    },
-    {
-      "Route": "MotionConnect.bundle.scp.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-mr7r45gx5d.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "220"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs="
-        }
-      ]
-    },
-    {
-      "Route": "MotionConnect.mr7r45gx5d.bundle.scp.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-mr7r45gx5d.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.004524886878"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "220"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
+          "Value": "5dvwfqjfiy"
         },
         {
           "Name": "label",
@@ -36173,13 +38822,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
     {
-      "Route": "MotionConnect.mr7r45gx5d.bundle.scp.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css",
+      "Route": "MotionConnect.5dvwfqjfiy.bundle.scp.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-5dvwfqjfiy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -36188,7 +38837,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "324"
+          "Value": "90"
         },
         {
           "Name": "Content-Type",
@@ -36196,56 +38845,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
-        },
-        {
-          "Name": "label",
-          "Value": "MotionConnect.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
-        }
-      ]
-    },
-    {
-      "Route": "MotionConnect.mr7r45gx5d.bundle.scp.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-mr7r45gx5d.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "220"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36263,7 +38867,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
+          "Value": "5dvwfqjfiy"
         },
         {
           "Name": "label",
@@ -36271,18 +38875,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs="
+          "Value": "sha256-vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU="
         }
       ]
     },
     {
-      "Route": "MotionConnect.mr7r45gx5d.styles.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-mr7r45gx5d.gz",
+      "Route": "MotionConnect.5dvwfqjfiy.styles.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-5dvwfqjfiy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004524886878"
+          "Quality": "0.010989010989"
         }
       ],
       "ResponseHeaders": [
@@ -36292,15 +38896,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "220"
+          "Value": "90"
         },
         {
           "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36320,13 +38924,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "W/\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
+          "Value": "5dvwfqjfiy"
         },
         {
           "Name": "label",
@@ -36334,12 +38938,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
     {
-      "Route": "MotionConnect.mr7r45gx5d.styles.css",
+      "Route": "MotionConnect.5dvwfqjfiy.styles.css",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/bundle/MotionConnect.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -36349,7 +38953,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "324"
+          "Value": "70"
         },
         {
           "Name": "Content-Type",
@@ -36357,11 +38961,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36371,7 +38975,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
+          "Value": "5dvwfqjfiy"
         },
         {
           "Name": "label",
@@ -36379,13 +38983,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
     {
-      "Route": "MotionConnect.mr7r45gx5d.styles.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-mr7r45gx5d.gz",
+      "Route": "MotionConnect.5dvwfqjfiy.styles.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-5dvwfqjfiy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -36394,7 +38998,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "220"
+          "Value": "90"
         },
         {
           "Name": "Content-Type",
@@ -36402,11 +39006,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36424,7 +39028,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mr7r45gx5d"
+          "Value": "5dvwfqjfiy"
         },
         {
           "Name": "label",
@@ -36432,18 +39036,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs="
+          "Value": "sha256-vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU="
         }
       ]
     },
     {
-      "Route": "MotionConnect.styles.css",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-mr7r45gx5d.gz",
+      "Route": "MotionConnect.bundle.scp.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-5dvwfqjfiy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004524886878"
+          "Quality": "0.010989010989"
         }
       ],
       "ResponseHeaders": [
@@ -36453,15 +39057,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "220"
+          "Value": "90"
         },
         {
           "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36481,13 +39085,150 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "W/\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
+        }
+      ]
+    },
+    {
+      "Route": "MotionConnect.bundle.scp.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/scopedcss/projectbundle/MotionConnect.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
+        }
+      ]
+    },
+    {
+      "Route": "MotionConnect.bundle.scp.css.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/ehwmmdidd2-5dvwfqjfiy.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "90"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU="
+        }
+      ]
+    },
+    {
+      "Route": "MotionConnect.styles.css",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-5dvwfqjfiy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.010989010989"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "90"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
@@ -36502,7 +39243,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "324"
+          "Value": "70"
         },
         {
           "Name": "Content-Type",
@@ -36510,11 +39251,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8=\""
+          "Value": "\"yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36524,13 +39265,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7qegYLvElgyT35NWXUenXvsgofWaQPuS90gEeaF5EK8="
+          "Value": "sha256-yW0qIK0S6/sSPwvvrLUcU0myIoIbrbrxk5WSeB+4OYQ="
         }
       ]
     },
     {
       "Route": "MotionConnect.styles.css.gz",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-mr7r45gx5d.gz",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/obj/Debug/net9.0/compressed/d0vsp7dw0u-5dvwfqjfiy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -36539,7 +39280,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "220"
+          "Value": "90"
         },
         {
           "Name": "Content-Type",
@@ -36547,11 +39288,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs=\""
+          "Value": "\"vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 08:16:50 GMT"
+          "Value": "Tue, 06 May 2025 13:18:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36569,7 +39310,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3j87xQuQZsbORl8zzoNaWyglCi5gCK1aVbGnfm34Dhs="
+          "Value": "sha256-vU18yN5pSfnhqigToQ3SqC3s+2woziOJCrrTCrPi1sU="
         }
       ]
     },
@@ -37804,6 +40545,88 @@
       ]
     },
     {
+      "Route": "uploads/c42842ed-f115-4724-8836-2f311968894f.3hpzkldl5r.jpeg",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2263681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SXzWOmPfBpDRJY9J3JrAV1p8ZtyMTNir84u1C3ENKRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 10:12:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3hpzkldl5r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SXzWOmPfBpDRJY9J3JrAV1p8ZtyMTNir84u1C3ENKRw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/c42842ed-f115-4724-8836-2f311968894f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2263681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SXzWOmPfBpDRJY9J3JrAV1p8ZtyMTNir84u1C3ENKRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 10:12:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SXzWOmPfBpDRJY9J3JrAV1p8ZtyMTNir84u1C3ENKRw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/da9069a8-41ba-4579-91ff-787f36b638cb.7r5jm021js.jpeg",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/da9069a8-41ba-4579-91ff-787f36b638cb.jpeg",
       "Selectors": [],
@@ -38050,6 +40873,88 @@
       ]
     },
     {
+      "Route": "uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2735248"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wd9uMJtr80B4lxZKjXmIrqcM/IwS1bNgZ9LofoGXSsc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 09:31:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wd9uMJtr80B4lxZKjXmIrqcM/IwS1bNgZ9LofoGXSsc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.lv58kv2yku.jpeg",
+      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2735248"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wd9uMJtr80B4lxZKjXmIrqcM/IwS1bNgZ9LofoGXSsc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 09:31:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lv58kv2yku"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ef1a7bed-8fab-4411-a948-0061d0c41bbf.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wd9uMJtr80B4lxZKjXmIrqcM/IwS1bNgZ9LofoGXSsc="
+        }
+      ]
+    },
+    {
       "Route": "uploads/fd1dfa3e-aae0-4481-ab27-7fa9b4a11710.1dsugsw25x.jpeg",
       "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/fd1dfa3e-aae0-4481-ab27-7fa9b4a11710.jpeg",
       "Selectors": [],
@@ -38292,88 +41197,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-POlp2YO+yn9RFG8s/Up6dfo/UzFIuVcY6jgWtHH8aQA="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/Messi.jpg",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/Messi.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "59911"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/yATjpS+0I0UEms0/LlK278O+ITADojmoZ/UpK5cGLA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 15:10:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/yATjpS+0I0UEms0/LlK278O+ITADojmoZ/UpK5cGLA="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/Messi.r1c04w27qr.jpg",
-      "AssetFile": "/Users/markusmirza/MotionConnect/MotionConnect/wwwroot/uploads/Messi.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "59911"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/yATjpS+0I0UEms0/LlK278O+ITADojmoZ/UpK5cGLA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 15:10:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r1c04w27qr"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/Messi.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/yATjpS+0I0UEms0/LlK278O+ITADojmoZ/UpK5cGLA="
         }
       ]
     },
